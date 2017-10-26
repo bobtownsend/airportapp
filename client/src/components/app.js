@@ -7,9 +7,11 @@ import Signup from "./auth/signup";
 import Feature from "./feature";
 import RequireAuth from "./auth/require_auth";
 import Homepage from "./homepage";
-import Dashboard from "./dashboard";
 import profile from "./profile";
 import "../index.css";
+import FontAwesome from 'react-fontawesome';
+
+
 // import Tripbuild from './tripbuild';
 // import Tripresults from './tripresults';
 // import Places from './places';
@@ -24,7 +26,7 @@ export default class App extends Component {
           <Route path="/Profile" component={profile} />
           <Route path="/signup" component={Signup} />
           <Route path="/signout" component={Signout} />
-          <Route path="/dashboard" component={Dashboard} />
+          
           <Route path="/feature" component={RequireAuth(Feature)} />
         </div>
       </Router>
