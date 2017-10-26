@@ -6,7 +6,7 @@ import * as actions from "../actions";
 import PropTypes from "prop-types";
 import profile from "./profile";
 import '../css/style.css';
-import FontAwesome from 'react-fontawesome';
+import fontAwesome from 'react-fontawesome';
 
 
 
@@ -288,7 +288,7 @@ class Homepage extends Component {
     <div className="row">
         <h2>Contact</h2>
         <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-        <div className="col-lg-6">
+        <div className="col-lg-6 col-md-6">
             <div className="input-group input-group-lg">
                 <span className="input-group-addon" id="sizing-addon1"><i className="fa fa-user" aria-hidden="true"></i>
                 </span>
