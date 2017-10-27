@@ -9,6 +9,12 @@ import "../css/style.css";
 import fontAwesome from "react-fontawesome";
 //import BigCalendar from "react-big-calendar";
 import mycalendar from "./calendar";
+import { Grid, Row, Col } from 'react-bootstrap';
+import team1 from '../images/team/team-1.jpg';
+import team2 from '../images/team/team-2.jpg';
+import team3 from '../images/team/team-3.jpg';
+import team4 from '../images/team/team-4.jpg';
+import team5 from '../images/team/team-5.jpg';
 
 class Homepage extends Component {
   static contextTypes = {
@@ -27,12 +33,12 @@ class Homepage extends Component {
           {this.props.message}
         </li>,
         <li className="nav-item" key={2}>
-          <Link className="btn btn-default tg-login__btn" to="/dashboard">
+          <Link id="navLink" className="btn btn-lg btn-primary" to="/dashboard">
             Dashboard
           </Link>
         </li>,
         <li className="nav-item" key={3}>
-          <Link className="nav-link" to="/signout">
+          <Link id="navLink" className="btn btn-lg btn-primary" to="/signout">
             Sign Out
           </Link>
         </li>
@@ -41,12 +47,12 @@ class Homepage extends Component {
       // show a link for user to Sign In or Sign Up
       return [
         <li className="nav-item">
-          <Link className="btn btn-default tg-login__btn" to="/signin" key={1}>
+          <Link id="navLink" className="btn btn-lg btn-primary" to="/signin" key={1}>
             Sign In
           </Link>
         </li>,
         <li className="nav-item" key={2}>
-          <Link className="btn btn-default tg-login__btn" to="/signup">
+          <Link id="navLink" className="btn btn-lg btn-primary" to="/signup">
             Sign Up
           </Link>
         </li>

@@ -79,8 +79,24 @@ p {
 
     opacity: 1;
     background-color: #428bca !important;
-
 }
+
+#navLink {
+    color: #fff !important;
+    opacity: 0.7;
+    background-color: #428bca !important;
+    border-radius: 0%;
+    padding: 5px 15px 5px 20px;
+    margin: 3px;
+    margin-right: 0px; 
+    margin-top: 8px;
+}
+
+.navbar-brand {
+    padding-left: -10px;
+}
+
+
 
 /*HEADER*/
 
@@ -109,20 +125,25 @@ p {
     font-size: 40px;
     font-weight: 700px;
     padding-top: 30px;
+    margin-left: 60px;
 
 }
 
 .header h1,
-.header p,
 .header button {
 
     margin-top: 20px
 }
 
+.header p {
+    margin-left: 60px;
+}
+
 .header .btn {
 
     border-radius: 0;
-    margin: 20px 5px;
+    margin: 10px 5px;
+    margin-left: 60px;
 }
 
 /*SERVICES*/
@@ -145,6 +166,7 @@ p {
     color: #737373;
     font-size: 14px;
     padding-bottom: 40px;
+    text-align: center;
 }
 
 .services i {
@@ -176,6 +198,7 @@ p {
 .events p {
 
     padding-bottom: 40px;
+    text-align: center;
 }
 
 .events .columns {
@@ -231,6 +254,7 @@ p {
 .team p {
 
     color: #737373;
+    text-align: center;
 }
 
 .team img {
@@ -244,10 +268,11 @@ p {
 
     height: 30px;
     width: 50px;
-    padding: 10px;
-    font-size: 10px;
+    padding: 15px;
+    font-size: 5px;
+    margin: 1%;
     border-radius: 50%;
-    background-color: #a0db8e;
+    background-color: #428bca;
     color: #fff;
 }
 
@@ -256,12 +281,13 @@ p {
     background-color: #709963;
 }
 
+
 /*partners*/
 
 .partners {
 
     padding: 50px 0 80px;
-    background-color: #3399ff;
+    background-color: #428bca;
     text-align: center;
     color: #fff;
 }
@@ -274,6 +300,7 @@ p {
 .partners p {
 
     padding-bottom: 40px;
+    text-align: center;
 }
 
 .partners img {
@@ -290,6 +317,13 @@ p {
     opacity: 2;
 }
 
+#volunteerbtn {
+    color: #428bca;
+    background-color: whitesmoke;
+    border-radius: 0%;
+    border-color: whitesmoke;
+}
+
 /*CONTACT*/
 
 .contact {
@@ -301,7 +335,8 @@ p {
 .contact p {
 
     padding-bottom: 80;
-    color: #737373; 
+    color: #737373;
+    text-align: center;
 }
 
 .contact h2 {
@@ -332,6 +367,7 @@ p {
     font-size: 15;
     background-color: #f08080;
     color: #fff;
+    margin-top: 4%;
 }
 
 .contact .btn:hover {
@@ -355,10 +391,10 @@ p {
     height: 30px;
     width: 30px;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #cccccc;
     margin-bottom: 10px;
-    margin-right: 5px;
+    margin-right: 12px;
 }
 
 .footer input {
@@ -368,11 +404,14 @@ p {
     padding: 5px;
     border: none;
     color: #000;
+    margin-left: 0px;
+    margin-top: 15px;
 }
 
 .footer .btn {
 
     padding: 10px 5px 10px;
-    margin: -3px 0 0 5px;
+    margin: -2px 0 0 5px;
+    border-radius: 0%;
 }
 
