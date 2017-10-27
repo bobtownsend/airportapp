@@ -1,23 +1,25 @@
 import React, { Component } from "react";
 import BigCalendar from "react-big-calendar";
-import events from "../events";
+import eventsCalendar from "./eventsCalendar";
+import moment from "moment";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+
+BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 
 let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k]);
 
-class Calendar extends Component {
+class mycalendar extends Component {
   render() {
     return (
-      <div>
-        <BigCalendar
-          {...this.props}
-          events={events}
-          views={allViews}
-          step={60}
-          defaultDate={new Date()}
-        />
-      </div>
+      <BigCalendar
+        {...this.props}
+        events={eventsCalendar}
+        views={allViews}
+        step={60}
+        defaultDate={new Date(2017, 9, 27)}
+      />
     );
   }
 }
 
-export default Calendar;
+export default mycalendar;

@@ -9,8 +9,8 @@ import RequireAuth from "./auth/require_auth";
 import Homepage from "./homepage";
 import profile from "./profile";
 import "../index.css";
-import FontAwesome from 'react-fontawesome';
-
+import FontAwesome from "react-fontawesome";
+import mycalendar from "../components/calendar";
 
 // import Tripbuild from './tripbuild';
 // import Tripresults from './tripresults';
@@ -26,7 +26,8 @@ export default class App extends Component {
           <Route path="/Profile" component={profile} />
           <Route path="/signup" component={Signup} />
           <Route path="/signout" component={Signout} />
-          
+          <Route path="/calendar" component={mycalendar} />
+
           <Route path="/feature" component={RequireAuth(Feature)} />
         </div>
       </Router>
