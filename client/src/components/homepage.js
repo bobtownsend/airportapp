@@ -7,8 +7,12 @@ import PropTypes from "prop-types";
 import profile from "./profile";
 import '../css/style.css';
 import fontAwesome from 'react-fontawesome';
-
-
+import { Grid, Row, Col } from 'react-bootstrap';
+import team1 from '../images/team/team-1.jpg';
+import team2 from '../images/team/team-2.jpg';
+import team3 from '../images/team/team-3.jpg';
+import team4 from '../images/team/team-4.jpg';
+import team5 from '../images/team/team-5.jpg';
 
 class Homepage extends Component {
   static contextTypes = {
@@ -27,12 +31,12 @@ class Homepage extends Component {
           {this.props.message}
         </li>,
         <li className="nav-item" key={2}>
-          <Link className="btn btn-default tg-login__btn" to="/dashboard">
+          <Link id="navLink" className="btn btn-lg btn-primary" to="/dashboard">
             Dashboard
           </Link>
         </li>,
         <li className="nav-item" key={3}>
-          <Link className="nav-link" to="/signout">
+          <Link id="navLink" className="btn btn-lg btn-primary" to="/signout">
             Sign Out
           </Link>
         </li>
@@ -41,12 +45,12 @@ class Homepage extends Component {
       // show a link for user to Sign In or Sign Up
       return [
         <li className="nav-item">
-          <Link className="btn btn-default tg-login__btn" to="/signin" key={1}>
+          <Link id="navLink" className="btn btn-lg btn-primary" to="/signin" key={1}>
             Sign In
           </Link>
         </li>,
         <li className="nav-item" key={2}>
-          <Link className="btn btn-default tg-login__btn" to="/signup">
+          <Link id="navLink" className="btn btn-lg btn-primary" to="/signup">
             Sign Up
           </Link>
         </li>
@@ -63,17 +67,20 @@ class Homepage extends Component {
       <div id="myNavbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
       <div className="container">
           <div className="navbar-header">
-
+          
+        
           
               <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
               </button>
-
               <a href="#" className="navbar-brand">Foster The Future</a>
+              
           </div>
+          
           <div className="navbar-collapse collapse">
+          
               <ul className="nav navbar-nav navbar-right">
                   <li><a href="#header">Home</a></li>
                   <li><a href="#services">services</a></li>
@@ -81,11 +88,14 @@ class Homepage extends Component {
                   <li><a href="#team">team</a></li>
                   <li><a href="#partners">partners</a></li>
                   <li><a href="#contact">contact</a></li>
-                  <li><button className="btn btn-lg btn-primary">Register</button></li>
-                  <li><button className="btn btn-lg btn-primary">Login</button></li>
+                   
+                  {this.renderLinks()}
+                  
+
+                  
               </ul>
             <ul className="nav navbar-nav navbar-right">
-              {this.renderLinks()}
+              
             </ul>
           </div>
       </div>
@@ -96,11 +106,11 @@ class Homepage extends Component {
       <div className="row">
       <div className="col-lg-6 col-md-6">
           <h1>Bringing kids hope!</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry.<br></br>
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br></br>
-          when an unknown printer took a galley of type and scrambled it to make a type<br></br>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type
           specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-
+          <button className="btn btn-lg btn-primary">About Us</button>
                          
       </div>
       
@@ -212,53 +222,68 @@ class Homepage extends Component {
 </div>
 </div>
 
-
 <div id="team" className="team">
 <div className="container">
     <div className="row">
         <h2>Meet The Team</h2>
         <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-        <div className="col-lg-3 col-md-3">
-            <img src="../images/team/team-1.jpg" className="img-circle" alt=""/>
-            <h4>John Doe</h4>
+        <Row className='show-grid'>
+        <Col sm={6} md={4}><br />
+            <img src={team1} className="img-circle" alt=""/>
+            <h4>Ray Roman</h4>
             <b>CEO and Founder</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
             <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-        </div>
-        <div className="col-lg-3 col-md-3">
-            <img src="../images/team/team-2.jpg" className="img-circle" alt=""/>
-            <h4>John Doe</h4>
+        </Col>
+        <Col sm={6} md={4}><br />
+            <img src={team2} className="img-circle" alt=""/>
+            <h4>Krysta Jones</h4>
             <b>CEO and Founder</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
             <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-        </div>
-        <div className="col-lg-3 col-md-3">
-            <img src="../images/team/team-3.jpg" className="img-circle" alt=""/>
-            <h4>John Doe</h4>
+        </Col>
+        <Col sm={6} md={4}><br />
+            <img src={team3} className="img-circle" alt=""/>
+            <h4>Lovie Bates</h4>
             <b>CEO and Founder</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
             <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-        </div>
-        <div className="col-lg-3 col-md-3">
-            <img src="../images/team/team-4.jpg" className="img-circle" alt=""/>
-            <h4>John Doe</h4>
+        </Col>
+        </Row>
+        <Row>
+        <Col sm={6} md={4} mdOffset={2}><br />
+            <img src={team4} className="img-circle" alt=""/>
+            <h4>Tyler Miller</h4>
             <b>CEO and Founder</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
             <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-        </div>
+        </Col>
+        <Col sm={6} md={4}><br />
+            <img src={team5} className="img-circle" alt=""/>
+            <h4>Adrian Hingson</h4>
+            <b>CEO and Founder</b>
+            <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+            <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+        </Col>
+        </Row>
+     
     </div>
+    
 </div>
 </div>
 
@@ -278,9 +303,10 @@ class Homepage extends Component {
         </div>
         <div className="col-lg-3 col-md-3">
         <li><img src="images/clients/client4.png" alt=""/></li>
-        </div>       
+        </div>    
     </div>
 </div>
+<button id="volunteerbtn" className="btn btn-md btn-primary">More info</button>  
 </div>
 
 <div id="contact" className="contact">
