@@ -62,7 +62,8 @@ class Homepage extends Component {
 
   render() {
     return (
-      /*NAVBAR*/
+
+      /* NAVBAR */
 
       <div>
         <div
@@ -89,7 +90,7 @@ class Homepage extends Component {
           <div className="navbar-collapse collapse">
           
               <ul className="nav navbar-nav navbar-right">
-                  <li><a href="#header">Home</a> </li>
+                  <li><a href="#header">Home</a></li>
                   <li><a href="#services">services</a></li>
                   <li><a href="#events">events</a></li>
                   <li><a href="#team">team</a></li>
@@ -97,45 +98,8 @@ class Homepage extends Component {
                   <li><a href="#contact">contact</a></li>
                    
                   {this.renderLinks()}
-                  
-
-              <a href="#" className="navbar-brand">
-                Foster The Future
-              </a>
-            </div>
-            <div className="navbar-collapse collapse">
-              <ul className="nav navbar-nav navbar-right">
-                <li>
-                  <a href="#header">Home</a>
-                </li>
-                <li>
-                  <a href="#services">services</a>
-                </li>
-                <li>
-                  <a href="#events">events</a>
-                </li>
-                <li>
-                  <a href="#team">team</a>
-                </li>
-                <li>
-                  <a href="#partners">partners</a>
-                </li>
-                <li>
-                  <a href="#contact">contact</a>
-                </li>
-                <li>
-                  <button className="btn btn-lg btn-primary">Register</button>
-                </li>
-                <li>
-                  <button className="btn btn-lg btn-primary">Login</button>
-                </li>
-              </ul>
-              <ul className="nav navbar-nav navbar-right">
-                {this.renderLinks()}
-              </ul>
-            <ul className="nav navbar-nav navbar-right">
-              
-            </ul>
+             </ul>
+           
           </div>
       </div>
   </div>
