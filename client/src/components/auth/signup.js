@@ -16,6 +16,7 @@ class Signup extends Component {
       password: "",
       confirmPassword: ""
     };
+
   }
 
   static contextTypes = {
@@ -298,6 +299,18 @@ function validate(formProps) {
   if (!formProps) {
     errors.phoneNumber = "Please enter your Phone Number";
   }
+
+  if(!formProps.firstName) {
+    errors.firstName= 'Please enter your First Name';
+  };
+  
+  if(!formProps.lastName) {
+    errors.lastName= 'Please enter your Last Name'
+  };
+
+  if(!formProps) {
+    errors.phoneNumber= 'Please enter your Phone Number'
+  };
 
   if (!formProps.email) {
     errors.email = "Please enter an email";
