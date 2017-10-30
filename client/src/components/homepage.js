@@ -70,7 +70,6 @@ class Homepage extends Component {
       /* NAVBAR */
 
       <div>
-<<<<<<< HEAD
       <div id="myNavbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
       <div className="container">
           <div className="navbar-header">
@@ -150,123 +149,8 @@ class Homepage extends Component {
       </div>
   </div>
 </div>
-=======
-        <div
-          id="myNavbar"
-          className="navbar navbar-default navbar-fixed-top"
-          role="navigation"
-        >
-          <div className="container">
-            <div className="navbar-header">
-              <button
-                type="button"
-                className="navbar-toggle"
-                data-toggle="collapse"
-                data-target=".navbar-collapse"
-              >
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-              </button>
-              <a href="#" className="navbar-brand">
-                Foster The Future
-              </a>
-            </div>
 
-            <div className="navbar-collapse collapse">
-              <ul className="nav navbar-nav navbar-right">
-                <li>
-                  <a href="#header">Home</a>
-                </li>
-                <li>
-                  <a href="#services">services</a>
-                </li>
-                <li>
-                  <a href="#events">events</a>
-                </li>
-                <li>
-                  <a href="#team">team</a>
-                </li>
-                <li>
-                  <a href="#partners">partners</a>
-                </li>
-                <li>
-                  <a href="#contact">contact</a>
-                </li>
->>>>>>> master
-
-                {this.renderLinks()}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-         <div id="header" className="header">
-          <div class="container">
-            <div className="row">
-              <div className="col-lg-6 col-md-6">
-                <h1>Bringing kids hope!</h1>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesettin industry.<br />
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s,<br />
-                  when an unknown printer took a galley of type and scrambled it
-                  to make a type<br />
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged.{" "}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="services" className="services">
-          <div className="container">
-            <h2>Our Services</h2>
-            <p>
-              Lorem Ipsum is simply dummy rext of the printing and typesetting
-              dummy text
-            </p>
-            <div className="row">
-              <div className="col-lg-3 col-md-3">
-                <i className="fa fa-desktop" aria-hidden="true" />
-                <h4>Service 1</h4>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <i className="fa fa-users" aria-hidden="true" />
-                <h4>Service 2</h4>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <i className="fa fa-calendar" aria-hidden="true" />
-                <h4>Service 3</h4>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <i className="fa fa-cog" aria-hidden="true" />
-                <h4>Service 4</h4>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="events" className="events">
+      <div id="events" className="events">
           <div className="container">
             <div className="row">
               <h2>Up Coming Events</h2>
@@ -355,10 +239,6 @@ class Homepage extends Component {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-    </div>
-  </div>
-</div>
 
 <div id="team" className="team">
 <div className="container">
@@ -424,152 +304,28 @@ class Homepage extends Component {
     
 </div>
 </div>
-=======
->>>>>>> master
 
-        <div id="team" className="team">
-          <div className="container">
-            <div className="row">
-              <h2>Meet The Team</h2>
-              <p>
-                Lorem Ipsum is simply dummy rext of the printing and typesetting
-                dummy text
-              </p>
-              <div className="col-lg-3 col-md-3">
-                <img
-                  src="../images/team/team-1.jpg"
-                  className="img-circle"
-                  alt=""
-                />
-                <h4>John Doe</h4>
-                <b>CEO and Founder</b>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-                <a href="#">
-                  <i className="fa fa-facebook" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-twitter" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-instagram" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-linkedin" aria-hidden="true" />
-                </a>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <img
-                  src="../images/team/team-2.jpg"
-                  className="img-circle"
-                  alt=""
-                />
-                <h4>John Doe</h4>
-                <b>CEO and Founder</b>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-                <a href="#">
-                  <i className="fa fa-facebook" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-twitter" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-instagram" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-linkedin" aria-hidden="true" />
-                </a>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <img
-                  src="../images/team/team-3.jpg"
-                  className="img-circle"
-                  alt=""
-                />
-                <h4>John Doe</h4>
-                <b>CEO and Founder</b>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-                <a href="#">
-                  <i className="fa fa-facebook" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-twitter" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-instagram" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-linkedin" aria-hidden="true" />
-                </a>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <img
-                  src="../images/team/team-4.jpg"
-                  className="img-circle"
-                  alt=""
-                />
-                <h4>John Doe</h4>
-                <b>CEO and Founder</b>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-                <a href="#">
-                  <i className="fa fa-facebook" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-twitter" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-instagram" aria-hidden="true" />
-                </a>
-                <a href="#">
-                  <i className="fa fa-linkedin" aria-hidden="true" />
-                </a>
-              </div>
-            </div>
-          </div>
+<div id="partners" className="partners">
+<div className="container">
+    <div className="row">
+        <h2>Our Partners</h2>
+        <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+        <div className="col-lg-3 col-md-3">
+        <li><img src="images/clients/client1.png" alt=""/></li>
         </div>
-
-        <div id="partners" className="partners">
-          <div className="container">
-            <div className="row">
-              <h2>Our Partners</h2>
-              <p>
-                Lorem Ipsum is simply dummy rext of the printing and typesetting
-                dummy text
-              </p>
-              <div className="col-lg-3 col-md-3">
-                <li>
-                  <img src="images/clients/client1.png" alt="" />
-                </li>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <li>
-                  <img src="images/clients/client2.png" alt="" />
-                </li>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <li>
-                  <img src="images/clients/client3.png" alt="" />
-                </li>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <li>
-                  <img src="images/clients/client4.png" alt="" />
-                </li>
-              </div>
-            </div>
-          </div>
+        <div className="col-lg-3 col-md-3">
+        <li><img src="images/clients/client2.png" alt=""/></li>
         </div>
+        <div className="col-lg-3 col-md-3">
+        <li><img src="images/clients/client3.png" alt=""/></li>
+        </div>
+        <div className="col-lg-3 col-md-3">
+        <li><img src="images/clients/client4.png" alt=""/></li>
+        </div>    
+    </div>
+</div>
+<button id="volunteerbtn" className="btn btn-md btn-primary">More info</button>  
+</div>
 
         <div id="contact" className="contact">
           <div className="container">
