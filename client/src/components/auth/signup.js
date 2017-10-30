@@ -9,8 +9,12 @@ class Signup extends Component {
     super(props);
 
     this.state = {
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
       email: '',
-      password: ''
+      password: '',
+      confirmPassword: ''
     }
   }
 
@@ -71,7 +75,7 @@ class Signup extends Component {
   };
 
   render () {
-    const { handleSubmit, fields: { email, password, passwordConfirm }} = this.props;
+    const { handleSubmit, fields: {firstName, lastName, phoneNumber, email, password, passwordConfirm }} = this.props;
     return (
       <div>
       <nav className="navbar navbar-default">
@@ -99,6 +103,18 @@ class Signup extends Component {
     </nav>
       <div className="tg-login__wrapper">
       <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+      <fieldset className='form-group'>
+        <label>First Name</label>
+        <input className='form-control' {...firstName} placeholder='Enter First Name'/>
+        </fieldset>
+        <fieldset className='form-group'>
+          <label>Last Name</label>
+          <input className='form-control' {...lastName} placeholder='Enter Last Name'/>
+          </fieldset>
+          <fieldset className='from-group'>
+            <label>Phone Number</label>
+            <input className='form-control' {...phoneNumber} placeholder='Enter Phone Number'/>
+            </fieldset>
         <fieldset className='form-group'>
           <label>Email:</label>
           <input className='form-control' {...email} placeholder='Enter email' />
@@ -115,16 +131,31 @@ class Signup extends Component {
           {passwordConfirm.touched && passwordConfirm.error && <div className='error'>{passwordConfirm.error}</div>}          
         </fieldset>
         {this.renderAlert()}
+        <button action='submit' className='btn btn-primary'>Upload Photo!</button>
         <button action='submit' className='btn btn-primary'>Sign up!</button>
+
       </form>
       </div>
       </div>
+      
     )
   }
 };
 
 function validate (formProps) {
   const errors = {};
+
+  if(!formProps.firstName) {
+    errors.firstName= 'Please enter your First Name';
+  };
+  
+  if(!formProps.lastName) {
+    errors.lastName= 'Please enter your Last Name'
+  };
+
+  if(!formProps) {
+    errors.phoneNumber= 'Please enter your Phone Number'
+  };
 
   if (!formProps.email) {
     errors.email = 'Please enter an email';
@@ -151,6 +182,6 @@ function mapStateToProps (state) {
 
 export default reduxForm({
   form: 'signup',
-  fields: ['email', 'password', 'passwordConfirm'],
+  fields: ['firstName', 'lastName', 'phoneNumber','email', 'password', 'passwordConfirm'],
   validate
 }, mapStateToProps, actions)(Signup);
