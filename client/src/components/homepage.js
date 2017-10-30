@@ -9,12 +9,12 @@ import "../css/style.css";
 import fontAwesome from "react-fontawesome";
 //import BigCalendar from "react-big-calendar";
 import mycalendar from "./calendar";
-import { Grid, Row, Col } from 'react-bootstrap';
-import team1 from '../images/team/team-1.jpg';
-import team2 from '../images/team/team-2.jpg';
-import team3 from '../images/team/team-3.jpg';
-import team4 from '../images/team/team-4.jpg';
-import team5 from '../images/team/team-5.jpg';
+import { Grid, Row, Col } from "react-bootstrap";
+import team1 from "../images/team/team-1.jpg";
+import team2 from "../images/team/team-2.jpg";
+import team3 from "../images/team/team-3.jpg";
+import team4 from "../images/team/team-4.jpg";
+import team5 from "../images/team/team-5.jpg";
 
 class Homepage extends Component {
   static contextTypes = {
@@ -47,7 +47,12 @@ class Homepage extends Component {
       // show a link for user to Sign In or Sign Up
       return [
         <li className="nav-item">
-          <Link id="navLink" className="btn btn-lg btn-primary" to="/signin" key={1}>
+          <Link
+            id="navLink"
+            className="btn btn-lg btn-primary"
+            to="/signin"
+            key={1}
+          >
             Sign In
           </Link>
         </li>,
@@ -62,7 +67,6 @@ class Homepage extends Component {
 
   render() {
     return (
-
       /* NAVBAR */
 
       <div>
@@ -83,94 +87,96 @@ class Homepage extends Component {
                 <span className="icon-bar" />
                 <span className="icon-bar" />
               </button>
-              <a href="#" className="navbar-brand">Foster The Future</a>
-              
-          </div>
-          
-          <div className="navbar-collapse collapse">
-          
+              <a href="#" className="navbar-brand">
+                Foster The Future
+              </a>
+            </div>
+
+            <div className="navbar-collapse collapse">
               <ul className="nav navbar-nav navbar-right">
-                  <li><a href="#header">Home</a></li>
-                  <li><a href="#services">services</a></li>
-                  <li><a href="#events">events</a></li>
-                  <li><a href="#team">team</a></li>
-                  <li><a href="#partners">partners</a></li>
-                  <li><a href="#contact">contact</a></li>
-                   
-                  {this.renderLinks()}
-             </ul>
-           
+                <li>
+                  <a href="#header">Home</a>
+                </li>
+                <li>
+                  <a href="#services">services</a>
+                </li>
+                <li>
+                  <a href="#events">events</a>
+                </li>
+                <li>
+                  <a href="#team">team</a>
+                </li>
+                <li>
+                  <a href="#partners">partners</a>
+                </li>
+                <li>
+                  <a href="#contact">contact</a>
+                </li>
+
+                {this.renderLinks()}
+              </ul>
+            </div>
           </div>
-      </div>
-  </div>
+        </div>
 
-  <div id="header" className="header">
-  <div class="container">
-      <div className="row">
-      <div className="col-lg-6 col-md-6">
-          <h1>Bringing kids hope!</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book.</p>
-          <button className="btn btn-lg btn-primary">About Us</button>
-                         
-      </div>
-      
-      </div>
-  </div>
-</div>
-             
-
-
-  <div id="services" className="services">
-  <div className="container">
-      <h2>Our Services</h2>
-      <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-      <div className="row">
-          <div className="col-lg-3 col-md-3">
-              <i className="fa fa-desktop" aria-hidden="true"></i>
-              <h4>Service 1</h4>
-              <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+        <div id="header" className="header">
+          <div class="container">
+            <div className="row">
+              <div className="col-lg-6 col-md-6">
+                <h1>Bringing kids hope!</h1>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesettin industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+                <button className="btn btn-lg btn-primary">About Us</button>
+              </div>
+            </div>
           </div>
-          <div className="col-lg-3 col-md-3">
-              <i className="fa fa-users" aria-hidden="true"></i>
-              <h4>Service 2</h4>
-              <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-      </div>
-          <div className="col-lg-3 col-md-3">
-              <i className="fa fa-calendar" aria-hidden="true"></i>
-              <h4>Service 3</h4>
-              <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-          </div>
-          <div className="col-lg-3 col-md-3">
-              <i className="fa fa-cog" aria-hidden="true"></i>
-              <h4>Service 4</h4>
-              <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p> 
-          </div>                
-      </div>
-  </div>
-</div>
+        </div>
 
-<div id="events" className="events">
-<div className="container">
-    <div className="row">
-        <h2>Up Coming Events</h2>
-        <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-        <div className="col-lg-3 col-md-3">
-            <div className="columns">
-                <h4>Events</h4>
-                <h1>Title</h1>
-                <b></b>
-                <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-                <hr/>
-                <li>Dummy list goes here</li>
-                <li>Dummy list goes here</li>
-                <li>Dummy list goes here</li>
-                <li>Dummy list goes here</li>
-                <li>Dummy list goes here</li>
-                <li>Dummy list goes here</li>
-                <button className="btn btn-md btn-primary">More info</button>
+        <div id="services" className="services">
+          <div className="container">
+            <h2>Our Services</h2>
+            <p>
+              Lorem Ipsum is simply dummy rext of the printing and typesetting
+              dummy text
+            </p>
+            <div className="row">
+              <div className="col-lg-3 col-md-3">
+                <i className="fa fa-desktop" aria-hidden="true" />
+                <h4>Service 1</h4>
+                <p>
+                  Lorem Ipsum is simply dummy rext of the printing and
+                  typesetting dummy text
+                </p>
+              </div>
+              <div className="col-lg-3 col-md-3">
+                <i className="fa fa-users" aria-hidden="true" />
+                <h4>Service 2</h4>
+                <p>
+                  Lorem Ipsum is simply dummy rext of the printing and
+                  typesetting dummy text
+                </p>
+              </div>
+              <div className="col-lg-3 col-md-3">
+                <i className="fa fa-calendar" aria-hidden="true" />
+                <h4>Service 3</h4>
+                <p>
+                  Lorem Ipsum is simply dummy rext of the printing and
+                  typesetting dummy text
+                </p>
+              </div>
+              <div className="col-lg-3 col-md-3">
+                <i className="fa fa-cog" aria-hidden="true" />
+                <h4>Service 4</h4>
+                <p>
+                  Lorem Ipsum is simply dummy rext of the printing and
+                  typesetting dummy text
+                </p>
+              </div>
             </div>
           </div>
         </div>
