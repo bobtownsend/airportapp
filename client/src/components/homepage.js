@@ -66,23 +66,18 @@ class Homepage extends Component {
       /* NAVBAR */
 
       <div>
-        <div
-          id="myNavbar"
-          className="navbar navbar-default navbar-fixed-top"
-          role="navigation"
-        >
-          <div className="container">
-            <div className="navbar-header">
-              <button
-                type="button"
-                className="navbar-toggle"
-                data-toggle="collapse"
-                data-target=".navbar-collapse"
-              >
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-                <span className="icon-bar" />
+
+      <div id="myNavbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div className="container">
+          <div className="navbar-header">
+              
+             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+
               </button>
+              
               <a href="#" className="navbar-brand">Foster The Future</a>
               
           </div>
@@ -104,6 +99,7 @@ class Homepage extends Component {
       </div>
   </div>
 
+  
   <div id="header" className="header">
   <div class="container">
       <div className="row">
@@ -117,14 +113,14 @@ class Homepage extends Component {
                          
       </div>
       
-      </div>
+    </div>
   </div>
 </div>
              
 
 
-  <div id="services" className="services">
-  <div className="container">
+<div id="services" className="services">
+ <div className="container">
       <h2>Our Services</h2>
       <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
       <div className="row">
@@ -329,6 +325,10 @@ class Homepage extends Component {
             </div>
           </div>
         </div>
+    </div>
+  </div>
+</div>
+
 
         <div id="team" className="team">
           <div className="container">
