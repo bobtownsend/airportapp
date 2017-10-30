@@ -119,69 +119,7 @@ class Homepage extends Component {
           </div>
         </div>
 
-        <div id="header" className="header">
-          <div class="container">
-            <div className="row">
-              <div className="col-lg-6 col-md-6">
-                <h1>Bringing kids hope!</h1>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesettin industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
-                </p>
-                <button className="btn btn-lg btn-primary">About Us</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="services" className="services">
-          <div className="container">
-            <h2>Our Services</h2>
-            <p>
-              Lorem Ipsum is simply dummy rext of the printing and typesetting
-              dummy text
-            </p>
-            <div className="row">
-              <div className="col-lg-3 col-md-3">
-                <i className="fa fa-desktop" aria-hidden="true" />
-                <h4>Service 1</h4>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <i className="fa fa-users" aria-hidden="true" />
-                <h4>Service 2</h4>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <i className="fa fa-calendar" aria-hidden="true" />
-                <h4>Service 3</h4>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-              </div>
-              <div className="col-lg-3 col-md-3">
-                <i className="fa fa-cog" aria-hidden="true" />
-                <h4>Service 4</h4>
-                <p>
-                  Lorem Ipsum is simply dummy rext of the printing and
-                  typesetting dummy text
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="header" className="header">
+         <div id="header" className="header">
           <div class="container">
             <div className="row">
               <div className="col-lg-6 col-md-6">
