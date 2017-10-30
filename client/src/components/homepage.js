@@ -61,7 +61,7 @@ class Homepage extends Component {
   render() {
     return (
 
-      /*NAVBAR*/
+      /* NAVBAR */
 
       <div>
       <div id="myNavbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -82,7 +82,7 @@ class Homepage extends Component {
           <div className="navbar-collapse collapse">
           
               <ul className="nav navbar-nav navbar-right">
-                  <li><a href="#header">Home</a> </li>
+                  <li><a href="#header">Home</a></li>
                   <li><a href="#services">services</a></li>
                   <li><a href="#events">events</a></li>
                   <li><a href="#team">team</a></li>
@@ -90,13 +90,8 @@ class Homepage extends Component {
                   <li><a href="#contact">contact</a></li>
                    
                   {this.renderLinks()}
-                  
-
-                  
-              </ul>
-            <ul className="nav navbar-nav navbar-right">
-              
-            </ul>
+             </ul>
+           
           </div>
       </div>
   </div>
