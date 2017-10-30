@@ -63,44 +63,58 @@ class Signup extends Component {
     } else {
       // show a link for user to Sign In or Sign Up
       return [
-        <li className='nav-item'>
-          <Link className='btn btn-default tg-login__btn' to='/signin' key={1}>Sign In</Link>
-        </li>
-        ,
-        <li className='nav-item' key={2}>
-          <Link className='btn btn-default tg-login__btn' to='/signup'>Sign Up</Link>
-        </li>
-      ];
-    }
-  };
+        <li className="nav-item">
+        <Link id="navLink" className="btn btn-lg btn-primary" to="/signin" key={1}>
+          Sign In
+        </Link>
+      </li>,
+      <li className="nav-item" key={2}>
+        <Link id="navLink" className="btn btn-lg btn-primary" to="/signup">
+          Sign Up
+        </Link>
+      </li>
+    ];
+  }
+}
 
   render () {
     const { handleSubmit, fields: {firstName, lastName, phoneNumber, email, password, passwordConfirm }} = this.props;
     return (
+   <div>
       <div>
-      <nav className="navbar navbar-default">
-      <div className="container-fluid">
-        <div className="navbar-header">
-          <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span className="sr-only">Toggle navigation</span>
-            <span className="icon-bar"></span>
-          </button>
-          <a className="navbar-brand" href="#">
-          <strong>App Name Here</strong></a>
-        </div>
-        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul className="nav navbar-nav">
-            <li className="active"><a href="/">Home <span className="sr-only">(current)</span></a></li>
-            <li><a href="#">Tab 2</a></li>
-            <li><a href="#">Tab 3</a></li>
-
-          </ul>
-          <ul className="nav navbar-nav navbar-right">
-            {this.renderLinks()}
-          </ul>
-        </div>
+      <div id="myNavbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div className="container">
+          <div className="navbar-header">
+              
+             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+              </button>
+              
+              <a href="#" className="navbar-brand">Foster The Future</a>
+              
+          </div>
+          
+          <div className="navbar-collapse collapse">
+          
+              <ul className="nav navbar-nav navbar-right">
+                  <li><a href="#header">Home</a></li>
+                  <li><a href="#services">services</a></li>
+                  <li><a href="#events">events</a></li>
+                  <li><a href="#team">team</a></li>
+                  <li><a href="#partners">partners</a></li>
+                  <li><a href="#contact">contact</a></li>
+                   
+                  {this.renderLinks()}
+             </ul>
+           
+          </div>
       </div>
-    </nav>
+  </div>
+  </div>
+
+
       <div className="tg-login__wrapper">
       <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
       <fieldset className='form-group'>
@@ -136,12 +150,49 @@ class Signup extends Component {
 
       </form>
       </div>
-      </div>
-      
-    )
-  }
-};
+      <br/>
 
+  
+  
+<div>
+<footer>
+<div className="footer" className="footer">
+<div className="container">
+    <div className="row">
+        <div className="col-lg-4 col-md-4">
+            <h4>Contact Us</h4>
+            <p><i className="fa fa-home" aria-hidden="true"></i> 8444 N. 90th St. #110 Scottsdale, AZ 85258</p>
+            <p><i className="fa fa-envelope" aria-hidden="true"></i> info@codercamps.com</p>
+            <p><i className="fa fa-phone" aria-hidden="true"></i>  +1 855 755 2267</p>
+            <p><i className="fa fa-globe" aria-hidden="true"></i>  www.codercamps.com</p>
+        </div>
+        <div className="col-lg-4 col-md-4">
+            <h4>About</h4>
+            <p><i className="fa fa-square-o" aria-hidden="true"></i> About Us</p>
+            <p><i className="fa fa-square-o" aria-hidden="true"></i> Privacy</p>
+            <p><i className="fa fa-square-o" aria-hidden="true"></i> Term & Conditions</p>
+        </div>
+        <div className="col-lg-4 col-md-4">
+           <h4>Stay In Touch</h4>
+           <i className="fa fa-facebook" aria-hidden="true"></i>
+           <i className="social fa fa-twitter" aria-hidden="true"></i>
+           <i className="social fa fa-instagram" aria-hidden="true"></i>
+           <i className="social fa fa-linkedin" aria-hidden="true"></i>
+           <i className="social fa fa-youtube" aria-hidden="true"></i>
+           <i className="social fa fa-github" aria-hidden="true"></i><br/>
+           <input type="email" placeholder="Subsribe For Updates"/><button className="btn btn-md btn-primary">Subscribe</button>
+        </div>
+    </div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+
+    )}
+
+};
 function validate (formProps) {
   const errors = {};
 
