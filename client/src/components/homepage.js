@@ -226,54 +226,62 @@ class Homepage extends Component {
         <Col sm={6} md={4}><br />
             <img src={team1} className="img-circle" alt=""/>
             <h4>Ray Roman</h4>
-            <b>CEO and Founder</b>
+            <b>Front End</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-            <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/rayroman0809"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/rayroman0809"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/rayroman0809/?hl=en"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/ray-roman-b9856123/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/rayroman0809"><i className="fa fa-github" aria-hidden="true"></i></a>
         </Col>
         <Col sm={6} md={4}><br />
             <img src={team2} className="img-circle" alt=""/>
             <h4>Krysta Jones</h4>
-            <b>CEO and Founder</b>
+            <b>Front End</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
             <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
         </Col>
         <Col sm={6} md={4}><br />
             <img src={team3} className="img-circle" alt=""/>
             <h4>Lovie Bates</h4>
-            <b>CEO and Founder</b>
+            <b>Front End</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
             <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
+            
         </Col>
         </Row>
         <Row>
         <Col sm={6} md={4} mdOffset={2}><br />
             <img src={team4} className="img-circle" alt=""/>
             <h4>Tyler Miller</h4>
-            <b>CEO and Founder</b>
+            <b>Back End</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
             <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
+            
         </Col>
         <Col sm={6} md={4}><br />
             <img src={team5} className="img-circle" alt=""/>
             <h4>Adrian Hingson</h4>
-            <b>CEO and Founder</b>
+            <b>Back End</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
             <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
+            
         </Col>
         </Row>
      
@@ -354,13 +362,13 @@ class Homepage extends Component {
                 </div>
                 <div className="col-lg-4 col-md-4">
                    <h4>Stay In Touch</h4>
-                   <i className="fa fa-facebook" aria-hidden="true"></i>
+                   <i className="social fa fa-facebook" aria-hidden="true"></i>
                    <i className="social fa fa-twitter" aria-hidden="true"></i>
                    <i className="social fa fa-instagram" aria-hidden="true"></i>
                    <i className="social fa fa-linkedin" aria-hidden="true"></i>
                    <i className="social fa fa-youtube" aria-hidden="true"></i>
                    <i className="social fa fa-github" aria-hidden="true"></i><br/>
-                   <input type="email" placeholder="Subsribe For Updates"/><button className="btn btn-md btn-primary">Subscribe</button>
+                   <input type="email" placeholder="      Subsribe For Updates"/><button className="btn btn-md btn-primary">Subscribe</button>
                 </div>
             </div>
         </div>
