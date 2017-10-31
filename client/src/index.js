@@ -7,6 +7,7 @@ import App from './components/app';
 import reducers from './reducers';
 import { AUTH_USER} from './actions/types';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import 'font-awesome/css/font-awesome.min.css';
 
 const store = createStore(reducers, composeWithDevTools(
   applyMiddleware(reduxThunk)

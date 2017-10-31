@@ -5,6 +5,7 @@
     "all-the-cities": "^2.0.0",
     "axios": "^0.16.2",
     "bower": "^1.8.2",
+    "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",
     "google-maps-react": "^1.1.0",
     "gulp": "^3.9.1",

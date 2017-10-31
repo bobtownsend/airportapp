@@ -268,9 +268,9 @@ p {
 .team i {
 
     height: 30px;
-    width: 50px;
-    padding: 15px;
-    font-size: 5px;
+    width: 30px;
+    padding: 5px;
+    font-size: 20px;
     margin: 1%;
     border-radius: 50%;
     background-color: #428bca;
@@ -279,7 +279,7 @@ p {
 
 .team a:hover i {
 
-    background-color: #709963;
+    background-color: #000000;
 }
 
 
@@ -389,8 +389,8 @@ p {
 .footer .social {
 
     font-size: 20px;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     text-align: center;
     padding: 10px;
     border: 1px solid #cccccc;
@@ -398,10 +398,17 @@ p {
     margin-right: 12px;
 }
 
+.footer .social:hover {
+    
+        background-color: #428bca !important;
+        color: #fff !important;
+    }
+
+
 .footer input {
 
     height: 40px;
-    width: 160px;
+    width: 200px;
     padding: 5px;
     border: none;
     color: #000;
