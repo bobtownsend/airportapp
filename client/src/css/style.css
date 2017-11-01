@@ -390,7 +390,7 @@ p {
 
     font-size: 20px;
     height: 40px;
-    width: 40px;
+    width: 35px;
     text-align: center;
     padding: 10px;
     border: 1px solid #cccccc;
@@ -408,8 +408,8 @@ p {
 .footer input {
 
     height: 40px;
-    width: 200px;
-    padding: 5px;
+    width: 175px;
+    padding: 3px;
     border: none;
     color: #000;
     margin-left: 0px;
@@ -420,6 +420,17 @@ p {
 
     padding: 10px 5px 10px;
     margin: -2px 0 0 5px;
+    border-radius: 0%;
+}
+
+.footer-signin {
+
+    margin-top: 0;
+}
+
+/*SIGNUP*/
+
+.sform-control {
     border-radius: 0%;
 }
 
