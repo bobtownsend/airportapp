@@ -81,7 +81,7 @@ class Homepage extends Component {
           <div className="navbar-collapse collapse">
           
               <ul className="nav navbar-nav navbar-right">
-                  <li><a href="#header">Home</a></li>
+                  
                   <li><a href="#services">services</a></li>
                   <li><a href="#events">events</a></li>
                   <li><a href="#team">team</a></li>
@@ -368,7 +368,7 @@ class Homepage extends Component {
                    <i className="social fa fa-linkedin" aria-hidden="true"></i>
                    <i className="social fa fa-youtube" aria-hidden="true"></i>
                    <i className="social fa fa-github" aria-hidden="true"></i><br/>
-                   <input type="email" placeholder="      Subsribe For Updates"/><button className="btn btn-md btn-primary">Subscribe</button>
+                   <input type="email" placeholder="    Subsribe For Updates"/><button className="btn btn-md btn-primary">Subscribe</button>
                 </div>
             </div>
         </div>
