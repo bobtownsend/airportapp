@@ -3,21 +3,26 @@ import { reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import * as actions from '../../actions';
 import PropTypes from 'prop-types';
+import ReactFilestack from 'filestack-react';
+import Test from './filestack.js';
+
 
 class Signup extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
+      firstName: '',
+      lastName:'',
+      phoneNumber:'',
       email: '',
-      password: ''
+      password: '',
+      passwordConfirm: ''
+
     }
   }
-
   static contextTypes = {
     router: PropTypes.object
   };
-
   componentWillUpdate(nextProps) {
     if (this.props.authenticated) {
       localStorage.setItem('userEmail', this.props.values.email);
@@ -72,9 +77,9 @@ class Signup extends Component {
     ];
   }
 }
-
   render () {
-    const { handleSubmit, fields: { email, password, passwordConfirm }} = this.props;
+    const { handleSubmit, fields: { firstName, lastName, phoneNumber, email, password, passwordConfirm }} = this.props;
+
     return (
    <div>
       <div>
@@ -109,10 +114,20 @@ class Signup extends Component {
       </div>
   </div>
   </div>
-
-
       <div className="tg-login__wrapper">
       <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+      <fieldset className='form-group'>
+        <label>First Name</label>
+        <input className='form-control' {...firstName} placeholder='Enter First Name'/>
+        </fieldset>
+        <fieldset className='form-group'>
+          <label>Last Name</label>
+          <input className='form-control' {...lastName} placeholder='Enter Last Name'/>
+          </fieldset>
+          <fieldset className='form-group'>
+            <label>Phone Number</label>
+            <input className='form-control' {...phoneNumber} placeholder='Enter Phone Number'/>
+            </fieldset>
         <fieldset className='form-group'>
           <label>Email:</label>
           <input className='form-control' {...email} placeholder='Enter email' />
@@ -130,6 +145,8 @@ class Signup extends Component {
         </fieldset>
         {this.renderAlert()}
         <button action='submit' className='btn btn-primary'>Sign up!</button>
+        <Test />
+        
       </form>
       <div id="footer-signin" className="footer" className="footer">
       <div className="container">
@@ -162,40 +179,26 @@ class Signup extends Component {
   </div>
       </div>
       </div>
-
       
-
-
-
-
+</div>
     )}
-
 };
-
-
-
 function validate (formProps) {
   const errors = {};
-
   if (!formProps.email) {
     errors.email = 'Please enter an email';
   };
-
   if (!formProps.password) {
     errors.password = 'Please enter a password';
   };
-
   if (!formProps.passwordConfirm) {
     errors.passwordConfirm = 'Please enter a password confirmation';
   };
-
   if (formProps.password !== formProps.passwordConfirm) {
     errors.password = 'Passwords must match';
   };
-
   return errors;
 }
-
 function mapStateToProps (state) {
   return { errorMessage: state.auth.error };
 };
