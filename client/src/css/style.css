@@ -149,20 +149,20 @@ p {
 
 /*SERVICES*/
 
-.services {
+.ourservices {
 
     padding: 40px 0 80px;
     text-align: center;
 }
 
-.sevices h2,
-.services h4 {
+.oursevices h2,
+.ourservices h4 {
 
     color: #4c4c4c;
     margin: 40px 0 20px;
 }
 
-.services p {
+.ourservices p {
 
     color: #737373;
     font-size: 14px;
@@ -170,16 +170,6 @@ p {
     text-align: center;
 }
 
-.services i {
-
-    height: 80px;
-    width: 80;
-    font-size: 30px;
-    padding: 25px 40px;
-    border-radius: 15%;
-    background-color: #428bca;
-    color: #fff;
-}
 
 /*EVENTS*/
 

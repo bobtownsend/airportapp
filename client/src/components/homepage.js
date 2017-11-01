@@ -82,7 +82,7 @@ class Homepage extends Component {
           
               <ul className="nav navbar-nav navbar-right">
                   
-                  <li><a href="#services">services</a></li>
+                  <li><a href="#ourservices">our services</a></li>
                   <li><a href="#events">events</a></li>
                   <li><a href="#team">team</a></li>
                   <li><a href="#partners">partners</a></li>
@@ -95,6 +95,7 @@ class Homepage extends Component {
       </div>
   </div>
 
+  
   
   <div id="header" className="header">
   <div class="container">
@@ -115,34 +116,15 @@ class Homepage extends Component {
              
 
 
-<div id="services" className="services">
+<div id="ourservices" className="ourservices">
  <div className="container">
       <h2>Our Services</h2>
       <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-      <div className="row">
-          <div className="col-lg-3 col-md-3">
-              <i className="fa fa-desktop" aria-hidden="true"></i>
-              <h4>Service 1</h4>
-              <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-          </div>
-          <div className="col-lg-3 col-md-3">
-              <i className="fa fa-users" aria-hidden="true"></i>
-              <h4>Service 2</h4>
-              <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-      </div>
-          <div className="col-lg-3 col-md-3">
-              <i className="fa fa-calendar" aria-hidden="true"></i>
-              <h4>Service 3</h4>
-              <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-          </div>
-          <div className="col-lg-3 col-md-3">
-              <i className="fa fa-cog" aria-hidden="true"></i>
-              <h4>Service 4</h4>
-              <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p> 
-          </div>                
-      </div>
+        <div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/V4w5R7_80G0" frameborder="0" allowfullscreen></iframe>
+        </div>
+     </div>
   </div>
-</div>
 
 <div id="events" className="events">
 <div className="container">
@@ -293,20 +275,22 @@ class Homepage extends Component {
 <div id="partners" className="partners">
 <div className="container">
     <div className="row">
+    <Row className='show-grid'>
         <h2>Our Partners</h2>
         <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
         <div className="col-lg-3 col-md-3">
-        <li><img src="images/clients/client1.png" alt=""/></li>
+        <li><img src='https://i.imgur.com/fe0T4nw.png' /></li>
         </div>
         <div className="col-lg-3 col-md-3">
-        <li><img src="images/clients/client2.png" alt=""/></li>
+        <li><img src='https://i.imgur.com/6onyRkH.png' /></li>
         </div>
         <div className="col-lg-3 col-md-3">
-        <li><img src="images/clients/client3.png" alt=""/></li>
+        <li><img src='https://i.imgur.com/P1ZhohF.png' /></li>
         </div>
         <div className="col-lg-3 col-md-3">
-        <li><img src="images/clients/client4.png" alt=""/></li>
+        <li><img src='https://i.imgur.com/grS3sEz.png' /></li>
         </div>    
+    </Row>
     </div>
 </div>
 <button id="volunteerbtn" className="btn btn-md btn-primary">More info</button>  
@@ -331,7 +315,7 @@ class Homepage extends Component {
             <div className="input-group input-group-lg">
                 <span className="input-group-addon" id="sizing-addon1"><i className="fa fa-phone" aria-hidden="true"></i>
                 </span>
-                <input type="text" className="form-control" aria-describedby="sizing-addon1" placeholder="Phone Number"/>
+                <input type="email" className="form-control" aria-describedby="sizing-addon1" placeholder="Phone Number"/>
             </div>
       </div>
         <div className="col-lg-6 col-md-6">
