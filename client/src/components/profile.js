@@ -66,19 +66,31 @@ class profile extends React.Component {
                   <li><a href="#team">team</a></li>
                   <li><a href="#partners">partners</a></li>
                   <li><a href="#contact">contact</a></li>
-                   
-                  {this.renderLinks()}
-             </ul>
+                   </ul>
+            
+            
+             
+           </div>
+           
            
           </div>
       </div>
+      <div>
+      {this.renderLinks()}
+      <form>
+      <h2 className="Name">Full Name</h2>
+      <input type="text" placeholder="name"/>
+      <h2 className="Email">Your email</h2>
+      <input type="text" placeholder="email"/>
+      <h2 className="PhoneNumber">Your Phone Number</h2>
+      <input type="text" placeholder="phonenumber"/>
+      <button action= "SUBMIT" className ="btn btn-primary">submit </button>
+      </form>
+      </div>
   </div>
-      <div className="Profile">
-        <h1 className="Name">Awsome Profile Page</h1>
-        <h2 className="Email">AWSOMEAT@GMAIL.COM</h2>
-        <h3 className="PhoneNumber">555-555-5555</h3>
-      </div>
-      </div>
+    
+  
+  
     );
   }
 }
