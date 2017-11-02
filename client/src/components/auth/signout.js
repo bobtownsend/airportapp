@@ -11,7 +11,12 @@ class Signout extends Component {
   componentWillMount () {
     this.props.signoutUser();
     this.context.router.history.push('/');
+
+
+    
   }
 };
 
 export default connect(null, actions)(Signout);
+
+
