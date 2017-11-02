@@ -27,8 +27,8 @@ class Homepage extends Component {
 
   render() {
     return (
-
-      <div>
+      
+        <div>
   
   
   <div id="header" className="header">
@@ -48,7 +48,6 @@ class Homepage extends Component {
   </div>
 </div>
              
-
 
 <div id="ourservices" className="ourservices">
  <div className="container">
