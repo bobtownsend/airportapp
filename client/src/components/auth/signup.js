@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import React, { Component } from 'react';
+import { reduxForm } from 'redux-form';
+import { Link } from 'react-router-dom';
+import * as actions from '../../actions';
+import PropTypes from 'prop-types';
+import ReactFilestack from 'filestack-react';
+import Test from '../filestack.js';
+=======
 import React, { Component } from "react";
 import { reduxForm } from "redux-form";
 import { Link } from "react-router-dom";
@@ -5,6 +14,7 @@ import * as actions from "../../actions";
 import PropTypes from "prop-types";
 import ReactFilestack from "filestack-react";
 import Test from "../filestack.js";
+>>>>>>> master
 
 class Signup extends Component {
   constructor(props) {
@@ -114,6 +124,34 @@ class Signup extends Component {
           </fieldset>
           <fieldset className="form-group">
             <label>Phone Number</label>
+<<<<<<< HEAD
+            <input className='form-control' {...phoneNumber} placeholder='Enter Phone Number'/>
+            </fieldset>
+        <fieldset className='form-group'>
+          <label>Email:</label>
+          <input className='form-control' {...email} placeholder='Enter email' />
+          {email.touched && email.error && <div className='error'>{email.error}</div>}        
+        </fieldset>
+        <fieldset className='form-group'>
+          <label>Password:</label>
+          <input className='form-control' {...password} type='password' placeholder='Enter password' />
+          {password.touched && password.error && <div className='error'>{password.error}</div>}
+        </fieldset>
+        <fieldset className='form-group'>
+          <label>Confirm Password:</label>
+          <input className='form-control' {...passwordConfirm} type='password' placeholder='Enter password again' />
+          {passwordConfirm.touched && passwordConfirm.error && <div className='error'>{passwordConfirm.error}</div>}          
+        </fieldset>
+        {this.renderAlert()}
+        
+      );
+      <Test />
+      {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
+      <button action='submit' className='btn btn-primary'>Sign up!</button>
+        
+        
+      </form>
+=======
             <input
               className="form-control"
               {...phoneNumber}
@@ -160,6 +198,7 @@ class Signup extends Component {
           </button>
           <Test />
         </form>
+>>>>>>> master
       </div>
     );
   }

@@ -17,6 +17,7 @@ class mycalendar extends Component {
         views={allViews}
         step={60}
         defaultDate={new Date(2017, 9, 27)}
+        style={{ height: "60vh" }}
       />
     );
   }
