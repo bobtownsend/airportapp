@@ -42,43 +42,13 @@ class profile extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <div>
-      <div id="myNavbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div className="container">
-          <div className="navbar-header">
-              
-             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-              </button>
-              
-              <a href="#" className="navbar-brand">Foster The Future</a>
-              
-          </div>
-          
-          <div className="navbar-collapse collapse">
-          
-              <ul className="nav navbar-nav navbar-right">
-                  <li><a href="#header">Home</a></li>
-                  <li><a href="#services">services</a></li>
-                  <li><a href="#events">events</a></li>
-                  <li><a href="#team">team</a></li>
-                  <li><a href="#partners">partners</a></li>
-                  <li><a href="#contact">contact</a></li>
-                   
-                  {this.renderLinks()}
-             </ul>
-           
-          </div>
-      </div>
-  </div>
+     
       <div className="Profile">
         <h1 className="Name">Awsome Profile Page</h1>
         <h2 className="Email">AWSOMEAT@GMAIL.COM</h2>
         <h3 className="PhoneNumber">555-555-5555</h3>
       </div>
-      </div>
+      
     );
   }
 }

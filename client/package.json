@@ -25,7 +25,7 @@
     "react-html5video": "^2.3.0",
     "react-icons": "^2.2.7",
     "react-redux": "^5.0.6",
-    "react-router": "^4.1.2",
+    "react-router": "^4.2.0",
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.13",
     "redux": "^3.7.2",
