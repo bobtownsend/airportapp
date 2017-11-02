@@ -139,8 +139,12 @@ class Signup extends Component {
           {passwordConfirm.touched && passwordConfirm.error && <div className='error'>{passwordConfirm.error}</div>}          
         </fieldset>
         {this.renderAlert()}
-        <button action='submit' className='btn btn-primary'>Sign up!</button>
-        <Test />
+        
+      );
+      <Test />
+      {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
+      <button action='submit' className='btn btn-primary'>Sign up!</button>
+        
         
       </form>
       </div>

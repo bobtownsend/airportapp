@@ -6,25 +6,28 @@ export default class Test extends React.Component {
     super(props);
   }
 
-  onUpload() {
-    console.log("Document Uploaded Successfully");
-    return <h2>Document Uploaded sccessfully</h2>;
+  onUpload(result) {
+    this.setState({ uploadedFiles: result.filesUploaded});
+    console.log(result.filesUploaded[0]);
   }
 
   render() {
     const options = {
+      accept: "link(url)",
       accept: ["image/*"],
-      minFiles:1,
       maxFiles: 1,
+      minFiles:1,
+      maxSize:150 *150,
       storeTo: {
         location: "s3"
       }
     };
+
     return (
       <div>
         <ReactFilestack
-          apikey={"AVVEHpNSEGUPUuMss6c3gz"}
-          buttonText="Upload Photo!"
+          apikey={"AFADgP4mQICNxkczq4zSpz"}
+          buttonText="Upload Photo"
           buttonClass="classname"
           options={options}
           onSuccess={this.onUpload}
@@ -33,3 +36,4 @@ export default class Test extends React.Component {
     );
   }
 }
+  
