@@ -23,25 +23,23 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-    <Router>
-      <div>
-      <Navbar>{Navbar}</Navbar>
-        <div>
-          <Route exact path="/" component={Homepage} />
-          <Route path="/signin" component={Signin} />
-          <Route path="/profile" component={profile} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/signout" component={Signout} />
-          <Route path="/calendar" component={mycalendar} />
-          <Route path="/profile" component={profile} />
+        <Router>
+          <div>
+            <Navbar>{Navbar}</Navbar>
+            <div>
+              <Route exact path="/" component={Homepage} />
+              <Route path="/signin" component={Signin} />
+              <Route path="/profile" component={profile} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/signout" component={Signout} />
+              <Route path="/calendar" component={mycalendar} />
+              <Route path="/profile" component={profile} />
 
-          <Route path="/feature" component={RequireAuth(Feature)} />
-        </div>
-        <Footer>{Footer}</Footer>
-      </div>
-      
-    </Router>
-      
+              <Route path="/feature" component={RequireAuth(Feature)} />
+            </div>
+            <Footer>{Footer}</Footer>
+          </div>
+        </Router>
       </div>
     );
   }
