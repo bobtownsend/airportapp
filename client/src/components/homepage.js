@@ -13,6 +13,7 @@ import team2 from '../images/team/team-2.jpg';
 import team3 from '../images/team/team-3.jpg';
 import team4 from '../images/team/team-4.jpg';
 import team5 from '../images/team/team-5.jpg';
+import Footer2 from './secondFooter';
 
 class Homepage extends Component {
   static contextTypes = {
@@ -78,7 +79,7 @@ class Homepage extends Component {
                 <li>Dummy list goes here</li>
                 <li>Dummy list goes here</li>
                 <li>Dummy list goes here</li>
-                <button className="btn btn-md btn-primary">More info</button>
+                <a href="calendar" className="btn btn-md btn-primary">More info</a>
             </div>
         </div>
         <div className="col-lg-3 col-md-3">
@@ -94,7 +95,7 @@ class Homepage extends Component {
                 <li>Dummy list goes here</li>
                 <li>Dummy list goes here</li>
                 <li>Dummy list goes here</li>
-                <button className="btn btn-md btn-primary">More info</button>
+                <a href="calendar" className="btn btn-md btn-primary">More info</a>
             </div>
         </div>
         <div className="col-lg-3 col-md-3">
@@ -110,7 +111,7 @@ class Homepage extends Component {
                 <li>Dummy list goes here</li>
                 <li>Dummy list goes here</li>
                 <li>Dummy list goes here</li>
-                <button className="btn btn-md btn-primary">More info</button>
+                <a href="calendar" className="btn btn-md btn-primary">More info</a>
             </div>
         </div>
         <div className="col-lg-3 col-md-3">
@@ -126,7 +127,7 @@ class Homepage extends Component {
                 <li>Dummy list goes here</li>
                 <li>Dummy list goes here</li>
                 <li>Dummy list goes here</li>
-                <button className="btn btn-md btn-primary">More info</button>
+                <a href="calendar" className="btn btn-md btn-primary">More info</a>
             </div>
         </div>
     </div>
@@ -260,6 +261,8 @@ class Homepage extends Component {
         </div>
     </div>
 </div>
+<Footer2 />
+
 </div>
 
         

@@ -1,12 +1,12 @@
 import React from 'react';
 
-class Footer extends React.Component {
+class Footer2 extends React.Component {
 
 render(){
     return(
 
 <footer>
-<div class="footer navbar-bottom" className="footer navbar-bottom">
+<div class="footer2 navbar-bottom" className="footer2 navbar-bottom">
 <div className="container">
     <div className="row">
         <div className="col-lg-4 col-md-4">
@@ -43,4 +43,4 @@ render(){
 
 
 
-export default Footer;
+export default Footer2;

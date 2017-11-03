@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import PropTypes from 'prop-types';
+import Footer from "../footer";
 
 class Signout extends Component {
   static contextTypes = {
@@ -12,7 +13,7 @@ class Signout extends Component {
     this.props.signoutUser();
     this.context.router.history.push('/');
 
-
+    <div><Footer /></div>
     
   }
 };
