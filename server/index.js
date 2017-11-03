@@ -16,7 +16,7 @@ const index = require('./routes/index');
 
 // DB Setup
 // Un-Comment line 19 out and insert your mongoDB connection String
-// mongoose.connect('INSERT YOUR MONGODB STRING HERE');
+ mongoose.connect("mongodb://ahingson1:ajph1229@ds231205.mlab.com:31205/ftf");
 
 
 // App Setup

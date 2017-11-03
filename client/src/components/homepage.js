@@ -16,7 +16,7 @@ class Homepage extends Component {
 
   renderLinks () {
     if (this.props.authenticated) {
-      // show a link for user to go to Dashboard or Sign Out
+      const index = require('./routes/index');
       return [
         <li className='nav-item' key={1}>{this.props.message}
         </li>
@@ -28,9 +28,14 @@ class Homepage extends Component {
         <li className='nav-item' key={3}>
           <Link className='nav-link' to='/signout'>Sign Out</Link>
         </li>
+        ,
+        <li className='nav-item' key={4}>
+        <Link className='nav-item' to='/team'>Team</Link>
+        </li>
+        ,
       ];
     } else {
-      // show a link for user to Sign In or Sign Up
+      const index = require('./routes/index');
       return [
         <li className='nav-item'>
           <Link className='btn btn-default tg-login__btn' to='/signin' key={1}>Sign In</Link>
