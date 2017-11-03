@@ -27,31 +27,70 @@ class profile extends React.Component {
       // show a link for user to Sign In or Sign Up
       return [
         <li className="nav-item">
-          <Link
-            id="navLink"
-            className="btn btn-lg btn-primary"
-            to="/signin"
-            key={1}
-          >
-            Sign In
-          </Link>
-        </li>,
-        <li className="nav-item" key={2}>
-          <Link id="navLink" className="btn btn-lg btn-primary" to="/signup">
-            Sign Up
-          </Link>
-        </li>
-      ];
-    }
+        <Link id="navLink" className="btn btn-lg btn-primary" to="/signin" key={1}>
+          Sign In
+        </Link>
+      </li>,
+      <li className="nav-item" key={2}>
+        <Link id="navLink" className="btn btn-lg btn-primary" to="/signup">
+          Sign Up
+        </Link>
+      </li>
+    ];
   }
+}
   render() {
     console.log(this.props);
     return (
-      <div className="Profile">
-        <h1 className="Name">Awsome Profile Page</h1>
-        <h2 className="Email">AWSOMEAT@GMAIL.COM</h2>
-        <h3 className="PhoneNumber">555-555-5555</h3>
+      <div>
+      <div id="myNavbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div className="container">
+          <div className="navbar-header">
+              
+             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+              </button>
+              
+              <a href="#" className="navbar-brand">Foster The Future</a>
+              
+          </div>
+          
+          <div className="navbar-collapse collapse">
+          
+              <ul className="nav navbar-nav navbar-right">
+                  <li><a href="#header">Home</a></li>
+                  <li><a href="#services">services</a></li>
+                  <li><a href="#events">events</a></li>
+                  <li><a href="#team">team</a></li>
+                  <li><a href="#partners">partners</a></li>
+                  <li><a href="#contact">contact</a></li>
+                   </ul>
+            
+            
+             
+           </div>
+           
+           
+          </div>
       </div>
+      <div>
+      {this.renderLinks()}
+      <form>
+      <h2 className="Name">Full Name</h2>
+      <input type="text" placeholder="name"/>
+      <h2 className="Email">Your email</h2>
+      <input type="text" placeholder="email"/>
+      <h2 className="PhoneNumber">Your Phone Number</h2>
+      <input type="text" placeholder="phonenumber"/>
+      <button action= "SUBMIT" className ="btn btn-primary">submit </button>
+      </form>
+      </div>
+  </div>
+    
+  
+  
     );
   }
 }
