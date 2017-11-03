@@ -37,3 +37,4 @@ export default class Test extends React.Component {
   }
 }
   
+<button action='submit' className='btn btn-primary'>Sign up!</button>
