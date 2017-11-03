@@ -7,6 +7,7 @@ import ReactFilestack from 'filestack-react';
 import Test from '../filestack.js';
 import Footer from "../footer";
 
+
 class Signup extends Component {
   constructor(props) {
     super(props);
@@ -142,7 +143,6 @@ class Signup extends Component {
      <br></br>
       </form>
       <div><Footer /></div>
-      
       </div>
       
       
