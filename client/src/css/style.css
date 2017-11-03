@@ -432,6 +432,7 @@ p {
     background-color: #1f1f1f;
     color: #cccccc;
     position: relative;
+    text-align-last: left;
     width: 100%;
     left: 0;
     bottom: 0px;
@@ -446,12 +447,13 @@ p {
 
     font-size: 20px;
     height: 40px;
-    width: 35px;
-    text-align: right;
+    width: 38px;
+    text-align: left;
     padding: 10px;
     border: 1px solid #cccccc;
     margin-bottom: 5px;
-    margin-right: 12px;
+    margin-right: 14px;
+    margin-left: -4px;
 }
 
 .footer2 .social:hover {
@@ -468,21 +470,26 @@ p {
     padding: 3px;
     border: none;
     color: #000;
-    margin-left: 0px;
+    margin-left: -110px;
     margin-top: 15px;
 }
 
 .footer2 .btn {
 
-    padding: 20px 5px 10px;
-    margin: 5px 0 0 5px;
-    border-radius: 0%;
+    border-radius: 0;
+    height: 40px;
+    width: 40%; 
+    font-size: 15;
+    background-color: #428bca;
+    color: #fff;
+    margin-top: -1%;
+    margin-right: -25%;
 }
 
-.footer2-signin {
 
-    margin-top: 0;
-}
+
+
+
 
 
 

@@ -5,8 +5,8 @@ class Footer2 extends React.Component {
 render(){
     return(
 
-<footer>
-<div class="footer2 navbar-bottom" className="footer2 navbar-bottom">
+
+<div className="footer2 navbar-bottom" className="footer2 navbar-bottom">
 <div className="container">
     <div className="row">
         <div className="col-lg-4 col-md-4">
@@ -36,7 +36,6 @@ render(){
     </div>
 </div>
 </div>
-</footer>
     )
 }
 }
