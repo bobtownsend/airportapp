@@ -3,6 +3,7 @@ import { reduxForm } from 'redux-form';
 import * as actions from '../../actions';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Footer from "../footer";
 
 class Signin extends Component {
   constructor(props) {
@@ -90,7 +91,12 @@ class Signin extends Component {
           </fieldset>
           {this.renderAlert()}
           <button action='submit' className='btn btn-primary'>Sign in</button>
+          <br></br>
+          <br></br>
+          <br></br>
+          
         </form>
+        <div><Footer /></div>
       </div>
         
 

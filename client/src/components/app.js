@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Component } from "react";
-import Footer from "./footer";
+//import Footer from "./footer";
 import FontAwesome from "react-fontawesome";
 import Navbar from "./navbar";
 import Calendar from "./calendar";
@@ -37,7 +37,7 @@ export default class App extends React.Component {
 
               <Route path="/feature" component={RequireAuth(Feature)} />
             </div>
-            <Footer>{Footer}</Footer>
+           
           </div>
         </Router>
       </div>

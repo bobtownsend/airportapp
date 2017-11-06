@@ -5,6 +5,8 @@ import * as actions from '../../actions';
 import PropTypes from 'prop-types';
 import ReactFilestack from 'filestack-react';
 import Test from '../filestack.js';
+import Footer from "../footer";
+
 
 class Signup extends Component {
   constructor(props) {
@@ -133,14 +135,17 @@ class Signup extends Component {
         </fieldset>
         {this.renderAlert()}
         
-      );
       <Test />
       {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
       <button action='submit' className='btn btn-primary'>Sign up!</button>
-        
-        
+     <br></br>
+     <br></br>
+     <br></br>
       </form>
+      <div><Footer /></div>
       </div>
+      
+      
     );
   }
 }

@@ -52,7 +52,7 @@ class Navbar extends React.Component {
             <span className="icon-bar"></span>
         </button>
         
-        <a href="#" className="navbar-brand">Foster The Future</a>
+        <a href="/" className="navbar-brand">Foster The Future</a>
         
     </div>
     
