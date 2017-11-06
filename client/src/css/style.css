@@ -429,9 +429,10 @@ p {
 /*FOOTER2*/
 
 .footer2 {
+    color: #ffffff;
     background-color: #1f1f1f;
-    color: #cccccc;
     position: relative;
+    text-align-last: left;
     width: 100%;
     left: 0;
     bottom: 0px;
@@ -446,12 +447,13 @@ p {
 
     font-size: 20px;
     height: 40px;
-    width: 35px;
-    text-align: right;
-    padding: 10px;
+    width: 38px;
+    text-align: left;
+    padding: 9px;
     border: 1px solid #cccccc;
     margin-bottom: 5px;
     margin-right: 12px;
+    margin-left: -4px;
 }
 
 .footer2 .social:hover {
@@ -464,25 +466,29 @@ p {
 .footer2 input {
 
     height: 40px;
-    width: 175px;
-    padding: 3px;
+    width: 162px;
+    padding: 5px;
     border: none;
     color: #000;
-    margin-left: 0px;
-    margin-top: 15px;
+    margin: 15px 1px;
+    margin-left: -5px;
 }
 
 .footer2 .btn {
 
-    padding: 20px 5px 10px;
-    margin: 5px 0 0 5px;
-    border-radius: 0%;
+    border-radius: 0;
+    height: 40px;
+    width: 35%; 
+    font-size: 20;
+    background-color: #428bca;
+    color: #fff;
+    margin: -2px 0 0 5px;
 }
 
-.footer2-signin {
 
-    margin-top: 0;
-}
+
+
+
 
 
 

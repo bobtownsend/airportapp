@@ -5,14 +5,13 @@ class Footer2 extends React.Component {
 render(){
     return(
 
-<footer>
-<div class="footer2 navbar-bottom" className="footer2 navbar-bottom">
+
+<div className="footer2 navbar-bottom" className="footer2 navbar-bottom">
 <div className="container">
     <div className="row">
         <div className="col-lg-4 col-md-4">
             <h4>Contact Us</h4>
-            <p><i className="fa fa-home" aria-hidden="true"></i> 8444 N. 90th St. #110 Scottsdale, 
-            AZ 85258</p>
+            <p><i className="fa fa-home" aria-hidden="true"></i> 8444 N. 90th St. #110 Scottsdale, AZ 85258</p>
             <p><i className="fa fa-envelope" aria-hidden="true"></i> info@codercamps.com</p>
             <p><i className="fa fa-phone" aria-hidden="true"></i>  +1 855 755 2267</p>
             <p><i className="fa fa-globe" aria-hidden="true"></i>  www.codercamps.com</p>
@@ -36,7 +35,6 @@ render(){
     </div>
 </div>
 </div>
-</footer>
     )
 }
 }
