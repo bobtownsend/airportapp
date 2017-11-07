@@ -423,8 +423,9 @@ p {
 
 .footer-signin {
 
-    margin-top: 0;
+    margin-top: 5;
 }
+
 
 /*FOOTER2*/
 
@@ -437,7 +438,7 @@ p {
     left: 0;
     bottom: 0px;
     right: 0;
-    top: 150px;
+    top: 80px;
    
 
 }
@@ -449,7 +450,7 @@ p {
     height: 40px;
     width: 38px;
     text-align: left;
-    padding: 9px;
+    padding: 10px;
     border: 1px solid #cccccc;
     margin-bottom: 5px;
     margin-right: 12px;
@@ -483,6 +484,10 @@ p {
     background-color: #428bca;
     color: #fff;
     margin: -2px 0 0 5px;
+}
+
+.text {
+    color: whitesmoke;
 }
 
 

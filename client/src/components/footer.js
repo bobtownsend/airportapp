@@ -22,6 +22,7 @@ render(){
             <p><i className="fa fa-square-o" aria-hidden="true"></i> About Us</p>
             <p><i className="fa fa-square-o" aria-hidden="true"></i> Privacy</p>
             <p><i className="fa fa-square-o" aria-hidden="true"></i> Term & Conditions</p>
+            <p><i className="fa fa-square-o" aria-hidden="true"></i> Make a Donatin</p>
         </div>
         <div className="col-lg-4 col-md-4">
            <h4>Stay In Touch</h4>

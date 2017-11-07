@@ -5,6 +5,7 @@ import { DefaultPlayer as Video } from "react-html5video";
 import * as actions from "../actions";
 import PropTypes from "prop-types";
 import profile from "./profile";
+import privacy from "./privacy";
 import '../css/style.css';
 import fontAwesome from 'react-fontawesome';
 import { Grid, Row, Col } from 'react-bootstrap';
@@ -174,8 +175,7 @@ class Homepage extends Component {
             <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
             
         </Col>
-        </Row>
-        <Row>
+        
         <Col sm={6} md={4} mdOffset={2}><br />
             <img src={team4} className="img-circle" alt=""/>
             <h4>Tyler Miller</h4>
@@ -232,10 +232,17 @@ class Homepage extends Component {
 </div>
 
 <div id="contact" className="contact">
-<div className="container">
-    <div className="row">
-        <h2>Contact</h2>
-        <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+    <div className="container">
+        <div className="row">
+
+            <h2>Contact</h2>
+            <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+
+<form
+    action="mailto:rayroman0809@gmail.com"
+    method="post"
+    enctype="multipart/form-data"
+    name="EmailThisForm">
         <div className="col-lg-6 col-md-6">
             <div className="input-group input-group-lg">
                 <span className="input-group-addon" id="sizing-addon1"><i className="fa fa-user" aria-hidden="true"></i>
@@ -250,15 +257,16 @@ class Homepage extends Component {
             <div className="input-group input-group-lg">
                 <span className="input-group-addon" id="sizing-addon1"><i className="fa fa-phone" aria-hidden="true"></i>
                 </span>
-                <input type="email" className="form-control" aria-describedby="sizing-addon1" placeholder="Phone Number"/>
+                <input type="text" className="form-control" aria-describedby="sizing-addon1" placeholder="Phone Number"/>
             </div>
-      </div>
+       </div>
         <div className="col-lg-6 col-md-6">
             <div class="input-group">
                 <textarea name="" id="" cols="80" rows="6" className="form-control"></textarea>
             </div>
-            <button className="btn btn-md">Submit your Message</button>
+            <button className="btn btn-md" input type="submit" value="EmailThisForm">Submit your Message</button>
         </div>
+</form>
     </div>
 </div>
 <Footer2 />
