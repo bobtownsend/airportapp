@@ -20,7 +20,7 @@ class mycalendar extends Component {
         events={eventsCalendar}
         views={{month:true}}
         step={60}
-        defaultDate={new Date(2017, 9, 27)}
+        defaultDate={new Date()}
   
         style={{ height: "150vh", padding: "100px" }}
         

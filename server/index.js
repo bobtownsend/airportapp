@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const opn = require('opn');
 const path = require('path');
- 
+
 const app = express();
 
 const mongoose = require('mongoose');
@@ -16,7 +16,7 @@ const index = require('./routes/index');
 
 // DB Setup
 // Un-Comment line 19 out and insert your mongoDB connection String
-mongoose.connect('mongodb://test:123@ds227865.mlab.com:27865/login');
+mongoose.connect('mongodb://userlogin:blah@ds149905.mlab.com:49905/log-in');
 
 
 // App Setup
