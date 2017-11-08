@@ -95,8 +95,10 @@ class Signup extends Component {
         passwordConfirm
       }
     } = this.props;
+
     return (
       <div className="tg-login__wrapper">
+        <Test />
         <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
           <fieldset className="form-group">
             <label>First Name</label>
@@ -135,7 +137,7 @@ class Signup extends Component {
         </fieldset>
         {this.renderAlert()}
         
-      <Test />
+      
       {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
       <button action='submit' className='btn btn-primary'>Sign up!</button>
      <br></br>
