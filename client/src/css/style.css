@@ -121,15 +121,6 @@ p {
     margin: 70px 0 0 40px;
 }
 
-.header h1 {
-    
-    font-size: 40px;
-    font-weight: 700px;
-    padding-top: 30px;
-    margin-left: 20px;
-
-}
-
 .header h1,
 .header button {
 
@@ -147,11 +138,20 @@ p {
     margin-left: 20px;
 }
 
+.largeImageText {
+    
+        
+        padding-top: 200px;
+        font-size: 700%;
+        text-shadow: 2px 2px 4px #000000;
+        
+    }
+
 /*SERVICES*/
 
 .ourservices {
 
-    padding: 40px 0 80px;
+    padding: 20px 0 80px;
     text-align: center;
 }
 
@@ -225,9 +225,9 @@ p {
     color: #737373;
 } 
 
-.columnButton {
+.columnsButton {
 
-    margin-top: 10px;
+
     border-radius: 0;
 }
 
@@ -282,8 +282,8 @@ p {
 
 .partners {
 
-    padding: 50px 0 80px;
-    background-color: #428bca;
+    padding: 50px 0 30px;
+    background-color: rgb(66, 139, 202);
     text-align: center;
     color: #fff;
 }
@@ -308,16 +308,20 @@ p {
     transition: all 500ms ease-in-out;
 }
 
+.client2 {
+
+    position: relative; top: -25px;
+}
+
+.client5 {
+    
+        position: relative; top: 10px;
+    }
+
+
 .partners li:hover img {
 
     opacity: 2;
-}
-
-#volunteerbtn {
-    color: #428bca;
-    background-color: whitesmoke;
-    border-radius: 0%;
-    border-color: whitesmoke;
 }
 
 /*CONTACT*/
@@ -372,8 +376,33 @@ p {
     color: #fff !important;
 }
 
-/*FOOTER*/
+/*PRIVACY*/
 
+.privacy {
+    
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: rgb(214, 214, 214) 
+    }
+
+.privacyP {
+
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.privacyPP {
+
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/*FOOTER*/
 
 
 .footer {
