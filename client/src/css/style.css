@@ -94,6 +94,7 @@ p {
 }
 
 .navbar-brand {
+    
     padding-left: -20px;
 }
 
@@ -140,18 +141,22 @@ p {
 
 .largeImageText {
     
-        
-        padding-top: 200px;
-        font-size: 700%;
-        text-shadow: 2px 2px 4px #000000;
-        
+    padding-top: 150px;
+    font-size: 700%;
+    text-shadow: 2px 2px 4px #000000;
     }
+
+.largeImageText:hover {
+
+    color: #428bca !important;
+
+}
 
 /*SERVICES*/
 
 .ourservices {
 
-    padding: 20px 0 80px;
+    padding: 40px 0 80px;
     text-align: center;
 }
 
@@ -315,7 +320,7 @@ p {
 
 .client5 {
     
-        position: relative; top: 10px;
+    position: relative; top: 10px;
     }
 
 
