@@ -36,7 +36,7 @@ class Homepage extends Component {
 <div>
   <div id="header" className="header">
     <div class="container">
-      <p className="text-center"><h1 className="largeImageText">FOSTER THE FUTURE</h1></p>
+      <p className="text-center"><h1 className="largeImageText"></h1></p>
     </div>
   </div>
              
