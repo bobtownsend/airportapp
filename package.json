@@ -25,6 +25,7 @@
     "react-google-autocomplete": "^1.0.13",
     "react-html5video": "^2.3.0",
     "react-icons": "^2.2.7",
+    "react-popup": "^0.8.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.1.2",
