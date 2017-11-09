@@ -28,27 +28,17 @@ class Homepage extends Component {
   
 
   render() {
+
+
+
     return (
       
-        <div>
-  
-  
+<div>
   <div id="header" className="header">
-  <div class="container">
-      <div className="row">
-      <div className="col-lg-6 col-md-6">
-          <h1>Bringing kids hope!</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesettin industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book.</p>
-          <button className="btn btn-lg btn-primary">About Us</button>
-                         
-      </div>
-      
+    <div class="container">
+      <p className="text-center"><h1 className="largeImageText">FOSTER THE FUTURE</h1></p>
     </div>
   </div>
-</div>
              
 
 <div id="ourservices" className="ourservices">
@@ -59,7 +49,7 @@ class Homepage extends Component {
       <h2>Text goes here</h2>
       <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
       </div>
-      <div className="col-lg-6 col-md-6">
+      <div className="your-centered-div" className="col-lg-6 col-md-6">
         <div class="embed-responsive embed-responsive-16by9">
           <iframe className="embed-responsive-item" className="video" src="https://www.youtube.com/embed/V4w5R7_80G0" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -148,10 +138,8 @@ class Homepage extends Component {
             <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
             <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
-            
         </Col>
-        
-        <Col sm={6} md={4} mdOffset={2}><br />
+        <Col sm={3} md={3}><br />
             <img src={team4} className="img-circle" alt=""/>
             <h4>Tyler Miller</h4>
             <b>Back End</b>
@@ -173,23 +161,21 @@ class Homepage extends Component {
     <div className="row">
     <Row className='show-grid'>
         <h2>Our Partners</h2>
-        <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
         <div className="col-lg-3 col-md-3">
-        <li><img src='https://i.imgur.com/fe0T4nw.png' /></li>
+        <li><img src='https://i.imgur.com/fe0T4nw.png'/></li>
         </div>
         <div className="col-lg-3 col-md-3">
-        <li><img src='https://i.imgur.com/6onyRkH.png' /></li>
+        <li><a target="_blank" href='http://www.arizonansforchildren.org/'><img className="client2" src='https://i.imgur.com/IX3vf8y.png' /></a></li>
         </div>
         <div className="col-lg-3 col-md-3">
-        <li><img src='https://i.imgur.com/P1ZhohF.png' /></li>
+        <li><a target="_blank" href='https://arizonaatwork.com'><img src='https://i.imgur.com/01YlgMf.png'/></a></li>
         </div>
         <div className="col-lg-3 col-md-3">
-        <li><img src='https://i.imgur.com/kccwdNi.png' /></li>
+        <li><a target="_blank" href='https://www.codercamps.com'><img className="client5" src='https://i.imgur.com/kccwdNi.png'/></a></li>
         </div>    
     </Row>
     </div>
 </div>
-<button id="volunteerbtn" className="btn btn-md btn-primary">More info</button>  
 </div>
 
 <div id="contact" className="contact">
@@ -225,7 +211,7 @@ class Homepage extends Component {
             <div class="input-group">
                 <textarea name="" id="" cols="80" rows="6" className="form-control"></textarea>
             </div>
-            <button className="btn btn-md" input type="submit" value="EmailThisForm">Submit your Message</button>
+            <button className="btn btn-md" >Submit your Message</button>
         </div>
 </form>
     </div>
