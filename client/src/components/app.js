@@ -8,7 +8,7 @@ import Calendar from "./calendar";
 import Feature from "./feature";
 import Homepage from "./homepage";
 import profile from "./profile";
-import privacy from "../components/privacy";
+import privacy from "./privacy";
 import mycalendar from "../components/calendar";
 import RequireAuth from "./auth/require_auth";
 import Signin from "./auth/signin";
@@ -36,7 +36,6 @@ export default class App extends React.Component {
               <Route path="/signout" component={Signout} />
               <Route path="/calendar" component={mycalendar} />
               <Route path="/profile" component={profile} />
-
               <Route path="/feature" component={RequireAuth(Feature)} />
             </div>
             <footer>{footer}</footer>
