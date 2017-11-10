@@ -44,10 +44,10 @@ class Homepage extends Component {
 <div id="ourservices" className="ourservices">
  <div className="container">
       <h2>Our Services</h2>
-      <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+      <p></p>
       <div className="col-lg-6 col-md-6">
-      <h2>Text goes here</h2>
-      <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+      <h2>about us</h2>
+      <p>Foster The Future is a care system in which a minor has been placed outside of the foster system and gets them ready for a career.</p>
       </div>
       <div className="your-centered-div" className="col-lg-6 col-md-6">
         <div class="embed-responsive embed-responsive-16by9">
@@ -62,14 +62,14 @@ class Homepage extends Component {
 <div className="container">
     <div className="row">
         <h2>Up Coming Events</h2>
-        <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+        <p>Check out our calendar of featured events in the listings below, plus get a full list of upcoming shows at our on our calendar page</p>
         <div className="col-lg-3 col-md-3">
             <div className="columns">
                 <h1>Nov. 8th</h1>
                 <b></b>
                 <hr/>
                 <p>Startup weekend PHX Speed Networking at 6pm @Galvanize Phoenix</p>
-                <a href="calendar" className="btn btn-md btn-primary">More info</a>
+                <a href="calendar" className="btn btn-md btn-primary calendarButton">More info</a>
             </div>
         </div>
         <div className="col-lg-3 col-md-3">
@@ -78,7 +78,7 @@ class Homepage extends Component {
                 <b></b>
                 <hr/>
                 <p>Solving common DBA problems with uncommon uses of R at 6pm @Ice AZ</p>
-                <a href="calendar" className="btn btn-md btn-primary">More info</a>
+                <a href="calendar" className="btn btn-md btn-primary calendarButton">More info</a>
             </div>
         </div>
         <div className="col-lg-3 col-md-3">
@@ -87,7 +87,7 @@ class Homepage extends Component {
                 <b></b>
                 <hr/>
                 <p>Algorithm Economy Meetup at 5:30pm @Culinary Dropout Phoenix Cloud</p>
-                <a href="calendar" className="btn btn-md btn-primary">More info</a>
+                <a href="calendar" className="btn btn-md btn-primary calendarButton">More info</a>
             </div>
         </div>
         <div className="col-lg-3 col-md-3">
@@ -96,7 +96,7 @@ class Homepage extends Component {
                 <b></b>
                 <hr/>
                 <p>Beginner Developer: Lighting Talks at 6:30pm @Godaddy Tempe ReactJS</p>
-                <a href="calendar" className="btn btn-md btn-primary">More info</a>
+                <a href="calendar" className="btn btn-md btn-primary calendarButton">More info</a>
             </div>
         </div>
     </div>
@@ -107,7 +107,7 @@ class Homepage extends Component {
 <div className="container">
     <div className="row">
         <h2>Meet The Team</h2>
-        <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+        <p>We’re a team of 4 creative professionals who take pride in getting the job done right and have fun doing it.</p>
         
         <Col sm={3} md={3}><br />
             <img src={team1} className="img-circle" alt=""/>
@@ -124,31 +124,30 @@ class Homepage extends Component {
             <h4>Krysta Jones</h4>
             <b>Front End</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-            <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/krysta.moore.16"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/kkaye1215/"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="www.linkedin.com/in/krystakayejones"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/kkaye85"><i className="fa fa-github" aria-hidden="true"></i></a>
         </Col>
         <Col sm={3} md={3}><br />
             <img src={team3} className="img-circle" alt=""/>
             <h4>Lovie Bates</h4>
             <b>Front End</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-            <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/lovie.bates"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/loviedrives/?hl=en"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/lovie-bates-771068148/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/loviedrives"><i className="fa fa-github" aria-hidden="true"></i></a>
         </Col>
         <Col sm={3} md={3}><br />
             <img src={team4} className="img-circle" alt=""/>
             <h4>Tyler Miller</h4>
             <b>Back End</b>
             <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
-            <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
-            
+            <a href="https://www.facebook.com/profile.php?id=100019632854480"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/wirebasket/"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/tyler-miller-54a024147/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://github.com/Wirebasket"><i className="fa fa-github" aria-hidden="true"></i></a>
         </Col>
      
     </div>
@@ -183,7 +182,7 @@ class Homepage extends Component {
         <div className="row">
 
             <h2>Contact</h2>
-            <p>Lorem Ipsum is simply dummy rext of the printing and typesetting dummy text</p>
+            <p>Got a question? Drop us an email.</p>
 
 <form
     action="mailto:rayroman0809@gmail.com"
