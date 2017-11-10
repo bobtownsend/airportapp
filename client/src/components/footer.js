@@ -22,7 +22,7 @@ class Footer extends React.Component {
                   info@codercamps.com
                 </a>
                 <br />
-                <a href="505-290-4953">
+                <a href="tel:505-290-4953">
                   <i className="fa fa-phone" aria-hidden="true" /> +1 (480)
                   291-8500
                 </a>
