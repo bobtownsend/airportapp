@@ -186,9 +186,7 @@ class Homepage extends Component {
 
 <form
     action="mailto:rayroman0809@gmail.com"
-    method="post"
-    enctype="multipart/form-data"
-    name="EmailThisForm">
+    enctype="text/plain">
         <div className="col-lg-6 col-md-6">
             <div className="input-group input-group-lg">
                 <span className="input-group-addon" id="sizing-addon1"><i className="fa fa-user" aria-hidden="true"></i>
@@ -208,7 +206,7 @@ class Homepage extends Component {
        </div>
         <div className="col-lg-6 col-md-6">
             <div class="input-group">
-                <textarea name="" id="" cols="80" rows="6" className="form-control"></textarea>
+                <textarea type="text" name="" id="" cols="80" rows="6" className="form-control"></textarea>
             </div>
             <button className="btn btn-md" >Submit your Message</button>
         </div>
