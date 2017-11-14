@@ -22,7 +22,7 @@ class Footer extends React.Component {
                   info@codercamps.com
                 </a>
                 <br />
-                <a href="505-290-4953">
+                <a href="tel:505-290-4953">
                   <i className="fa fa-phone" aria-hidden="true" /> +1 (480)
                   291-8500
                 </a>
@@ -32,21 +32,21 @@ class Footer extends React.Component {
                 </p>
               </div>
               <div className="col-lg-4 col-md-4">
-                <h4>About</h4>
-                <p>
+                <h4>Quick Links</h4>
+                <a href="ourservices">
                   <i className="fa fa-square-o" aria-hidden="true" /> About Us
-                </p>
-                <p>
+                </a><br></br>
+                <a href="privacy">
                   <i className="fa fa-square-o" aria-hidden="true" /> Privacy
-                </p>
-                <p>
+                </a><br></br>
+                <a href="privacy">
                   <i className="fa fa-square-o" aria-hidden="true" /> Term &
                   Conditions
-                </p>
-                <p>
+                </a><br></br>
+                <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7D6BXB6RXM6X8&lc=US&item_name=Foster%20The%20Future&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">
                   <i className="fa fa-square-o" aria-hidden="true" /> Make a
                   Donatin
-                </p>
+                </a>
               </div>
               <div className="col-lg-4 col-md-4">
                 <h4>Stay In Touch</h4>
@@ -57,8 +57,8 @@ class Footer extends React.Component {
                 <i className="social fa fa-youtube" aria-hidden="true" />
                 <i className="social fa fa-github" aria-hidden="true" />
                 <br />
-                <input type="email" placeholder="    Subsribe For Updates" />
-                <button className="btn btn-md btn-primary">Subscribe</button>
+                <input type="text" placeholder=" Give online safe secure" />
+                <a a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7D6BXB6RXM6X8&lc=US&item_name=Foster%20The%20Future&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" className="btn btn-md btn-primary">Donate Now</a>
               </div>
             </div>
           </div>
