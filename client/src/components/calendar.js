@@ -37,11 +37,12 @@ class Mycalendar extends Component {
           closeHtml={null}
           defaultOk="close"
           wildClasses={false}
-          closeOnOutsideClick={true}
-        />
+          closeOnOutsideClick={true}/>
+          
         <div>
           <Footer />
         </div>
+        
       </div>
     );
   }

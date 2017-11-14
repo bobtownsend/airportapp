@@ -4,7 +4,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <div class="footer navbar-bottom" className="footer navbar-bottom">
+        <div className="footer navbar-bottom" className="footer navbar-bottom">
           <div className="container">
             <div className="row">
               <div className="col-lg-4 col-md-4">
@@ -58,7 +58,7 @@ class Footer extends React.Component {
                 <i className="social fa fa-github" aria-hidden="true" />
                 <br />
                 <input type="text" placeholder=" Give online safe secure" />
-                <a a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7D6BXB6RXM6X8&lc=US&item_name=Foster%20The%20Future&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" className="btn btn-md btn-primary">Donate Now</a>
+                <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7D6BXB6RXM6X8&lc=US&item_name=Foster%20The%20Future&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" className="btn btn-md btn-primary">Donate Now</a><br></br>
               </div>
             </div>
           </div>
