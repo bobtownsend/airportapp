@@ -20,9 +20,7 @@ class Mycalendar extends Component {
           {...this.props}
           Popup
           onSelectEvent={event =>
-            Popup.alert(
-              "Phoenix Fam Fest ($15) 9am @ Phoenix Convention Center"
-            )}
+          Popup.alert("Phoenix Fam Fest ($15) 9am @ Phoenix Convention Center")}
           events={eventsCalendar}
           views={{ month: true }}
           step={60}
@@ -30,7 +28,7 @@ class Mycalendar extends Component {
           style={{ height: "150vh", padding: "100px" }}
           {...this.props}
           onSelectEvent={event =>
-            Popup.alert("Saturday Morning Open Hack 9am @ GoDaddy Tempe")}
+          Popup.alert("Saturday Morning Open Hack 9am @ GoDaddy Tempe")}
           events={eventsCalendar}
           views={{ month: true }}
           step={60}
@@ -49,13 +47,14 @@ class Mycalendar extends Component {
           btnClass="mm-popup__btn"
           closeBtn={true}
           closeHtml={null}
-          defaultOk="AddCalender"
+          defaultOk="Add to my calender"
           wildClasses={false}
-          closeOnOutsideClick={true}
-        />
+          closeOnOutsideClick={true}/>
+          
         <div>
           <Footer />
         </div>
+        
       </div>
     );
   }
