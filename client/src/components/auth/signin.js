@@ -9,12 +9,12 @@ class Signin extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      email: '',
-      password: ''
-    }
+     this.state = {
+    email: '',
+       password: ''
+    
   }
-
+  }
   //add the router object to this.context to allow for redirects
   static contextTypes = {
     router: PropTypes.object
@@ -27,10 +27,25 @@ class Signin extends Component {
     };
   };
 
-  handleFormSubmit ({ email, password }) {
+  handleFormSubmit (event) {
+      event.preventDefault();
+
+      let email = this.refs.email.value;
+      let password = this.refs.password.value;
     // action creator dispatching creditionals to validate on server
-    this.props.signinUser({ email, password });
+    this.props.signinUser(email, password );
+    console.log("New USER SIGNED IN");
+    console.log( email )
+    console.log( password )
   };
+  // handleChange(e){
+    // let tempUser=this.state.profile;
+    // tempUser[e.target.name]=e.target.value;
+    // this.setState({
+      // user:tempUser
+    // });
+  // };
+
 
   renderAlert () {
     if (this.props.errorMessage) {
@@ -80,17 +95,20 @@ class Signin extends Component {
   
 
       <div className='tg-login__wrapper'>
-        <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+        {/* <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}> */}
+        <form >
           <fieldset className='form-group'>
+            <label>THIS IS A NEWWWWW TEST ALSO </label>
             <label>Email:</label>
-            <input {...email} className='form-control' placeholder='Enter email' />
+            <input ref="email" className='form-control' placeholder='Enter email' />
           </fieldset>
           <fieldset className='form-group'>
             <label>Password:</label>
-            <input {...password} type='password' className='form-control' placeholder='Enter password' />
+            <input  ref="password" type='password' className='form-control' placeholder='Enter password'  />
+              {/* {...password} */}
           </fieldset>
           {this.renderAlert()}
-          <button action='submit' className='btn btn-primary'>Sign in</button>
+          <button type='submit' className='btn btn-primary' onClick={this.handleFormSubmit.bind(this)}>Sign in</button>
           <br></br>
           <br></br>
           <br></br>

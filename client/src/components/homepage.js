@@ -35,7 +35,7 @@ class Homepage extends Component {
       
 <div>
   <div id="header" className="header">
-    <div class="container">
+    <div className="container">
       <p className="text-center"><h1 className="largeImageText">FOSTER THE FUTURE</h1></p>
     </div>
   </div>
@@ -234,4 +234,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, actions)(Homepage);
+export default connect(mapStateToProps, actions)(Homepage); 
