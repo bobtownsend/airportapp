@@ -10,11 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.17.1",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.1",
     "cors": "^2.8.4",
     "express": "^4.15.4",
-    "filestack-js": "^0.9.11",
     "jwt-simple": "^0.5.1",
     "mongodb": "^2.2.31",
     "mongoose": "^4.11.11",

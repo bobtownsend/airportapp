@@ -35,8 +35,8 @@ class Homepage extends Component {
       
 <div>
   <div id="header" className="header">
-    <div class="container">
-      <p className="text-center"><h1 className="largeImageText"></h1></p>
+    <div className="container">
+      <p className="text-center" className="largeImageText"></p>
     </div>
   </div>
              
@@ -50,8 +50,8 @@ class Homepage extends Component {
       <p>Foster The Future is a care system in which a minor has been placed outside of the foster system and gets them ready for a career.</p>
       </div>
       <div className="your-centered-div" className="col-lg-6 col-md-6">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe className="embed-responsive-item" className="video" src="https://www.youtube.com/embed/V4w5R7_80G0" frameborder="0" allowfullscreen></iframe>
+        <div className="embed-responsive embed-responsive-16by9">
+          <iframe className="embed-responsive-item" className="video" src="https://www.youtube.com/embed/V4w5R7_80G0" frameBorder="0" allowFullScreen></iframe>
         </div>
         </div>
         </div>
@@ -186,7 +186,9 @@ class Homepage extends Component {
 
 <form
     action="mailto:rayroman0809@gmail.com"
-    enctype="text/plain">
+    method="post"
+    encType="multipart/form-data"
+    name="EmailThisForm">
         <div className="col-lg-6 col-md-6">
             <div className="input-group input-group-lg">
                 <span className="input-group-addon" id="sizing-addon1"><i className="fa fa-user" aria-hidden="true"></i>
@@ -205,8 +207,8 @@ class Homepage extends Component {
             </div>
        </div>
         <div className="col-lg-6 col-md-6">
-            <div class="input-group">
-                <textarea type="text" name="" id="" cols="80" rows="6" className="form-control"></textarea>
+            <div className="input-group">
+                <textarea name="" id="" cols="80" rows="6" className="form-control"></textarea>
             </div>
             <button className="btn btn-md" >Submit your Message</button>
         </div>
@@ -231,4 +233,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, actions)(Homepage);
+export default connect(mapStateToProps, actions)(Homepage); 

@@ -12,7 +12,7 @@ import {
 import * as types from './types';
 const ROOT_URL = 'http://localhost:8080/api/v1';
 
-export function signinUser ({ email, password }) {
+export function signinUser (email, password ) {
   return function (dispatch) {
     // Submit email/password to the server
     axios.post(`${ROOT_URL}/signin`, { email, password })
@@ -21,7 +21,8 @@ export function signinUser ({ email, password }) {
         // - Update state to indicate user is authenticated
         dispatch({ type: AUTH_USER })
         // - Save the JWT token
-        localStorage.setItem('token', response.data.token)
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('authenticated', true);
       })
       .catch(() => {
         // If request is bad...
@@ -30,13 +31,15 @@ export function signinUser ({ email, password }) {
       })
   };
 }
-
-export function signupUser ({ email, password }) {
+//firstName, lastName, phoneNumber,email,password
+export function signupUser (firstName, lastName, email, password, phoneNumber) {
   return function (dispatch) {
-    axios.post(`${ROOT_URL}/signup`, { email, password })
+    axios.post(`${ROOT_URL}/signup`, { email, password, firstName, lastName, phoneNumber })
       .then(response => {
         dispatch({ type: AUTH_USER })
-        localStorage.setItem('token', response.data.token)
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('userEmail', response.data.email);
+        localStorage.setItem('authenticated', true);
       })
       .catch(response => dispatch(authError('Email Address already Signed Up')))
   };

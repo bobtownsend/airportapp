@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom';
 
 
 class Navbar extends React.Component {
+
     renderLinks () {
-        if (this.props.authenticated) {
+      //        localStorage.setItem('authenticated', true);
+      let  authenticated = localStorage.getItem('authenticated');
+      
+        if (authenticated != null && authenticated === true) {
           // show a link for user to go to Dashboard or Sign Out
           return [
             <li className='nav-item' key={1}>{this.props.message}
