@@ -52,13 +52,6 @@ class Signin extends Component {
     
 
   };
-  // handleChange(e){
-    // let tempUser=this.state.profile;
-    // tempUser[e.target.name]=e.target.value;
-    // this.setState({
-      // user:tempUser
-    // });
-  // };
 
 
   renderAlert () {
@@ -81,7 +74,7 @@ class Signin extends Component {
       <div className='tg-login__wrapper'>
         <form >
           <fieldset className='form-group'>
-            <label>THIS IS A NEWWWWW TEST ALSO </label>
+            <label>Login with Username and Password</label><br></br>
             <label>Email:</label>
             <input ref="email" className='form-control' placeholder='Enter email' />
           </fieldset>
@@ -94,7 +87,11 @@ class Signin extends Component {
           <br></br>
           <br></br>
           <br></br>
-          
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
         </form>
         <div><Footer /></div>
       </div>

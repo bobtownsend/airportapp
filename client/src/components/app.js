@@ -31,7 +31,6 @@ export default class App extends React.Component {
               <Route path="/signup" component={Signup} />
               <Route path="/signout" component={Signout} />
               <Route path="/calendar" component={mycalendar} />
-              <Route path="/profile" component={profile} />
               <Route path="/feature" component={RequireAuth(Feature)} />
             </div>
             <footer>{footer}</footer>
