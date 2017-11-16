@@ -1,7 +1,7 @@
 .mm-popup__box {
   width: 475px;
   position: absolute;
-  text-size: 5px;
+  font-size: 10px;
   top: 10%;
   left: 50%;
   margin-left: -175px;

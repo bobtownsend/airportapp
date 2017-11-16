@@ -1,102 +1,113 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from './navbar';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+import PropTypes from 'prop-types';
+import axios from 'axios';
+
 
 class profile extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      authenticated: false
+    }
   }
-  renderLinks() {
-    if (this.props.authenticated) {
-      // show a link for user to go to Dashboard or Sign Out
-      return [
-        <li className="nav-item" key={1}>
-          {this.props.message}
-        </li>,
-        <li className="nav-item" key={2}>
-          <Link className="btn btn-default tg-login__btn" to="/dashboard">
-            Dashboard
-          </Link>
-        </li>,
-        <li className="nav-item" key={3}>
-          <Link className="nav-link" to="/signout">
-            Sign Out
-          </Link>
-        </li>
-      ];
-    } else {
-      // show a link for user to Sign In or Sign Up
-      return [
-        <li className="nav-item">
-        <Link id="navLink" className="btn btn-lg btn-primary" to="/signin" key={1}>
-          Sign In
-        </Link>
-      </li>,
-      <li className="nav-item" key={2}>
-        <Link id="navLink" className="btn btn-lg btn-primary" to="/signup">
-          Sign Up
-        </Link>
-      </li>
-    ];
-  }
+  static contextTypes = {
+    router: PropTypes.object
+  };
+  componentWillMount(){
+    let auth = localStorage.getItem('authenticated');
+if (auth == true){
+this.setState({authenticated: true});
+console.log(this.props);
 }
-  render() {
+  }
+componentDidMount(){
+  console.log(this.props);
+
+
+  console.log("COMPONENT DID MOUNT");
+
+
+  
+}
+
+  
+  handleFormSubmit(){
     console.log(this.props);
+    // Call action creator to sign up the user
+    let fullName= this.refs.fullName.value;
+    let phoneNumber= this.refs.phoneNumber.value;
+
+    let email= this.refs.email.value;
+
+    let oldEmail = localStorage.getItem('userEmail');
+    console.log(oldEmail);
+    console.log(fullName);
+    console.log(email);
+    console.log(phoneNumber);
+    this.props.editUser(oldEmail, email, fullName, phoneNumber);
+    console.log('editUser function initiated');
+
+  }
+  render() {
+    
     return (
       <div>
-      <div id="myNavbar" className="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div className="container">
-          <div className="navbar-header">
-              
-             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-              </button>
-              
-              <a href="#" className="navbar-brand">Foster The Future</a>
-              
-          </div>
-          
-          <div className="navbar-collapse collapse">
-          
-              <ul className="nav navbar-nav navbar-right">
-                  <li><a href="#header">Home</a></li>
-                  <li><a href="#services">services</a></li>
-                  <li><a href="#events">events</a></li>
-                  <li><a href="#team">team</a></li>
-                  <li><a href="#partners">partners</a></li>
-                  <li><a href="#contact">contact</a></li>
-                   </ul>
-            
-            
-             
-           </div>
-           
-           
-          </div>
+        <div>
+        <div>
+      <Navbar />
       </div>
-      <div>
-      {this.renderLinks()}
+      <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       <form>
-      <h2 className="Name">Full Name</h2>
-      <input type="text" placeholder="name"/>
-      <h2 className="Email">Your email</h2>
-      <input type="text" placeholder="email"/>
-      <h2 className="PhoneNumber">Your Phone Number</h2>
-      <input type="text" placeholder="phonenumber"/>
-      <button action= "SUBMIT" className ="btn btn-primary">submit </button>
+        <fieldset className="form-group">
+            <label>Full Name</label>
+            <input
+            ref="fullName"
+            className="form-control"
+            placeholder="Enter First Name"
+            />
+          </fieldset>
+          <fieldset className="form-group">
+            <label>Email</label>
+            <input
+            ref="email"
+            className="form-control"
+            placeholder="Enter First Name"
+            />
+          </fieldset>
+          <fieldset className="form-group">
+            <label>Phone Number</label>
+            <input
+            ref="phoneNumber"
+            className="form-control"
+            placeholder="Enter First Name"
+            />
+            
+          </fieldset>
+      <button onClick={this.handleFormSubmit.bind(this)} className ="btn btn-primary">submit </button>
       </form>
-      </div>
+
   </div>
-    
+    </div>
   
   
     );
   }
 }
 
-export default profile;
+const mapStateToProps = (state) => {
+  return {state: state}
+}
 
-// <h1 className="Name">{this.props.person.name}</h1>
-// <h2 className="Email">{this.props.person.email}</h2>
-// <h3 className="PhoneNumber">{this.props.person.phone}</h3>
+export default connect(mapStateToProps, actions)(profile);
+
+

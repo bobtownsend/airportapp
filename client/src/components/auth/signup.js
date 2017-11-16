@@ -29,11 +29,27 @@ class Signup extends Component {
       this.context.router.history.push("/");
     }
   }
-  handleFormSubmit(formProps) {
+  handleFormSubmit(event) {
+    event.preventDefault();
     // Call action creator to sign up the user
-    this.props.signupUser(formProps);
+    let firstName= this.refs.firstName.value;
+    let lastName= this.refs.lastName.value;
+
+    let email= this.refs.email.value;
+
+    let password= this.refs.password.value;
+    let phoneNumber = this.refs.phoneNumber.value;
+    
+    console.log(firstName);
+    console.log(lastName);
+    console.log(email);
+    console.log(password);
+    console.log(phoneNumber);
+    this.props.signupUser(firstName, lastName, email, password, phoneNumber);
+
+    console.log(this.props.values);
     localStorage.setItem("userEmail", this.props.values.email);
-    this.context.router.history.push("/");
+    this.context.router.history.push("/profile");
   }
   renderAlert() {
     if (this.props.errorMessage) {
@@ -44,45 +60,7 @@ class Signup extends Component {
       );
     }
   }
-  renderLinks() {
-    if (this.props.authenticated) {
-      // show a link for user to go to Dashboard or Sign Out
-      return [
-        <li className="nav-item" key={1}>
-          {this.props.message}
-        </li>,
-        <li className="nav-item" key={2}>
-          <Link className="btn btn-default tg-login__btn" to="/dashboard">
-            Dashboard
-          </Link>
-        </li>,
-        <li className="nav-item" key={3}>
-          <Link className="nav-link" to="/signout">
-            Sign Out
-          </Link>
-        </li>
-      ];
-    } else {
-      // show a link for user to Sign In or Sign Up
-      return [
-        <li className="nav-item">
-          <Link
-            id="navLink"
-            className="btn btn-lg btn-primary"
-            to="/signin"
-            key={1}
-          >
-            Sign In
-          </Link>
-        </li>,
-        <li className="nav-item" key={2}>
-          <Link id="navLink" className="btn btn-lg btn-primary" to="/signup">
-            Sign Up
-          </Link>
-        </li>
-      ];
-    }
-  }
+ 
   render() {
     const {
       handleSubmit,
@@ -99,12 +77,13 @@ class Signup extends Component {
     return (
       <div className="tg-login__wrapper">
         <Test />
-        <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+        <form >
           <fieldset className="form-group">
             <label>First Name</label>
             <input
+            ref="firstName"
               className="form-control"
-              {...firstName}
+              
               placeholder="Enter First Name"
             />
           </fieldset>
@@ -112,22 +91,22 @@ class Signup extends Component {
             <label>Last Name</label>
             <input
               className="form-control"
-              {...lastName}
+              ref="lastName"
               placeholder="Enter Last Name"
             />
           </fieldset>
           <fieldset className="form-group">
             <label>Phone Number</label>
-            <input className='form-control' {...phoneNumber} placeholder='Enter Phone Number'/>
+            <input className='form-control' ref="phoneNumber" placeholder='Enter Phone Number'/>
             </fieldset>
         <fieldset className='form-group'>
           <label>Email:</label>
-          <input className='form-control' {...email} placeholder='Enter email' />
+          <input className='form-control' ref="email" placeholder='Enter email' />
           {email.touched && email.error && <div className='error'>{email.error}</div>}        
         </fieldset>
         <fieldset className='form-group'>
           <label>Password:</label>
-          <input className='form-control' {...password} type='password' placeholder='Enter password' />
+          <input className='form-control' ref="password" type='password' placeholder='Enter password' />
           {password.touched && password.error && <div className='error'>{password.error}</div>}
         </fieldset>
         <fieldset className='form-group'>
@@ -139,7 +118,7 @@ class Signup extends Component {
         
       
       {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
-      <button action='submit' className='btn btn-primary'>Sign up!</button>
+      <button onClick={this.handleFormSubmit.bind(this)} action='submit' className='btn btn-primary'>Sign up!</button>
      <br></br>
      <br></br>
      <br></br>
