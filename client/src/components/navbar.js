@@ -10,18 +10,18 @@ class Navbar extends React.Component {
       //        localStorage.setItem('authenticated', true);
       let  authenticated = localStorage.getItem('authenticated');
       
-        if (authenticated != null && authenticated === true) {
+        if (!!authenticated) {
           // show a link for user to go to Dashboard or Sign Out
           return [
-            <li className='nav-item' key={1}>{this.props.message}
+            <li className="nav-item" key={1}>{this.props.message}
             </li>
             ,
-            <li className='nav-item' key={2}>
-              <Link className='btn btn-default tg-login__btn' to='/dashboard'>Dashboard</Link>
+            <li className="nav-item" key={2}>
+              <Link className="btn btn-lg btn-primary" to="/profile">Dashboard</Link>
             </li>
             ,
-            <li className='nav-item' key={3}>
-              <Link className='nav-link' to='/signout'>Sign Out</Link>
+            <li className="nav-item" key={3}>
+              <Link className="btn btn-lg btn-primary" to="/signout">Sign Out</Link>
             </li>
           ];
         } else {

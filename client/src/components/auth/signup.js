@@ -49,7 +49,7 @@ class Signup extends Component {
 
     console.log(this.props.values);
     localStorage.setItem("userEmail", this.props.values.email);
-    this.context.router.history.push("/");
+    this.context.router.history.push("/profile");
   }
   renderAlert() {
     if (this.props.errorMessage) {
@@ -115,7 +115,7 @@ class Signup extends Component {
     return (
       <div className="tg-login__wrapper">
         <Test />
-        <form >
+        <form className="signUp">
           <fieldset className="form-group">
             <label>First Name</label>
             <input

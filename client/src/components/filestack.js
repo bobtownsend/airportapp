@@ -35,11 +35,13 @@ renderPicker(){
     
 
     return (
+      
       <div>
         {this.state.imageUrl && <img style={{width: "15vw"}} src={this.state.imageUrl} />}
         <br />
         <button className="btn btn-primary" onClick={()=> this.renderPicker()}>UpLoad Profile Pictures</button>
       </div>
+      
     );
   }
 }

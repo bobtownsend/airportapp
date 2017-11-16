@@ -13,6 +13,14 @@ exports.signin = function (req, res, next) {
   res.send({ token: tokenForUser(req.user) });
 };
 
+exports.signOut = function (req,res,next){
+  localStorage.removeItem('token');
+  localStorage.removeItem('userEmail');
+  localStorage.removeItem('authenticated');
+  res.redirect('/');
+
+}
+
 exports.signup = function (req, res, next) {
   const email = req.body.email;
   const password = req.body.password;
