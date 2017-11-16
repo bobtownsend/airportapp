@@ -1,11 +1,26 @@
 const User = require('../models/user');
 
-exports.editUser = function (req, res, next) {
-    console.log("EDIT USER FUNCTION STARTED");
-    console.log("EDIT USER FUNCTION STARTED");
-    console.log("EDIT USER FUNCTION STARTED");
+exports.getUser = function(req,res,next){
+  const email = req.body.userEmail;
+  console.log("GET USER INITIATED");
+  console.log("GET USER INITIATED");
+  console.log("GET USER INITIATED");
+  console.log("GET USER INITIATED");
+  console.log("GET USER INITIATED");
+  console.log("GET USER INITIATED");
+  console.log(userEmail);
+  User.findOne({ email: email }, function (err, existingUser) {
+    if (err) { return next(err) }
 
-    console.log("EDIT USER FUNCTION STARTED");
+    // If a user with email does exist, return an error
+    if (existingUser) {
+      res.send({response: existingUser})
+  }
+
+  });
+}
+
+exports.editUser = function (req, res, next) {
 
     console.log("EDIT USER FUNCTION STARTED");
     
