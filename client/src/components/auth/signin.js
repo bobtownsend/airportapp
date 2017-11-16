@@ -53,6 +53,7 @@ class Signin extends Component {
 
   };
 
+
   renderAlert () {
     if (this.props.errorMessage) {
       return (
@@ -73,6 +74,7 @@ class Signin extends Component {
       <div className='tg-login__wrapper'>
         <form >
           <fieldset className='form-group'>
+            <label>Login with Username and Password</label><br></br>
             <label>Email:</label>
             <input ref="email" className='form-control' placeholder='Enter email' />
           </fieldset>
@@ -85,7 +87,11 @@ class Signin extends Component {
           <br></br>
           <br></br>
           <br></br>
-          
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
         </form>
         <div><Footer /></div>
       </div>
