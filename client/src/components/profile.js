@@ -18,11 +18,27 @@ class profile extends React.Component {
     router: PropTypes.object
   };
   componentWillMount(){
-    let auth = localStorage.getItem('authenticated');
+   
+    
+    let userEmail = localStorage.getItem('userEmail');
+    let auth = localStorage.getItem('authenticated'); 
+
+
 if (auth == true){
 this.setState({authenticated: true});
 console.log(this.props);
+
+axios.post(`/fetchUser`, { userEmail })
+.then(response => {
+
+    console.log(response);
+})
+.catch(err => {
+console.log(err)
+})
 }
+
+
   }
 componentDidMount(){
   console.log(this.props);

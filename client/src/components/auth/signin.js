@@ -38,13 +38,13 @@ class Signin extends Component {
     console.log("New USER SIGNED IN");
     console.log( email );
     
-    axios.get('/fetchUser')
-    .then(function(response){
-      console.log(response)
-    })
-    .catch(function(error){
-      console.log(error);
-    })
+    // axios.get('/api/v1/fetchUser')
+    // .then(function(response){
+    //   console.log(response)
+    // })
+    // .catch(function(error){
+    //   console.log(error);
+    // })
 
 
     this.context.router.history.push('/profile');

@@ -25,9 +25,11 @@ const localLogin = new LocalStrategy(localOptions, function (email, password, do
          return done(null, false); }
          console.log(user);
 
-        axios.post('/fetchUser', {firstName: user.firstName, lastName: user.lastName})
+        axios.post('/fetchUser', {user: user})
           .then(function(response){
-            console.log(response.config.data)
+            res.send({
+              payload: response
+            });
           })
           .catch(function(error){
             console.log(error);

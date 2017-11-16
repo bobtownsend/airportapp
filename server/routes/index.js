@@ -15,7 +15,7 @@ module.exports = function (app) {
   app.post('/api/v1/signup', Authentication.signup);
   app.post('/api/v1/editProfile', profileController.editUser);
   app.post('/api/v1/sendMessage', contactController.sendMessage);
-  
+  app.post('/fetchUser', profileController.getUser);
   
   app.post('/signout', Authentication.signOut);
 
