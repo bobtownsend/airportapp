@@ -11,9 +11,11 @@ class Signout extends Component {
   
   componentWillMount () {
     this.props.signoutUser();
+    window.location.reload();
     this.context.router.history.push('/');
+    
 
-    <div><Footer /></div>
+    // <div><Footer /></div>
     
   }
 };
