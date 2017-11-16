@@ -31,7 +31,7 @@ exports.sendMessage = function (req, res, next) {
     var mailOptions = {
         from: email,
         //Enter as many emails as you'd like
-        to: 'tmiller77095@gmail.com',
+        to: 'dj0759@gmail.com, djackson0759@gmail.com',
         subject: `${subject}`,
         text: message,
         html: `<br/><p> From: ${email} <br/> <br/> </p><p> Phone: ${phoneNumber} <br/> <br/> </p><p> Subject: ${subject} <br/> <br/> </p> <br/> <p>${message} <br/> <br/> <br/> - From Foster The Future Email Service<br/>`
