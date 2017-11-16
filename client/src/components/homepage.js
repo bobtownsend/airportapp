@@ -17,15 +17,33 @@ import team5 from '../images/team/team-5.jpg';
 import Footer from './footer';
 
 class Homepage extends Component {
+    constructor(props){
+        super(props);
+    }
+    state ={
+        contactSubmision: false,
+        sent: false
+    }
   static contextTypes = {
     router: PropTypes.object
   };
 
+  
   componentDidMount() {
     this.props.fetchMessage();
   }
 
-  
+  contactSubmit = () =>{
+    let email = this.refs.email.value;
+    let fullName = this.refs.fullName.value;
+    let phoneNumber = this.refs.phoneNumber.value;
+    let message = this.refs.message.value;
+    let subject = this.refs.subject.value;
+   this.props.contactSubmit(email, fullName, phoneNumber, subject, message);
+this.setState({sent: true, contactSubmision: true});
+    console.log('CONTACT FORM SUBMITED');
+
+  }
 
   render() {
 
@@ -184,35 +202,42 @@ class Homepage extends Component {
             <h2>Contact</h2>
             <p>Got a question? Drop us an email.</p>
 
-<form
-    action="mailto:rayroman0809@gmail.com"
-    method="post"
-    encType="multipart/form-data"
-    name="EmailThisForm">
+
+<form>
         <div className="col-lg-6 col-md-6">
             <div className="input-group input-group-lg">
                 <span className="input-group-addon" id="sizing-addon1"><i className="fa fa-user" aria-hidden="true"></i>
                 </span>
-                <input type="text" className="form-control" aria-describedby="sizing-addon1" placeholder="Full Name"/>
+                <input type="text" ref="fullName" className="form-control" aria-describedby="sizing-addon1" placeholder="Full Name"/>
             </div>
             <div className="input-group input-group-lg">
                 <span className="input-group-addon" id="sizing-addon1"><i className="fa fa-envelope" aria-hidden="true"></i>
                 </span>
-                <input type="text" className="form-control" aria-describedby="sizing-addon1" placeholder="Email Address"/>
+                <input type="text" ref="email" className="form-control" aria-describedby="sizing-addon1" placeholder="Email Address"/>
             </div>
             <div className="input-group input-group-lg">
                 <span className="input-group-addon" id="sizing-addon1"><i className="fa fa-phone" aria-hidden="true"></i>
                 </span>
-                <input type="text" className="form-control" aria-describedby="sizing-addon1" placeholder="Phone Number"/>
+                <input type="text" ref="phoneNumber" className="form-control" aria-describedby="sizing-addon1" placeholder="Phone Number"/>
             </div>
+       </div>
+       <div className="input-group input-group-lg">
+            <label> Subject</label>
+                <input type="text" ref="subject" className="form-control" aria-describedby="sizing-addon1" placeholder="Subject"/>
+            
        </div>
         <div className="col-lg-6 col-md-6">
             <div className="input-group">
-                <textarea name="" id="" cols="80" rows="6" className="form-control"></textarea>
+                <textarea ref="message" name="" id="" cols="80" rows="6" className="form-control"></textarea>
             </div>
-            <button className="btn btn-md" >Submit your Message</button>
+            <button onClick={this.contactSubmit.bind(this)} className="btn btn-md" >Submit your Message</button>
         </div>
 </form>
+<br></br>
+<br></br>
+<br></br>
+{/* I CHANGED THIS */}
+{this.state.contactSubmision == true ? <p style={{'color': 'green', 'font-size': '18px'}}> Message Submitted Successfully </p>: <p></p>}
     </div>
 </div>
 

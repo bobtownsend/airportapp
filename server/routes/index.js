@@ -1,5 +1,6 @@
 const Authentication = require('../controllers/authentication');
-const profileController = require('../controllers/profilecontroller');
+const profileController = require('../controllers/profile.controller');
+const contactController = require('../controllers/contactMessage.controller');
 const passportService = require('../services/passport');
 const passport = require('passport');
 
@@ -15,4 +16,9 @@ module.exports = function (app) {
   app.post('/api/v1/signin', requireSignin, Authentication.signin);
   app.post('/api/v1/signup', Authentication.signup);
   app.post('/api/v1/editProfile', profileController.editUser);
-  app.post('/api/v1/signout', Authentication.signOut);};
+  app.post('/api/v1/sendMessage', contactController.sendMessage);
+  
+  
+  app.post('/signout', Authentication.signOut);
+
+};

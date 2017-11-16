@@ -16,7 +16,6 @@ import Signout from "./auth/signout";
 import Signup from "./auth/signup";
 import "../index.css";
 
-
 export default class App extends React.Component {
   render() {
     return (
@@ -26,8 +25,8 @@ export default class App extends React.Component {
             <Navbar>{Navbar}</Navbar>
             <div>
               <Route exact path="/" component={Homepage} />
-              <Route path="/signin" component={Signin} />
-              <Route path="/profile" component={profile} />
+              <Route path="/signin" component={Signin} /> 
+              <Route path="/userHomepage" component={Homepage} /> 
               <Route path="/privacy" component={privacy} />              
               <Route path="/signup" component={Signup} />
               <Route path="/signout" component={Signout} />

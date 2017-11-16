@@ -17,9 +17,10 @@ exports.signOut = function (req,res,next){
   localStorage.removeItem('token');
   localStorage.removeItem('userEmail');
   localStorage.removeItem('authenticated');
-  res.redirect('/');
 
-}
+
+};
+
 
 exports.signup = function (req, res, next) {
   const email = req.body.email;
