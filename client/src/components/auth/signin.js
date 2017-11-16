@@ -37,14 +37,10 @@ class Signin extends Component {
     console.log("New USER SIGNED IN");
     console.log( email )
     console.log( password )
+    this.context.router.history.push('/profile');
+    // this.props.router.push(`/profile`);
+    
   };
-  // handleChange(e){
-    // let tempUser=this.state.profile;
-    // tempUser[e.target.name]=e.target.value;
-    // this.setState({
-      // user:tempUser
-    // });
-  // };
 
 
   renderAlert () {
@@ -96,9 +92,9 @@ class Signin extends Component {
 
       <div className='tg-login__wrapper'>
         {/* <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}> */}
-        <form >
+        <form className="signIn">
           <fieldset className='form-group'>
-            <label>THIS IS A NEWWWWW TEST ALSO </label>
+            <label>Login with Username and Password</label><br></br>
             <label>Email:</label>
             <input ref="email" className='form-control' placeholder='Enter email' />
           </fieldset>
@@ -112,7 +108,11 @@ class Signin extends Component {
           <br></br>
           <br></br>
           <br></br>
-          
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
         </form>
         <div><Footer /></div>
       </div>

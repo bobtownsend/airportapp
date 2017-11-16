@@ -16,9 +16,6 @@ import Signout from "./auth/signout";
 import Signup from "./auth/signup";
 import "../index.css";
 
-// import Tripbuild from './tripbuild';
-// import Tripresults from './tripresults';
-// import Places from './places';
 
 export default class App extends React.Component {
   render() {
@@ -35,7 +32,6 @@ export default class App extends React.Component {
               <Route path="/signup" component={Signup} />
               <Route path="/signout" component={Signout} />
               <Route path="/calendar" component={mycalendar} />
-              <Route path="/profile" component={profile} />
               <Route path="/feature" component={RequireAuth(Feature)} />
             </div>
             <footer>{footer}</footer>
