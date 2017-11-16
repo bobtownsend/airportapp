@@ -3,6 +3,9 @@ const User = require('../models/user');
 const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 const LocalStrategy = require('passport-local');
+const axios = require('axios');
+
+
 
 // Create local strategy
 const localOptions = { usernameField: 'email' };
@@ -17,8 +20,18 @@ const localLogin = new LocalStrategy(localOptions, function (email, password, do
     // compare passwords - is `password` equal to user.password?
     user.comparePassword(password, function (err, isMatch) {
       if (err) { return done(err) }
-      if (!isMatch) { return done(null, false) }
+      if (!isMatch) {
 
+         return done(null, false); }
+         console.log(user);
+
+        axios.post('/fetchUser', {firstName: user.firstName, lastName: user.lastName})
+          .then(function(response){
+            console.log(response.config.data)
+          })
+          .catch(function(error){
+            console.log(error);
+          })
       return done(null, user)
     })
   })
