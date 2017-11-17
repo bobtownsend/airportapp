@@ -17,8 +17,6 @@ exports.signOut = function (req,res,next){
   localStorage.removeItem('token');
   localStorage.removeItem('userEmail');
   localStorage.removeItem('authenticated');
-
-
 };
 
 
@@ -27,9 +25,20 @@ exports.signup = function (req, res, next) {
   const password = req.body.password;
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
+  const phoneNumber = req.body.phoneNumber;
+  const adminCode = req.body.adminCode;
   if (!email || !password) {
     return res.status(422).send({ error: 'You must provide email and password'});
   };
+
+  const secretKey = '123secret';
+let isAdmin;
+  if (adminCode === secretKey){
+    isAdmin = true;
+  } else {
+    isAdmin = false;
+  }
+  
 
   // See if a user with the given email exists
   User.findOne({ email: email }, function (err, existingUser) {
@@ -45,7 +54,9 @@ exports.signup = function (req, res, next) {
       email: email,
       password: password,
       firstName: firstName,
-      lastName: lastName
+      lastName: lastName,
+      phoneNumber: phoneNumber,
+      isAdmin: isAdmin
     });
 
     user.save(function (err) {

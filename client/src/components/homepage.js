@@ -222,7 +222,6 @@ this.setState({sent: true, contactSubmision: true});
             </div>
        </div>
        <div className="input-group input-group-lg">
-            <label> Subject</label>
                 <input type="text" ref="subject" className="form-control" aria-describedby="sizing-addon1" placeholder="Subject"/>
             
        </div>
