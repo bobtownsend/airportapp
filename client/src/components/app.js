@@ -15,7 +15,7 @@ import Signin from "./auth/signin";
 import Signout from "./auth/signout";
 import Signup from "./auth/signup";
 import "../index.css";
-
+import Admin from './admin';
 export default class App extends React.Component {
   render() {
     return (
@@ -32,6 +32,9 @@ export default class App extends React.Component {
               <Route path="/signout" component={Signout} />
               <Route path="/calendar" component={mycalendar} />
               <Route path="/profile" component={profile} />
+              <Route path="/admin" component={Admin} />
+
+
               <Route path="/feature" component={RequireAuth(Feature)} />
             </div>
             <footer>{footer}</footer>

@@ -52,47 +52,27 @@ export function signinUser(email, password) {
   };
 }
 
-export function editUser(oldEmail, email, fullName, phoneNumber) {
-  return function(dispatch) {
-    //Submit email/password to the server
-    axios
-      .post(`${ROOT_URL}/editProfile`, {
-        oldEmail,
-        email,
-        fullName,
-        phoneNumber
-      })
+export function editUser (oldEmail, email, fullName, phoneNumber) {
+  return function (dispatch) {
+    // Submit email/password to the server
+    axios.post(`${ROOT_URL}/editProfile`, { oldEmail, email, fullName, phoneNumber})
       .then(response => {
-        //If request is good...
-
+        // If request is good...
+       
         console.log("USER UPDATED SUCCESSFULLY!");
+        
       })
       .catch(() => {
         // If request is bad...
         // - Show an error to the user
-        dispatch(authError("Bad Login Info"));
-      });
+        dispatch(authError('Bad Login Info'))
+      })
   };
 }
 //firstName, lastName, phoneNumber,email,password
-export function signupUser(
-  firstName,
-  lastName,
-  email,
-  password,
-  phoneNumber,
-  adminCode
-) {
-  return function(dispatch) {
-    axios
-      .post(`${ROOT_URL}/signup`, {
-        email,
-        password,
-        firstName,
-        lastName,
-        phoneNumber,
-        adminCode
-      })
+export function signupUser (firstName, lastName, email, password, phoneNumber, adminCode) {
+  return function (dispatch) {
+    axios.post(`${ROOT_URL}/signup`, { email, password, firstName, lastName, phoneNumber, adminCode })
       .then(response => {
         dispatch({ type: AUTH_USER });
         localStorage.setItem("token", response.data.token);
@@ -105,7 +85,15 @@ export function signupUser(
   };
 }
 
-export function authError(error) {
+export function removeUser(id){
+  return function(dispatch){
+    axios.post(`${ROOT_URL}/removeUser`, {id})
+    .then().catch(err => console.log(err))
+  }
+}
+
+
+export function authError (error) {
   return {
     type: AUTH_ERROR,
     payload: error

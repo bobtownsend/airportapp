@@ -39,24 +39,20 @@ class Signup extends Component {
     let password = this.refs.password.value;
     let phoneNumber = this.refs.phoneNumber.value;
     let adminCode = this.refs.adminCode.value;
-
     console.log(firstName);
     console.log(lastName);
     console.log(email);
     console.log(password);
     console.log(phoneNumber);
-    this.props.signupUser(
-      firstName,
-      lastName,
-      email,
-      password,
-      phoneNumber,
-      adminCode
-    );
+    this.props.signupUser(firstName, lastName, email, password, phoneNumber, adminCode);
 
     console.log(this.props.values);
     localStorage.setItem("userEmail", this.props.values.email);
-    this.context.router.history.push("/profile");
+    window.location.reload(true);
+    
+    this.context.router.history.push("/signin");
+    this.context.router.refresh;
+    
   }
   renderAlert() {
     if (this.props.errorMessage) {
@@ -84,7 +80,7 @@ class Signup extends Component {
     return (
       <div className="tg-login__wrapper">
         <Test />
-        <form className="signUp">
+        <form >
           <fieldset className="form-group">
             <label>First Name</label>
             <input
@@ -103,72 +99,42 @@ class Signup extends Component {
           </fieldset>
           <fieldset className="form-group">
             <label>Phone Number</label>
-            <input
-              className="form-control"
-              ref="phoneNumber"
-              placeholder="Enter Phone Number"
-            />
-          </fieldset>
-          <fieldset className="form-group">
-            <label>Email:</label>
-            <input
-              className="form-control"
-              ref="email"
-              placeholder="Enter email"
-            />
-            {email.touched &&
-              email.error && <div className="error">{email.error}</div>}
-          </fieldset>
-          <fieldset className="form-group">
-            <label>Password:</label>
-            <input
-              className="form-control"
-              ref="password"
-              type="password"
-              placeholder="Enter password"
-            />
-            {password.touched &&
-              password.error && <div className="error">{password.error}</div>}
-          </fieldset>
-          <fieldset className="form-group">
-            <label>Confirm Password:</label>
-            <input
-              className="form-control"
-              {...passwordConfirm}
-              type="password"
-              placeholder="Enter password again"
-            />
-            {passwordConfirm.touched &&
-              passwordConfirm.error && (
-                <div className="error">{passwordConfirm.error}</div>
-              )}
-          </fieldset>
-          <fieldset className="form-group">
-            <label>Admin code</label>
+            <input className='form-control' ref="phoneNumber" placeholder='Enter Phone Number'/>
+            </fieldset>
+        <fieldset className='form-group'>
+          <label>Email:</label>
+          <input className='form-control' ref="email" placeholder='Enter email' />
+          {email.touched && email.error && <div className='error'>{email.error}</div>}        
+        </fieldset>
+        <fieldset className='form-group'>
+          <label>Password:</label>
+          <input className='form-control' ref="password" type='password' placeholder='Enter password' />
+          {password.touched && password.error && <div className='error'>{password.error}</div>}
+        </fieldset>
+        <fieldset className='form-group'>
+          <label>Confirm Password:</label>
+          <input className='form-control' {...passwordConfirm} type='password' placeholder='Enter password again' />
+          {passwordConfirm.touched && passwordConfirm.error && <div className='error'>{passwordConfirm.error}</div>}          
+        </fieldset>
+
+        <fieldset className="form-group">
+            <label>Admin Code</label>
             <input
               className="form-control"
               ref="adminCode"
               placeholder="Enter Admin Code"
             />
           </fieldset>
-
-          {this.renderAlert()}
-
-          {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
-          <button
-            onClick={this.handleFormSubmit.bind(this)}
-            action="submit"
-            className="btn btn-primary"
-          >
-            Sign up!
-          </button>
-          <br />
-          <br />
-          <br />
-        </form>
-        <div>
-          <Footer />
-        </div>
+        {this.renderAlert()}
+        
+      
+      {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
+      <button onClick={this.handleFormSubmit.bind(this)} action='submit' className='btn btn-primary'>Sign up!</button>
+     <br></br>
+     <br></br>
+     <br></br>
+      </form>
+      <div><Footer /></div>
       </div>
     );
   }

@@ -3,22 +3,18 @@ const User = require('../models/user');
 exports.getUser = function(req,res,next){
   const email = req.body.userEmail;
   console.log("GET USER INITIATED");
-  console.log("GET USER INITIATED");
-  console.log("GET USER INITIATED");
-  console.log("GET USER INITIATED");
-  console.log("GET USER INITIATED");
-  console.log("GET USER INITIATED");
-  console.log(userEmail);
-  User.findOne({ email: email }, function (err, existingUser) {
-    if (err) { return next(err) }
+  console.log("email" + email);
 
-    // If a user with email does exist, return an error
-    if (existingUser) {
-      res.send({response: existingUser})
-  }
-
+  User.aggregate([
+    {
+      $match: {email: email}
+    },
+  ]).then(function(userProfile){
+    res.send({payload:userProfile})
+  }).catch(function(err){
+    res.send("The user profile lookup failed");
   });
-}
+};
 
 exports.editUser = function (req, res, next) {
 

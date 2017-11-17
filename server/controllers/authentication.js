@@ -16,10 +16,10 @@ exports.signin = function(req, res, next) {
   res.send({ token: tokenForUser(req.user) });
 };
 
-exports.signOut = function(req, res, next) {
-  localStorage.removeItem("token");
-  localStorage.removeItem("userEmail");
-  localStorage.removeItem("authenticated");
+exports.signOut = function (req,res,next){
+  localStorage.removeItem('token');
+  localStorage.removeItem('userEmail');
+  localStorage.removeItem('authenticated');
 };
 
 exports.signup = function(req, res, next) {
@@ -27,6 +27,7 @@ exports.signup = function(req, res, next) {
   const password = req.body.password;
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
+  const phoneNumber = req.body.phoneNumber;
   const adminCode = req.body.adminCode;
   if (!email || !password) {
     return res
@@ -40,6 +41,15 @@ exports.signup = function(req, res, next) {
   } else {
     isAdmin = false;
   }
+
+  const secretKey = '123secret';
+let isAdmin;
+  if (adminCode === secretKey){
+    isAdmin = true;
+  } else {
+    isAdmin = false;
+  }
+  
 
   // See if a user with the given email exists
   User.findOne({ email: email }, function(err, existingUser) {
@@ -58,6 +68,7 @@ exports.signup = function(req, res, next) {
       password: password,
       firstName: firstName,
       lastName: lastName,
+      phoneNumber: phoneNumber,
       isAdmin: isAdmin
     });
 
