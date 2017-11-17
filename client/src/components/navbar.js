@@ -1,5 +1,5 @@
 import React from 'react';
-import Signin from './auth/signin'
+// import Signin from './auth/signin'
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -30,7 +30,7 @@ class Navbar extends React.Component {
         } else {
           // show a link for user to Sign In or Sign Up
           return [
-            <li className="nav-item">
+            <li className= "nav-item">
             <Link id="navLink" className="btn btn-primary" to="/signin">Sign In</Link>
           </li>,
           <li className="nav-item">

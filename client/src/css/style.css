@@ -365,6 +365,7 @@ p {
     border-radius: 0 !important; 
 }
 
+
 .contact .btn {
 
     border-radius: 0;
@@ -372,7 +373,7 @@ p {
     font-size: 15;
     background-color: #f08080;
     color: #fff;
-    margin-top: 4%;
+    margin-top: -1%;
 }
 
 .contact .btn:hover {

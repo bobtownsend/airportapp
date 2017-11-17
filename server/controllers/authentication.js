@@ -42,14 +42,6 @@ exports.signup = function(req, res, next) {
     isAdmin = false;
   }
 
-  const secretKey = '123secret';
-  let isAdmin;
-  if (adminCode === secretKey){
-    isAdmin = true;
-  } else {
-    isAdmin = false;
-  }
-
   // See if a user with the given email exists
   User.findOne({ email: email }, function(err, existingUser) {
     if (err) {
