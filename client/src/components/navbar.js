@@ -1,11 +1,17 @@
 import React from 'react';
 import Signin from './auth/signin'
 import { Link } from 'react-router-dom';
-
+import PropTypes from 'prop-types';
 
 
 class Navbar extends React.Component {
-
+  static contextTypes = {
+    router: PropTypes.object
+  };
+  componentWillMount(){
+        //Refresh page to re-render navbar
+        this.context.router.refresh;
+  }
     renderLinks () {
       //        localStorage.setItem('authenticated', true);
       let  authenticated = localStorage.getItem('authenticated');

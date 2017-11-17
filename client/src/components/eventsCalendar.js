@@ -20,14 +20,14 @@ export default [
   {
     title: "Phoenix Fan Fest $15  9am",
     start: new Date(2017, 11, 15, 9, 0),
-    end: new Date(2017, 10, 11),
+    end: new Date(2017, 11, 11),
     desc: "Phoenix Convention Center"
   },
 
   {
     title: "Saturday Moring Open Hack  9am",
     start: new Date(2017, 11, 16),
-    end: new Date(2017, 10, 16),
+    end: new Date(2017, 11, 16),
     desc: "GoDaddy Tempe"
   },
 
@@ -50,5 +50,19 @@ export default [
     start: new Date(2017, 11, 8),
     end: new Date(2017, 11, 8),
     desc: "@ Devry Linux Hackfest"
+  },
+
+  {
+    title: "Hackfest @ DeVry CyberSecurity Range 11am",
+    start: new Date(2017, 11, 4),
+    end: new Date(2017, 11, 4),
+    desc: "@ Devry Linux Hackfest"
+  },
+
+  {
+    title: "Saturday Moring Open Hack  9am",
+    start: new Date(2017, 12, 20, 9),
+    end: new Date(2017, 12, 11),
+    desc: "GoDaddy Tempe"
   }
 ];

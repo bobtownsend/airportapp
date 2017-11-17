@@ -33,7 +33,7 @@ class Signin extends Component {
       let email = this.refs.email.value;
       let password = this.refs.password.value;
     // action creator dispatching creditionals to validate on server
-    this.props.signinUser(email, password );
+    this.props.signinUser(email, password);
     localStorage.setItem('userEmail', email);
     console.log("New USER SIGNED IN");
     console.log( email );
@@ -48,7 +48,6 @@ class Signin extends Component {
     
 
   };
-
 
   renderAlert () {
     if (this.props.errorMessage) {
@@ -70,7 +69,6 @@ class Signin extends Component {
       <div className='tg-login__wrapper'>
         <form >
           <fieldset className='form-group'>
-            <label>Login with Username and Password</label><br></br>
             <label>Email:</label>
             <input ref="email" className='form-control' placeholder='Enter email' />
           </fieldset>
@@ -83,11 +81,7 @@ class Signin extends Component {
           <br></br>
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+          
         </form>
         <div><Footer /></div>
       </div>
