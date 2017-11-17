@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { reduxForm } from 'redux-form';
-import { Link } from 'react-router-dom';
-import * as actions from '../../actions';
-import PropTypes from 'prop-types';
-import ReactFilestack from 'filestack-react';
-import Test from '../filestack-test.js';
+import React, { Component } from "react";
+import { reduxForm } from "redux-form";
+import { Link } from "react-router-dom";
+import * as actions from "../../actions";
+import PropTypes from "prop-types";
+import ReactFilestack from "filestack-react";
+import Test from "../filestack.js";
 import Footer from "../footer";
-
 
 class Signup extends Component {
   constructor(props) {
@@ -32,24 +31,28 @@ class Signup extends Component {
   handleFormSubmit(event) {
     event.preventDefault();
     // Call action creator to sign up the user
-    let firstName= this.refs.firstName.value;
-    let lastName= this.refs.lastName.value;
+    let firstName = this.refs.firstName.value;
+    let lastName = this.refs.lastName.value;
 
-    let email= this.refs.email.value;
+    let email = this.refs.email.value;
 
-    let password= this.refs.password.value;
+    let password = this.refs.password.value;
     let phoneNumber = this.refs.phoneNumber.value;
-    
+    let adminCode = this.refs.adminCode.value;
     console.log(firstName);
     console.log(lastName);
     console.log(email);
     console.log(password);
     console.log(phoneNumber);
-    this.props.signupUser(firstName, lastName, email, password, phoneNumber);
+    this.props.signupUser(firstName, lastName, email, password, phoneNumber, adminCode);
 
     console.log(this.props.values);
     localStorage.setItem("userEmail", this.props.values.email);
-    this.context.router.history.push("/profile");
+    window.location.reload(true);
+    
+    this.context.router.history.push("/signin");
+    this.context.router.refresh;
+    
   }
   renderAlert() {
     if (this.props.errorMessage) {
@@ -60,7 +63,7 @@ class Signup extends Component {
       );
     }
   }
- 
+
   render() {
     const {
       handleSubmit,
@@ -77,13 +80,12 @@ class Signup extends Component {
     return (
       <div className="tg-login__wrapper">
         <Test />
-        <form className="signUp">
+        <form >
           <fieldset className="form-group">
             <label>First Name</label>
             <input
-            ref="firstName"
+              ref="firstName"
               className="form-control"
-              
               placeholder="Enter First Name"
             />
           </fieldset>
@@ -114,6 +116,15 @@ class Signup extends Component {
           <input className='form-control' {...passwordConfirm} type='password' placeholder='Enter password again' />
           {passwordConfirm.touched && passwordConfirm.error && <div className='error'>{passwordConfirm.error}</div>}          
         </fieldset>
+
+        <fieldset className="form-group">
+            <label>Admin Code</label>
+            <input
+              className="form-control"
+              ref="adminCode"
+              placeholder="Enter Admin Code"
+            />
+          </fieldset>
         {this.renderAlert()}
         
       
@@ -125,8 +136,6 @@ class Signup extends Component {
       </form>
       <div><Footer /></div>
       </div>
-      
-      
     );
   }
 }

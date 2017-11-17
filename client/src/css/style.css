@@ -407,32 +407,6 @@ p {
     padding-right: 50px;
 }
 
-/*PROFILE*/
-
-.profileSignIn {
-    padding-top: 200px;
-    margin-left: 25%; 
-    text-align:center;
-    width: 700px;
-}
-
-
-/*SIGNIN*/
-
-.signIn {
-    margin-left: 25%; 
-    text-align:center;
-    width: 700px;
-}
-
-/*SIGNUP*/
-
-.signUp {
-    margin-left: 25%; 
-    text-align:center;
-    width: 700px;
-}
-
 /*FOOTER*/
 
 

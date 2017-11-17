@@ -16,7 +16,6 @@
     "mdbootstrap": "^4.4.1",
     "moment": "^2.19.1",
     "mongoose": "^4.11.12",
-    "nodemailer": "^4.4.0",
     "path": "^0.12.7",
     "react": "^15.6.1",
     "react-add-to-calendar": "^0.1.4",

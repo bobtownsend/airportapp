@@ -16,8 +16,9 @@ const index = require("./routes/index");
 
 // DB Setup
 // Un-Comment line 19 out and insert your mongoDB connection String
-//mongoose.connect('mongodb://admin:admin@ds259325.mlab.com:59325/airportapp');
-mongoose.connect('mongodb://admin:admin@ds259325.mlab.com:59325/airportapp');
+mongoose.connect('mongodb://admin:admin@ds155587.mlab.com:55587/newsite');
+
+//mongoose.connect('mongodb://admin:admin@ds011369.mlab.com:11369/db1');
 // App Setup
 app.use(morgan("combined"));
 app.use(cors());
