@@ -36,13 +36,13 @@ export function signinUser(email, password) {
         console.log("LOOK HERE INDEX. JS ");
         console.log("LOOK HERE INDEX. JS ");
         console.log(response);
-
         // If request is good...
         // - Update state to indicate user is authenticated
         dispatch({ type: AUTH_USER });
         // - Save the JWT token
-        localStorage.setItem("token", response.data.token);
-        localStorage.setItem("authenticated", true);
+        localStorage.setItem('token', response.data.token);
+        // localStorage.setItem('authenticated', true);
+        // localStorage.setItem('userEmail', email);
       })
       .catch(() => {
         // If request is bad...
@@ -87,11 +87,10 @@ export function signupUser (firstName, lastName, email, password, phoneNumber, a
 
 export function removeUser(id){
   return function(dispatch){
-    axios.post(`${ROOT_URL}/removeUser`, {id})
-    .then().catch(err => console.log(err))
+    axios.post(`{$ROOT_URL}/removeUser`, {id})
+    .then().catch(err => console.log())
   }
 }
-
 
 export function authError (error) {
   return {

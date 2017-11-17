@@ -2,9 +2,6 @@ const User = require('../models/user');
 
 exports.getUser = function(req,res,next){
   const email = req.body.userEmail;
-  console.log("GET USER INITIATED");
-  console.log("email" + email);
-
   User.aggregate([
     {
       $match: {email: email}
@@ -13,7 +10,7 @@ exports.getUser = function(req,res,next){
     res.send({payload:userProfile})
   }).catch(function(err){
     res.send("The user profile lookup failed");
-  });
+  }); 
 };
 
 exports.editUser = function (req, res, next) {

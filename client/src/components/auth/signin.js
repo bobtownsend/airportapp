@@ -11,7 +11,8 @@ class Signin extends Component {
 
      this.state = {
     email: '',
-       password: ''
+       password: '',
+       failedSignIn: false
     
   }
   }
@@ -23,8 +24,7 @@ class Signin extends Component {
   componentWillUpdate(nextProps) {
     if (nextProps.authenticated) {
 
-      this.context.router.history.push('/');
-      this.context.router.history.push('/');
+      this.context.router.history.push('/profile');
     };
   };
 
@@ -37,14 +37,14 @@ class Signin extends Component {
     localStorage.setItem('userEmail', email);
     console.log("New USER SIGNED IN");
     console.log( email );
-    
+
     //Refresh page to re-render navbar
     this.context.router.refresh;
-    
-    this.context.router.history.push('/profile');
-
-
-    //this.context.router.dispatch(window.location.reload(), null);
+    let auth = localStorage.getItem('authenticated');
+    if (auth === true){
+      this.context.router.history.push('/profile');
+    }
+    this.setState({failedSignIn: true})
     
 
   };

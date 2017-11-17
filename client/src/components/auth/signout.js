@@ -15,7 +15,7 @@ class Signout extends Component {
     this.context.router.history.push('/');
     
 
-    // <div><Footer /></div>
+  
     
   }
 };
