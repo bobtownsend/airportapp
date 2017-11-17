@@ -21,6 +21,7 @@
     "react-add-to-calendar": "^0.1.4",
     "react-big-calendar": "^0.16.1",
     "react-bootstrap": "^0.31.5",
+    "react-datetime": "^2.11.0",
     "react-dom": "^15.6.1",
     "react-fontawesome": "^1.6.1",
     "react-google-autocomplete": "^1.0.13",
