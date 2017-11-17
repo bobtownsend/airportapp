@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import BigCalendar from "react-big-calendar";
 import eventsCalendar from "./eventsCalendar";
 import moment from "moment";
-import AddtoCalendar from "./addCalendar";
+import AddtoCalendar from "react-add-to-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import Popup from "react-popup";
 // import "../css/style.css";
@@ -27,7 +27,10 @@ class Mycalendar extends Component {
           views={{ month: true }}
           defaultDate={new Date()}
           onSelectEvent={event =>
-            Popup.alert(<AddtoCalendar />, event.title + "    " + event.desc)}
+            Popup.alert(
+              <AddtoCalendar event={event} />,
+              event.title + "    " + event.desc + "   " + event.date
+            )}
         />
 
         <Popup
@@ -37,12 +40,12 @@ class Mycalendar extends Component {
           closeHtml={null}
           defaultOk="close"
           wildClasses={false}
-          closeOnOutsideClick={true}/>
-          
+          closeOnOutsideClick={true}
+        />
+
         <div>
           <Footer />
         </div>
-        
       </div>
     );
   }
