@@ -5,49 +5,44 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-
+const ROOT_URL = 'http://localhost:8080/api/v1';
 
 class profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      authenticated: false
+      authenticated: false,
+      user: []
     }
   }
   static contextTypes = {
     router: PropTypes.object
   };
   componentWillMount(){
-   
-    
     let userEmail = localStorage.getItem('userEmail');
     let auth = localStorage.getItem('authenticated'); 
 
-
-if (auth == true){
-this.setState({authenticated: true});
-console.log(this.props);
-
-axios.post(`/fetchUser`, { userEmail })
+axios.post(`${ROOT_URL}/fetchUser`, { userEmail })
 .then(response => {
-
-    console.log(response);
+  this.setState({authenticated: true, user: response.data.payload});
+  console.log("CHANGED STATE");
+  console.log(this.state);
 })
 .catch(err => {
 console.log(err)
-})
-}
-
+});
+console.log("STATE IS: ");
+console.log(this.state);
 
   }
 componentDidMount(){
   console.log(this.props);
 
-
+  //This refreshes page to re-render navbar
+  this.context.router.refresh;
+  this.context.router.history.push('/profile');  
   console.log("COMPONENT DID MOUNT");
 
-
-  
 }
 
   
@@ -68,62 +63,78 @@ componentDidMount(){
     console.log('editUser function initiated');
 
   }
+
   render() {
-    
-    return (
-      <div>
+    const userProfile = this.state.user[0];
+    if (userProfile){
+      if(userProfile.isAdmin === true){
+        this.context.router.history.push('/admin');
+      }
+      console.log(userProfile);
+      // const fullName = userProfile[0].firstName + " " + userProfile[0].lastName
+      // const email = userProfile[0].email
+       
+        
+        // <div>  <br></br><br></br><br></br><br></br><br></br><p>Welcome, </p>
+        
+        
+      }
+      return (
         <div>
-        <div>
-      <Navbar />
-      </div>
-      <br></br>
+          <div>
+          <div>
+        <Navbar />
+        </div>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-      <form>
-        <fieldset className="form-group">
-            <label>Full Name</label>
-            <input
-            ref="fullName"
-            className="form-control"
-            placeholder="Enter First Name"
-            />
-          </fieldset>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          
+          <div>
+          </div>
+        <form>
           <fieldset className="form-group">
-            <label>Email</label>
-            <input
-            ref="email"
-            className="form-control"
-            placeholder="Enter First Name"
-            />
-          </fieldset>
-          <fieldset className="form-group">
-            <label>Phone Number</label>
-            <input
-            ref="phoneNumber"
-            className="form-control"
-            placeholder="Enter First Name"
-            />
-            
-          </fieldset>
-      <button onClick={this.handleFormSubmit.bind(this)} className ="btn btn-primary">submit </button>
-      </form>
-
-  </div>
+              <label>Full Name</label>
+              <input
+              ref="fullName"
+              className="form-control"
+              placeholder="Enter First Name"
+              />
+            </fieldset>
+            <fieldset className="form-group">
+              <label>Email</label>
+              <input
+              ref="email"
+              className="form-control"
+              placeholder="Enter First Name"
+              />
+            </fieldset>
+            <fieldset className="form-group">
+              <label>Phone Number</label>
+              <input
+              ref="phoneNumber"
+              className="form-control"
+              placeholder="Enter First Name"
+              />
+              
+            </fieldset>
+        <button onClick={this.handleFormSubmit.bind(this)} className ="btn btn-primary">submit </button>
+        </form>
+  
     </div>
-  
-  
-    );
+      </div>
+    
+    
+      );
+    }
   }
-}
-
-const mapStateToProps = (state) => {
-  return {state: state}
-}
-
-export default connect(mapStateToProps, actions)(profile);
-
-
+  
+  const mapStateToProps = (state) => {
+    return {state: state}
+  }
+  
+  export default connect(mapStateToProps, actions)(profile);
+  
