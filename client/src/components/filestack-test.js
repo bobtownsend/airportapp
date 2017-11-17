@@ -1,7 +1,7 @@
 import ReactFilestack, { client } from "filestack-react";
 import React from "react";
-import filestack from "filestack-js";
-const apikey= "AFADgP4mQICNxkczq4zSpz";
+import filestack from "../..filestack-test";
+const apikey= "AVVEHpNSEGUPUuMss6c3gz";
 const filestackDb = filestack.init(apikey);
 
 export default class Test extends React.Component {
@@ -9,7 +9,11 @@ export default class Test extends React.Component {
     super(props);
     this.state = {}
   }
-
+/* onUpload(){
+  console.log("Document Uploaded Successfully");
+  return <h2>Document Uploaded Successfully</h2>
+}
+*/
 renderPicker(){
   const ratio= 1/1;
   filestackDb.pick({
@@ -31,9 +35,30 @@ renderPicker(){
   })
 }
 
-  render() {
+  /*render() {
+    const options = {
+      accept:["image/*"],
+      minFiles:1,
+      maxFiles:1,
+      storeTo: {
+        location:"s3"
+      }
+    }
+    return (
+//       <div>
+//         <ReactFilestack
+//           apikey={"AVVEHpNSEGUPUuMss6c3gz"}
+//           buttonText="Upload Photo!"
+//           buttonClass="classname"
+//           options={options}
+//           onSuccess={this.onUpload}
+//         />
+//       </div>
+//     );
+//   }
+// }
     
-
+*/
     return (
       
       <div>

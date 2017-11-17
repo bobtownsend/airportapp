@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import * as actions from '../../actions';
 import PropTypes from 'prop-types';
 import ReactFilestack from 'filestack-react';
-import Test from '../filestack.js';
+import Test from '../filestack-test.js';
 import Footer from "../footer";
 
 
