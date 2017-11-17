@@ -6,7 +6,6 @@ import * as actions from '../actions';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 const ROOT_URL = 'http://localhost:8080/api/v1';
-let userProfile = [];
 
 class profile extends React.Component {
   constructor(props) {
@@ -22,31 +21,28 @@ class profile extends React.Component {
   componentWillMount(){
     let userEmail = localStorage.getItem('userEmail');
     let auth = localStorage.getItem('authenticated'); 
-  
-    axios.post(`${ROOT_URL}/fetchUser`, { userEmail })
-    .then(response => {
-        this.setState({authenticated: true, user: response.data.payload});
-        console.log("CHANGED STATE");
-        console.log(this.state);
-    })
-    .catch(err => {
-    console.log(err)
-    });
-    console.log("STATE IS: ");
-    console.log(this.state);   
-    
+
+axios.post(`${ROOT_URL}/fetchUser`, { userEmail })
+.then(response => {
+  this.setState({authenticated: true, user: response.data.payload});
+  console.log("CHANGED STATE");
+  console.log(this.state);
+})
+.catch(err => {
+console.log(err)
+});
+console.log("STATE IS: ");
+console.log(this.state);
+
   }
 componentDidMount(){
   console.log(this.props);
 
-    //Refresh page to re-render navbar
-    this.context.router.refresh;
-    this.context.router.history.push('/profile');
+  //This refreshes page to re-render navbar
+  this.context.router.refresh;
+  this.context.router.history.push('/profile');  
   console.log("COMPONENT DID MOUNT");
-  // this.context.router.history.push('/profile');
-  
 
-  
 }
 
   
@@ -67,72 +63,78 @@ componentDidMount(){
     console.log('editUser function initiated');
 
   }
+
   render() {
     const userProfile = this.state.user[0];
     if (userProfile){
       if(userProfile.isAdmin === true){
         this.context.router.history.push('/admin');
       }
-        console.log(userProfile);
-        // <div>  <br></br><br></br><br></br><br></br><br></br><p>Welcome, </p><h4> {userProfile[0].firstName}, {userProfile[0].lastName}. </h4></div>)
-    }
-    return (
-      <div>
-        <div>
-        <div>
-      <Navbar />
-      </div>
-      <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+      console.log(userProfile);
+      // const fullName = userProfile[0].firstName + " " + userProfile[0].lastName
+      // const email = userProfile[0].email
+       
         
+        // <div>  <br></br><br></br><br></br><br></br><br></br><p>Welcome, </p>
+        
+        
+      }
+      return (
         <div>
+          <div>
+          <div>
+        <Navbar />
         </div>
-      <form>
-        <fieldset className="form-group">
-            <label>Full Name</label>
-            <input
-            ref="fullName"
-            className="form-control"
-            placeholder="Enter First Name"
-            />
-          </fieldset>
+        <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          
+          <div>
+          </div>
+        <form>
           <fieldset className="form-group">
-            <label>Email</label>
-            <input
-            ref="email"
-            className="form-control"
-            placeholder="Enter First Name"
-            />
-          </fieldset>
-          <fieldset className="form-group">
-            <label>Phone Number</label>
-            <input
-            ref="phoneNumber"
-            className="form-control"
-            placeholder="Enter First Name"
-            />
-            
-          </fieldset>
-      <button onClick={this.handleFormSubmit.bind(this)} className ="btn btn-primary">submit </button>
-      </form>
-
-  </div>
+              <label>Full Name</label>
+              <input
+              ref="fullName"
+              className="form-control"
+              placeholder="Enter First Name"
+              />
+            </fieldset>
+            <fieldset className="form-group">
+              <label>Email</label>
+              <input
+              ref="email"
+              className="form-control"
+              placeholder="Enter First Name"
+              />
+            </fieldset>
+            <fieldset className="form-group">
+              <label>Phone Number</label>
+              <input
+              ref="phoneNumber"
+              className="form-control"
+              placeholder="Enter First Name"
+              />
+              
+            </fieldset>
+        <button onClick={this.handleFormSubmit.bind(this)} className ="btn btn-primary">submit </button>
+        </form>
+  
     </div>
-  
-  
-    );
+      </div>
+    
+    
+      );
+    }
   }
-}
-
-const mapStateToProps = (state) => {
-  return {state: state}
-}
-
-export default connect(mapStateToProps, actions)(profile);
-
-
+  
+  const mapStateToProps = (state) => {
+    return {state: state}
+  }
+  
+  export default connect(mapStateToProps, actions)(profile);
+  

@@ -27,7 +27,7 @@ exports.signup = function(req, res, next) {
   const password = req.body.password;
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
-  const phoneNumber = req.body.phoneNumber;
+  const phoneNumber = req.body.phoneNumer;
   const adminCode = req.body.adminCode;
   if (!email || !password) {
     return res
@@ -37,6 +37,14 @@ exports.signup = function(req, res, next) {
   let isAdmin;
   const secretKey = "123secret";
   if (adminCode === secretKey) {
+    isAdmin = true;
+  } else {
+    isAdmin = false;
+  }
+
+  const secretKey = '123secret';
+  let isAdmin;
+  if (adminCode === secretKey){
     isAdmin = true;
   } else {
     isAdmin = false;

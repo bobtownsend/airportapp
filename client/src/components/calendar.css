@@ -12,3 +12,8 @@
   overflow: hidden;
   z-index: 100;
 }
+
+.react-calendar__day{
+  border: 1px black;
+
+}

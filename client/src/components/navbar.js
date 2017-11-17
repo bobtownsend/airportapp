@@ -16,30 +16,25 @@ class Navbar extends React.Component {
       //        localStorage.setItem('authenticated', true);
       let  authenticated = localStorage.getItem('authenticated');
       console.log(authenticated);
-        if (!!authenticated) {
+        if (authenticated) {
           // show a link for user to go to Dashboard or Sign Out
           return [
  
-            <li className='nav-item'key={1}>
-              <Link className='btn btn-primary' to='/profile'>Dashboard</Link>
-            </li>
-            ,
-            <li className='nav-item' key={2}>
-              <Link className='btn btn-primary' to='/signout'>Sign Out</Link>
+            <li className='nav-item'>
+              <Link id="navlink" className="btn btn-primary" to="/profile">Dashboard</Link>
+            </li>,
+            <li className='nav-item'>
+              <Link id="navlink" className="btn btn-primary" to="/signout">Sign Out</Link>
             </li>
           ];
         } else {
           // show a link for user to Sign In or Sign Up
           return [
             <li className="nav-item">
-            <Link id="navLink" className="btn btn-primary" to="/signin" key={1}>
-              Sign In
-            </Link>
+            <Link id="navLink" className="btn btn-primary" to="/signin">Sign In</Link>
           </li>,
-          <li className="nav-item" key={2}>
-            <Link id="navLink" className="btn btn-primary" to="/signup">
-              Sign Up
-            </Link>
+          <li className="nav-item">
+            <Link id="navLink" className="btn btn-primary" to="/signup">Sign Up</Link>
           </li>
         ];
       }

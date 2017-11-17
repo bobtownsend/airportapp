@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import ReactFilestack from "filestack-react";
 import Test from "../filestack.js";
 import Footer from "../footer";
+import { Button, Alert } from "react-bootstrap"; 
 
 class Signup extends Component {
   constructor(props) {
@@ -16,18 +17,19 @@ class Signup extends Component {
       phoneNumber: "",
       email: "",
       password: "",
-      passwordConfirm: ""
+      passwordConfirm: "",
+      alertVisible: false
     };
   }
   static contextTypes = {
     router: PropTypes.object
   };
-  componentWillUpdate(nextProps) {
-    if (this.props.authenticated) {
-      localStorage.setItem("userEmail", this.props.values.email);
-      this.context.router.history.push("/");
-    }
-  }
+  // componentWillUpdate(nextProps) {
+  //   if (this.props.authenticated) {
+  //     localStorage.setItem("userEmail", this.props.values.email);
+  //     this.context.router.history.push("/");
+  //   }
+  // }
   handleFormSubmit(event) {
     event.preventDefault();
     // Call action creator to sign up the user
@@ -39,6 +41,13 @@ class Signup extends Component {
     let password = this.refs.password.value;
     let phoneNumber = this.refs.phoneNumber.value;
     let adminCode = this.refs.adminCode.value;
+
+    if (adminCode == undefined || adminCode == "" || adminCode == null){
+      let adminCode = "";
+    } else if (this.refs.adminCode){
+      adminCode = this.refs.adminCode.value;
+    }
+    
     console.log(firstName);
     console.log(lastName);
     console.log(email);
@@ -47,12 +56,15 @@ class Signup extends Component {
     this.props.signupUser(firstName, lastName, email, password, phoneNumber, adminCode);
 
     console.log(this.props.values);
+    let authenticated = localStorage.getItem('authenticated');
+    if (authenticated){
     localStorage.setItem("userEmail", this.props.values.email);
     window.location.reload(true);
-    
+
     this.context.router.history.push("/signin");
     this.context.router.refresh;
-    
+  }
+
   }
   renderAlert() {
     if (this.props.errorMessage) {
@@ -63,7 +75,13 @@ class Signup extends Component {
       );
     }
   }
+ handleAlertDismiss() {
+   this.setState({ alertVisible: false });
+ }
 
+ handleAlertShow() {
+    this.setState({ alertVisible: true });
+ }
   render() {
     const {
       handleSubmit,
@@ -126,8 +144,25 @@ class Signup extends Component {
             />
           </fieldset>
         {this.renderAlert()}
-        
-      
+        <Button onClick={() => this.handleAlertShow()}>I'm an Admin!</Button>  
+        {this.state.alertVisible == true ? 
+                <Alert bsStyle="danger" onDismiss={this.handleAlertDismiss}>
+                <h4>Enter Your Admin Code.</h4>
+                
+                <fieldset className="form-group">
+            <label>Admin Code</label>
+            <input
+              className="form-control"
+              ref="adminCode"
+              placeholder="Enter Admin Code"
+            />
+          </fieldset>
+                  <span> or </span>
+                  <Button onClick={() => this.handleAlertDismiss()}>Cancel</Button>
+                
+              </Alert> : <p></p>
+            }
+      <br></br>
       {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
       <button onClick={this.handleFormSubmit.bind(this)} action='submit' className='btn btn-primary'>Sign up!</button>
      <br></br>
