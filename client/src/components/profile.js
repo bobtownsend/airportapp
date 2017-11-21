@@ -1,11 +1,12 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import Navbar from './navbar';
-import { connect } from 'react-redux';
-import * as actions from '../actions';
-import PropTypes from 'prop-types';
-import axios from 'axios';
 
+
+import Navbar from "./navbar";
+import { connect } from "react-redux";
+import * as actions from "../actions";
+import PropTypes from "prop-types";
+import axios from "axios";
 
 import MyCalendar from "./calendar";
 import { lang } from "moment";
@@ -112,11 +113,7 @@ class profile extends React.Component {
           <br />
           <br />
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <MyCalendar userEvents={this.state.userEvents} />
+          
 
           <form>
             <fieldset className="form-group">
@@ -150,35 +147,9 @@ class profile extends React.Component {
               submit{" "}
             </button>
           </form>
+          <MyCalendar userEvents={this.state.userEvents} />
           <div />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          
         </div>
       </div>
     );

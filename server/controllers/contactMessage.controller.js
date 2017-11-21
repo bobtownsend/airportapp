@@ -15,7 +15,7 @@ exports.sendMessage = function (req, res, next) {
     console.log(email);
     console.log(fullName);
     console.log(phoneNumber);
-    console.log(subject);
+    // console.log(subject);
     console.log(message);
 
 
@@ -23,16 +23,15 @@ exports.sendMessage = function (req, res, next) {
         service: 'Gmail',
         auth: {
            
-            user: 'ccplaneguys@gmail.com',
-            pass:'!*Password1!*',
+            user: 'fosterthefuture44@gmail.com',
+            pass:'Brassmonkey12!',
            
         }
     });
     var mailOptions = {
         from: email,
         //Enter as many emails as you'd 
-        to: 'tmiller77095@gmail.com, tmiller85208@gmail.com',
-        subject: `${subject}`,
+        to: "fosterthefuture44@gmail.com",
         text: message,
         html: `<br/><p> From: ${email} <br/> <br/> </p><p> Phone: ${phoneNumber} <br/> <br/> </p><p> Subject: ${subject} <br/> <br/> </p> <br/> <p>${message} <br/> <br/> <br/> - From Foster The Future Email Service<br/>`
     };
