@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Component } from "react";
+// import { Component } from "react";
 import footer from "./footer";
-import FontAwesome from "react-fontawesome";
+// import FontAwesome from "react-fontawesome";
 import Navbar from "./navbar";
-import Calendar from "./calendar";
+// import Calendar from "./calendar";
 import Feature from "./feature";
 import Homepage from "./homepage";
 import profile from "./profile";
