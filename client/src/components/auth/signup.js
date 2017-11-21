@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import ReactFilestack from "filestack-react";
 import Test from "../filestack.js";
 import Footer from "../footer";
-import { Button, Alert } from "react-bootstrap"; 
+import { Button, Alert } from "react-bootstrap";
 
 class Signup extends Component {
   constructor(props) {
@@ -18,6 +18,7 @@ class Signup extends Component {
       email: "",
       password: "",
       passwordConfirm: "",
+      adminCode: "",
       alertVisible: false
     };
   }
@@ -42,29 +43,34 @@ class Signup extends Component {
     let phoneNumber = this.refs.phoneNumber.value;
     let adminCode = this.refs.adminCode.value;
 
-    if (adminCode == undefined || adminCode == "" || adminCode == null){
+    if (adminCode == undefined || adminCode == "" || adminCode == null) {
       let adminCode = "";
-    } else if (this.refs.adminCode){
+    } else if (this.refs.adminCode) {
       adminCode = this.refs.adminCode.value;
     }
-    
+
     console.log(firstName);
     console.log(lastName);
     console.log(email);
     console.log(password);
     console.log(phoneNumber);
-    this.props.signupUser(firstName, lastName, email, password, phoneNumber, adminCode);
+    this.props.signupUser(
+      firstName,
+      lastName,
+      email,
+      password,
+      phoneNumber,
+      adminCode
+    );
 
     console.log(this.props.values);
-    let authenticated = localStorage.getItem('authenticated');
-    if (authenticated){
+    let authenticated = localStorage.getItem("authenticated");
+    localStorage.setItem("authenticated", false);
     localStorage.setItem("userEmail", this.props.values.email);
     window.location.reload(true);
 
     this.context.router.history.push("/signin");
     this.context.router.refresh;
-  }
-
   }
   renderAlert() {
     if (this.props.errorMessage) {
@@ -75,13 +81,13 @@ class Signup extends Component {
       );
     }
   }
- handleAlertDismiss() {
-   this.setState({ alertVisible: false });
- }
+  handleAlertDismiss() {
+    this.setState({ alertVisible: false });
+  }
 
- handleAlertShow() {
+  handleAlertShow() {
     this.setState({ alertVisible: true });
- }
+  }
   render() {
     const {
       handleSubmit,
@@ -98,7 +104,7 @@ class Signup extends Component {
     return (
       <div className="tg-login__wrapper">
         <Test />
-        <form >
+        <form>
           <fieldset className="form-group">
             <label>First Name</label>
             <input
@@ -117,25 +123,48 @@ class Signup extends Component {
           </fieldset>
           <fieldset className="form-group">
             <label>Phone Number</label>
-            <input className='form-control' ref="phoneNumber" placeholder='Enter Phone Number'/>
-            </fieldset>
-        <fieldset className='form-group'>
-          <label>Email:</label>
-          <input className='form-control' ref="email" placeholder='Enter email' />
-          {email.touched && email.error && <div className='error'>{email.error}</div>}        
-        </fieldset>
-        <fieldset className='form-group'>
-          <label>Password:</label>
-          <input className='form-control' ref="password" type='password' placeholder='Enter password' />
-          {password.touched && password.error && <div className='error'>{password.error}</div>}
-        </fieldset>
-        <fieldset className='form-group'>
-          <label>Confirm Password:</label>
-          <input className='form-control' {...passwordConfirm} type='password' placeholder='Enter password again' />
-          {passwordConfirm.touched && passwordConfirm.error && <div className='error'>{passwordConfirm.error}</div>}          
-        </fieldset>
+            <input
+              className="form-control"
+              ref="phoneNumber"
+              placeholder="Enter Phone Number"
+            />
+          </fieldset>
+          <fieldset className="form-group">
+            <label>Email:</label>
+            <input
+              className="form-control"
+              ref="email"
+              placeholder="Enter email"
+            />
+            {email.touched &&
+              email.error && <div className="error">{email.error}</div>}
+          </fieldset>
+          <fieldset className="form-group">
+            <label>Password:</label>
+            <input
+              className="form-control"
+              ref="password"
+              type="password"
+              placeholder="Enter password"
+            />
+            {password.touched &&
+              password.error && <div className="error">{password.error}</div>}
+          </fieldset>
+          <fieldset className="form-group">
+            <label>Confirm Password:</label>
+            <input
+              className="form-control"
+              {...passwordConfirm}
+              type="password"
+              placeholder="Enter password again"
+            />
+            {passwordConfirm.touched &&
+              passwordConfirm.error && (
+                <div className="error">{passwordConfirm.error}</div>
+              )}
+          </fieldset>
 
-        <fieldset className="form-group">
+          <fieldset className="form-group">
             <label>Admin Code</label>
             <input
               className="form-control"
@@ -143,33 +172,42 @@ class Signup extends Component {
               placeholder="Enter Admin Code"
             />
           </fieldset>
-        {this.renderAlert()}
-        <Button onClick={() => this.handleAlertShow()}>I'm an Admin!</Button>  
-        {this.state.alertVisible == true ? 
-                <Alert bsStyle="danger" onDismiss={this.handleAlertDismiss}>
-                <h4>Enter Your Admin Code.</h4>
-                
-                <fieldset className="form-group">
-            <label>Admin Code</label>
-            <input
-              className="form-control"
-              ref="adminCode"
-              placeholder="Enter Admin Code"
-            />
-          </fieldset>
-                  <span> or </span>
-                  <Button onClick={() => this.handleAlertDismiss()}>Cancel</Button>
-                
-              </Alert> : <p></p>
-            }
-      <br></br>
-      {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
-      <button onClick={this.handleFormSubmit.bind(this)} action='submit' className='btn btn-primary'>Sign up!</button>
-     <br></br>
-     <br></br>
-     <br></br>
-      </form>
-      <div><Footer /></div>
+          {this.renderAlert()}
+          <Button onClick={() => this.handleAlertShow()}>I'm an Admin!</Button>
+          {this.state.alertVisible == true ? (
+            <Alert bsStyle="danger" onDismiss={this.handleAlertDismiss}>
+              <h4>Enter Your Admin Code.</h4>
+
+              <fieldset className="form-group">
+                <label>Admin Code</label>
+                <input
+                  className="form-control"
+                  ref="secondCode"
+                  placeholder="Enter Admin Code"
+                />
+              </fieldset>
+              <span> or </span>
+              <Button onClick={() => this.handleAlertDismiss()}>Cancel</Button>
+            </Alert>
+          ) : (
+            <p />
+          )}
+          <br />
+          {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
+          <button
+            onClick={this.handleFormSubmit.bind(this)}
+            action="submit"
+            className="btn btn-primary"
+          >
+            Sign up!
+          </button>
+          <br />
+          <br />
+          <br />
+        </form>
+        <div>
+          <Footer />
+        </div>
       </div>
     );
   }

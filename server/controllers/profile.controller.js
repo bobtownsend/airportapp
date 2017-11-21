@@ -51,39 +51,6 @@ exports.addEvent = function(req, res, next) {
       return next(err);
     }
 
-    // If a user with email does exist, return an error
-    // if (existingUser) {
-    //   console.log("Found existing user in DB, Pushing event to user!");
-    //   userEvents
-    //     .aggregate([
-    //       {
-    //         $match: { userEmail: existingUser.userEmail }
-    //       }
-    //     ])
-    //     .then(function(userProfile) {
-    //       userEvents.updateOne(
-    //         { userEmail: userEmail },
-    //         {
-    //           $set: {
-    //             events: [...existingUser.events, event]
-    //           }
-    //         }
-    //       );
-    //     })
-    //     .catch(function(err) {
-    //       res.send("The user Event lookup failed");
-    //     });
-    //   // try {
-    //   //   userEvents.updateOne(
-    //   //     { userEmail: userEmail },
-    //   //     { $push: { events: { event: event } } },
-    //   //     { upsert: true }
-    //   //   );
-    //   // } catch (error) {
-    //   //   console.log(error);
-    //   // }
-    // } else {
-
     const event = new userEvents({
       userEmail: userEmail,
       events: [
