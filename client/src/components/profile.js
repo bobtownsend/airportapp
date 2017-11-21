@@ -1,11 +1,12 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import Navbar from './navbar';
-import { connect } from 'react-redux';
-import * as actions from '../actions';
-import PropTypes from 'prop-types';
-import axios from 'axios';
 
+
+import Navbar from "./navbar";
+import { connect } from "react-redux";
+import * as actions from "../actions";
+import PropTypes from "prop-types";
+import axios from "axios";
 
 import MyCalendar from "./calendar";
 import { lang } from "moment";
