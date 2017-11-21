@@ -1,5 +1,5 @@
 import React from 'react';
-import Signin from './auth/signin'
+// import Signin from './auth/signin'
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -30,10 +30,10 @@ class Navbar extends React.Component {
         } else {
           // show a link for user to Sign In or Sign Up
           return [
-            <li className="nav-item">
+            <li key={6}className= "nav-item">
             <Link id="navLink" className="btn btn-primary" to="/signin">Sign In</Link>
           </li>,
-          <li className="nav-item">
+          <li key={7} className="nav-item">
             <Link id="navLink" className="btn btn-primary" to="/signup">Sign Up</Link>
           </li>
         ];
@@ -63,11 +63,11 @@ class Navbar extends React.Component {
     
         <ul className="nav navbar-nav navbar-right">
             {/* I CHANGED THIS */}
-            <li><a href="/#ourservices">our services</a></li>
-            <li><a href="/#events">events</a></li>
-            <li><a href="/#team">team</a></li>
-            <li><a href="/#partners">partners</a></li>
-            <li><a href="/#contact">contact</a></li>
+            <li key={1}><a href="/#ourservices">our services</a></li>
+            <li key={2}><a href="/#events">events</a></li>
+            <li key={3}><a href="/#team">team</a></li>
+            <li key={4}><a href="/#partners">partners</a></li>
+            <li key={5}><a href="/#contact">contact</a></li>
              
             {this.renderLinks()}
        </ul>

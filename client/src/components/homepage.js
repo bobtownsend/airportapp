@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { DefaultPlayer as Video } from "react-html5video";
+// import { Link } from "react-router-dom";
+// import { DefaultPlayer as Video } from "react-html5video";
 import * as actions from "../actions";
 import PropTypes from "prop-types";
-import profile from "./profile";
-import privacy from "./privacy";
+// import profile from "./profile";
+// import privacy from "./privacy";
 import '../css/style.css';
-import fontAwesome from 'react-fontawesome';
+// import fontAwesome from 'react-fontawesome';
 import { Grid, Row, Col } from 'react-bootstrap';
 import team1 from '../images/team/team-1.jpg';
 import team2 from '../images/team/team-2.jpg';
 import team3 from '../images/team/team-3.jpg';
 import team4 from '../images/team/team-4.jpg';
-import team5 from '../images/team/team-5.jpg';
+// import team5 from '../images/team/team-5.jpg';
 import Footer from './footer';
 
 class Homepage extends Component {
@@ -54,7 +54,6 @@ this.setState({sent: true, contactSubmision: true});
 <div>
   <div id="header" className="header">
     <div className="container">
-      <p className="text-center" className="largeImageText"></p>
     </div>
   </div>
              
@@ -63,9 +62,11 @@ this.setState({sent: true, contactSubmision: true});
  <div className="container">
       <h2>Our Services</h2>
       <p></p>
-      <div className="col-lg-6 col-md-6">
+      <div className="testP">
+      <div className="col-lg-6 col-md-6"><br></br><br></br>
       <h2>about us</h2>
       <p>Foster The Future is a care system in which a minor has been placed outside of the foster system and gets them ready for a career.</p>
+      </div>
       </div>
       <div className="your-centered-div" className="col-lg-6 col-md-6">
         <div className="embed-responsive embed-responsive-16by9">
@@ -179,13 +180,13 @@ this.setState({sent: true, contactSubmision: true});
     <Row className='show-grid'>
         <h2>Our Partners</h2>
         <div className="col-lg-3 col-md-3">
-        <li><img src='https://i.imgur.com/fe0T4nw.png'/></li>
+        <li><a target="_blank" href='http://www.fibco.org/'><img className="client6" src='https://i.imgur.com/7RBcX8s.png'/></a></li>
         </div>
         <div className="col-lg-3 col-md-3">
         <li><a target="_blank" href='http://www.arizonansforchildren.org/'><img className="client2" src='https://i.imgur.com/IX3vf8y.png' /></a></li>
         </div>
         <div className="col-lg-3 col-md-3">
-        <li><a target="_blank" href='https://arizonaatwork.com'><img src='https://i.imgur.com/01YlgMf.png'/></a></li>
+        <li><a target="_blank" href='https://arizonaatwork.com'><img className="client3" src='https://i.imgur.com/01YlgMf.png'/></a></li>
         </div>
         <div className="col-lg-3 col-md-3">
         <li><a target="_blank" href='https://www.codercamps.com'><img className="client5" src='https://i.imgur.com/kccwdNi.png'/></a></li>
@@ -220,10 +221,6 @@ this.setState({sent: true, contactSubmision: true});
                 </span>
                 <input type="text" ref="phoneNumber" className="form-control" aria-describedby="sizing-addon1" placeholder="Phone Number"/>
             </div>
-       </div>
-       <div className="input-group input-group-lg">
-                <input type="text" ref="subject" className="form-control" aria-describedby="sizing-addon1" placeholder="Subject"/>
-            
        </div>
         <div className="col-lg-6 col-md-6">
             <div className="input-group">
