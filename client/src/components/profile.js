@@ -113,11 +113,7 @@ class profile extends React.Component {
           <br />
           <br />
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <MyCalendar userEvents={this.state.userEvents} />
+          
 
           <form>
             <fieldset className="form-group">
@@ -151,35 +147,9 @@ class profile extends React.Component {
               submit{" "}
             </button>
           </form>
+          <MyCalendar userEvents={this.state.userEvents} />
           <div />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          
         </div>
       </div>
     );

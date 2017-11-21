@@ -24,10 +24,4 @@ module.exports = function(app) {
   
   app.post('/signout', Authentication.signOut);
 
-  app.post("/api/v1/fetchAllUsers", adminController.getAllUsers);
-  app.post("/api/v1/removeUser", adminController.removeUser);
-  app.post("/api/v1/addToCalendar", profileController.addEvent);
-  app.post("/api/v1/fetchEvents", profileController.fetchEvents);
-
-  app.post("/signout", Authentication.signOut);
 };
