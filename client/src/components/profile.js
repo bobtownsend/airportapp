@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-const ROOT_URL = 'http://localhost:8080/api/v1';
+
 
 import MyCalendar from "./calendar";
 import { lang } from "moment";
