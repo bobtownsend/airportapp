@@ -45,7 +45,7 @@ class Footer extends React.Component {
                 </a><br></br>
                 <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7D6BXB6RXM6X8&lc=US&item_name=Foster%20The%20Future&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">
                   <i className="fa fa-square-o" aria-hidden="true" /> Make a
-                  Donatin
+                  Donation
                 </a>
               </div>
               <div className="col-lg-4 col-md-4">

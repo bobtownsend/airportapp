@@ -1,5 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
+
+
 import Navbar from "./navbar";
 import { connect } from "react-redux";
 import * as actions from "../actions";
@@ -111,11 +113,7 @@ class profile extends React.Component {
           <br />
           <br />
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <MyCalendar userEvents={this.state.userEvents} />
+          
 
           <form>
             <fieldset className="form-group">
@@ -149,35 +147,9 @@ class profile extends React.Component {
               submit{" "}
             </button>
           </form>
+          <MyCalendar userEvents={this.state.userEvents} />
           <div />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          
         </div>
       </div>
     );
