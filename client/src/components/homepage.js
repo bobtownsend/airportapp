@@ -14,6 +14,7 @@ import team2 from '../images/team/team-2.jpg';
 import team3 from '../images/team/team-3.jpg';
 import team4 from '../images/team/team-4.jpg';
 import team5 from '../images/team/team-5.jpg';
+import bg3 from '../images/bg3.jpg';
 import Footer from './footer';
 class Homepage extends Component {
     constructor(props){
@@ -43,7 +44,7 @@ this.setState({sent: true, contactSubmision: true});
   render() {
     return (
       
-<div>
+<div >
   <div id="header" className="header">
     <div className="container">
       <p className="text-center" className="largeImageText"></p>
@@ -205,10 +206,7 @@ this.setState({sent: true, contactSubmision: true});
                 <input type="text" ref="phoneNumber" className="form-control" aria-describedby="sizing-addon1" placeholder="Phone Number"/>
             </div>
        </div>
-       {/* <div className="input-group input-group-lg">
-                <input type="text" ref="subject" className="form-control" aria-describedby="sizing-addon1" placeholder="Subject"/>
-            
-       </div> */}
+       
         <div className="col-lg-6 col-md-6">
             <div className="input-group">
                 <textarea ref="message" name="" id="" cols="80" rows="6" className="form-control"></textarea>
