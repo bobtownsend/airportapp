@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { DefaultPlayer as Video } from "react-html5video";
 import * as actions from "../actions";
 import PropTypes from "prop-types";
@@ -14,6 +14,7 @@ import team2 from '../images/team/team-2.jpg';
 import team3 from '../images/team/team-3.jpg';
 import team4 from '../images/team/team-4.jpg';
 import team5 from '../images/team/team-5.jpg';
+import bg3 from '../images/bg3.jpg';
 import Footer from './footer';
 class Homepage extends Component {
     constructor(props){
@@ -43,7 +44,7 @@ this.setState({sent: true, contactSubmision: true});
   render() {
     return (
       
-<div>
+<div >
   <div id="header" className="header">
     <div className="container">
       <p className="text-center" className="largeImageText"></p>
@@ -167,10 +168,10 @@ this.setState({sent: true, contactSubmision: true});
     <Row className='show-grid'>
         <h2>Our Partners</h2>
         <div className="col-lg-3 col-md-3">
-        <li><img src='https://i.imgur.com/fe0T4nw.png'/></li>
+        <li><a target="_blank" href='http://www.fibco.org/'><img className="client6" src='https://i.imgur.com/tsEjK46.png'/></a></li>
         </div>
         <div className="col-lg-3 col-md-3">
-        <li><a target="_blank" href='http://www.arizonansforchildren.org/'><img className="client2" src='https://i.imgur.com/IX3vf8y.png' /></a></li>
+        <li><a target="_blank" href='http://www.arizonansforchildren.org/'><img className="client2" src='https://i.imgur.com/IX3vf8y.png'/></a></li>
         </div>
         <div className="col-lg-3 col-md-3">
         <li><a target="_blank" href='https://arizonaatwork.com'><img src='https://i.imgur.com/01YlgMf.png'/></a></li>
@@ -205,10 +206,7 @@ this.setState({sent: true, contactSubmision: true});
                 <input type="text" ref="phoneNumber" className="form-control" aria-describedby="sizing-addon1" placeholder="Phone Number"/>
             </div>
        </div>
-       {/* <div className="input-group input-group-lg">
-                <input type="text" ref="subject" className="form-control" aria-describedby="sizing-addon1" placeholder="Subject"/>
-            
-       </div> */}
+       
         <div className="col-lg-6 col-md-6">
             <div className="input-group">
                 <textarea ref="message" name="" id="" cols="80" rows="6" className="form-control"></textarea>
@@ -226,6 +224,8 @@ this.setState({sent: true, contactSubmision: true});
 </div>
 <Footer/>   
     </div>
+    
+
     
     );
   }
