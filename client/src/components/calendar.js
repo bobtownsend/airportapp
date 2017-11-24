@@ -10,6 +10,9 @@ import Popup from "react-popup";
 import Footer from "./footer";
 import "./calendar.css";
 import axios from "axios";
+import PropTypes from 'prop-types';
+
+
 const ROOT_URL = "http://localhost:8080/api/v1";
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
@@ -20,7 +23,27 @@ class Mycalendar extends Component {
   constructor(props) {
     super(props);
   }
-
+  state = {
+    changedView: false
+  }
+  static contextTypes = {
+    router: PropTypes.object
+  };
+  deleteEvent(event){
+    console.log(event);
+    let email = localStorage.getItem('userEmail');
+    console.log(email);
+    axios
+    .post(`${ROOT_URL}/removeFromCalendar`, { event, email })
+    .then(response => {
+      console.log("Event Removed was successful!");
+    })
+    .catch(err => {
+      console.log(err);
+    });
+    this.context.router.history.push('/');
+    
+  }
   addEventToCalendar(event) {
     console.log(event);
     const userEmail = localStorage.getItem("userEmail");
@@ -52,13 +75,27 @@ class Mycalendar extends Component {
           style={{ height: "150vh", padding: "100px" }}
           views={{ month: true }}
           defaultDate={new Date()}
-          onSelectEvent={event =>
+          onSelectEvent={   event => 
+            {
+              if(this.props.isUser != true){
+              Popup.close();
+            
             Popup.alert(
-              <button onClick={() => this.addEventToCalendar(event)}>
+              <button onClick={() => {this.addEventToCalendar(event);  Popup.close();}}>
                 Add Event
               </button>,
               event.title + "    " + event.desc + "   " + event.date
-            )}
+            )} else {
+              Popup.close();
+              Popup.alert(
+                <button onClick={() => {this.deleteEvent(event);  Popup.close(); this.context.router.history.push('/profile'); window.location.reload(); }}>
+                Remove Event
+              </button>,
+                event.title + "    " + event.desc + "   " + event.date
+              )
+            }
+          }
+          }
         />
 
         <Popup

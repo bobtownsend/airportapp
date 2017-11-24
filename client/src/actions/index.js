@@ -52,14 +52,15 @@ export function signinUser(email, password) {
   };
 }
 
-export function editUser(oldEmail, email, fullName, phoneNumber) {
+export function editUser(oldEmail, email, firstName, lastName, phoneNumber) {
   return function(dispatch) {
     // Submit email/password to the server
     axios
       .post(`${ROOT_URL}/editProfile`, {
         oldEmail,
         email,
-        fullName,
+        firstName,
+        lastName,
         phoneNumber
       })
       .then(response => {
