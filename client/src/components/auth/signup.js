@@ -240,3 +240,4 @@ export default reduxForm(
   mapStateToProps,
   actions
 )(Signup);
+

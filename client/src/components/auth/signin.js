@@ -29,6 +29,12 @@ class Signin extends Component {
   handleFormSubmit() {
     let email = this.refs.email.value;
     let password = this.refs.password.value;
+
+    let adminCode = this.refs.adminCode.value;
+
+    if (adminCode == "123secret"){
+      this.context.router.history.push("/admin");
+    }
     // action creator dispatching creditionals to validate on server
     this.props.signinUser(email, password);
     localStorage.setItem("userEmail", email);
@@ -77,6 +83,15 @@ class Signin extends Component {
             />
           </fieldset>
           {this.renderAlert()}
+          <fieldset className="form-group">
+            <label>Admin Code:</label>
+            <input
+              ref="adminCode"
+              type="text"
+              className="form-control"
+              placeholder="Enter password"
+            />
+          </fieldset>
           <button
             type="button"
             className="btn btn-primary"

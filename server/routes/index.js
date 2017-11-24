@@ -18,10 +18,13 @@ module.exports = function(app) {
   app.post("/api/v1/editProfile", profileController.editUser);
   app.post("/api/v1/sendMessage", contactController.sendMessage);
   app.post("/api/v1/fetchUser", profileController.getUser);
+
+  
   app.post("/api/v1/fetchAllUsers", adminController.getAllUsers);
   app.post("/api/v1/removeUser", adminController.removeUser);
   app.post("/api/v1/fetchEvents", profileController.fetchEvents);
   app.post("/api/v1/addToCalendar", profileController.addEvent);
-
+  app.post("/api/v1/removeFromCalendar", profileController.removeEvent);
+  
   app.post("/signout", Authentication.signOut);
 };

@@ -78,17 +78,19 @@ class profile extends React.Component {
   handleFormSubmit() {
     console.log(this.props);
     // Call action creator to sign up the user
-    let fullName = this.refs.fullName.value;
+    let firstName = this.refs.firstName.value;
+    let lastName = this.refs.lastName.value;
+    
     let phoneNumber = this.refs.phoneNumber.value;
 
     let email = this.refs.email.value;
 
     let oldEmail = localStorage.getItem("userEmail");
     console.log(oldEmail);
-    console.log(fullName);
+    console.log(firstName + " " + lastName);
     console.log(email);
     console.log(phoneNumber);
-    this.props.editUser(oldEmail, email, fullName, phoneNumber);
+    this.props.editUser(oldEmail, email, firstName, lastName, phoneNumber);
     console.log("editUser function initiated");
   }
 
@@ -114,40 +116,59 @@ class profile extends React.Component {
           <br />
           <br />
           
+          {userProfile ? 
+         
+          <div>
+             <br/>
+            <br/>
 
+           <br/>
+          <h3>Welcome, {userProfile.firstName}</h3>
           <form>
             <fieldset className="form-group">
-              <label>Full Name</label>
+              <label>First Name
               <input
-                ref="fullName"
+              defaultValue={userProfile.firstName}
+                ref="firstName"
                 className="form-control"
-                placeholder="Enter First Name"
+                
               />
+              </label>
+              <label>Last Name
+              <input
+                defaultValue={userProfile.lastName}
+                ref="lastName"
+                className="form-control"
+              />
+              </label>
             </fieldset>
             <fieldset className="form-group">
               <label>Email</label>
               <input
+                defaultValue={userProfile.email}
                 ref="email"
                 className="form-control"
-                placeholder="Enter First Name"
               />
             </fieldset>
             <fieldset className="form-group">
               <label>Phone Number</label>
-              <input
+              <input type="text"
+              defaultValue={userProfile.phoneNumber}
                 ref="phoneNumber"
                 className="form-control"
-                placeholder="Enter First Name"
+                
               />
             </fieldset>
             <button
               onClick={this.handleFormSubmit.bind(this)}
               className="btn btn-primary"
             >
-              submit{" "}
+              Edit
             </button>
           </form>
-          <MyCalendar userEvents={this.state.userEvents} />
+          </div>
+           : <p></p>}
+          <MyCalendar userEvents={this.state.userEvents} isUser={true}/>
           <div />
           
         </div>
