@@ -1,7 +1,7 @@
 .mm-popup__box {
   width: 475px;
   position: absolute;
-  font-size: 10px;
+  font-size: 15px;
   top: 10%;
   left: 50%;
   margin-left: -175px;
@@ -13,9 +13,6 @@
   z-index: 100;
 }
 
-.react-calendar__day{
+.react-calendar__day {
   border: 1px black;
-
 }
-
-
