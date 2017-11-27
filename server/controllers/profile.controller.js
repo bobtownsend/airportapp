@@ -76,42 +76,66 @@ exports.addEvent = function(req, res, next) {
     console.log("Event Saved Succesfully");
   });
 };
+
+exports.removeEvent = function(req,res,next){
+  let event = req.body.event;
+  let email = req.body.email;
+  console.log("EVENT TO BE REMOVED");
+  console.log(event);
+  console.log("===============================");
+
+  userEvents.find({userEmail:email})
+    .then(function(response){
+      
+      for (var i =0; i < response.length; i++){
+        console.log(response[i].events[0]);
+        
+        if (response[i].events[0]._id == event._id){
+          userEvents
+          .remove({_id: response[i]._id  })
+            .then(function(response) {
+              console.log("Events Deleted Successfully! :)");
+              
+            })
+            .catch(function(err) {
+              res.send("The user profile lookup failed");
+            });
+          let eventToDelete = response[i];
+        }
+      }
+        console.log("FOR LOOP FINISHED");
+        console.log(eventToDelete);
+
+        
+      
+    })
+
+
+
+}
+
 exports.editUser = function(req, res, next) {
   console.log("EDIT USER FUNCTION STARTED");
 
   const newEmail = req.body.email;
-  const fullName = req.body.fullName;
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
+  
   const phoneNumber = req.body.phoneNumber;
   const oldEmail = req.body.oldEmail;
 
-  console.log(newEmail);
-  console.log(fullName);
+  console.log(oldEmail);
+  console.log(firstName);
+  console.log(lastName);
   console.log(phoneNumber);
   console.log(newEmail);
 
-  // if (!email || !password) {
-  //   return res.status(422).send({ error: 'You must provide email and password'});
-  // };
+User.updateOne(
+  {email: oldEmail}, 
+  {$set: { firstName: firstName, lastName: lastName, email: newEmail, phoneNumber: phoneNumber} },
+).then((response) => console.log(response))
+.catch(err => console.log(err))
 
-  // See if a user with the given email exists
 
-  User.findOne({ email: oldEmail }, function(err, existingUser) {
-    if (err) {
-      return next(err);
-    }
 
-    // If a user with email does exist, return an error
-    if (existingUser) {
-    }
-
-    // If a user with email does NOT exist, create and save user record
-    //   const user = new User({
-    //     email: email,
-    //     password: password,
-    //     firstName: firstName,
-    //     lastName: lastName
-    //   });
-
-    // Repond to request indicating the user was created
-  });
 };

@@ -23,7 +23,7 @@ exports.signup = function(req, res, next) {
   const password = req.body.password;
   const firstName = req.body.firstName;
   const lastName = req.body.lastName;
-  const phoneNumber = req.body.phoneNumer;
+  const phoneNumber = req.body.phoneNumber;
   const adminCode = req.body.adminCode;
   if (!email || !password) {
     return res
