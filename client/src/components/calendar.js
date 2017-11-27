@@ -86,7 +86,7 @@ class Mycalendar extends Component {
                 >
                   Add Event
                 </button>,
-                event.title + "    " + event.desc + "   " + event.date
+                event.title + "    " + event.desc + "   "
               );
             } else {
               Popup.close();
