@@ -2,6 +2,7 @@ import React from "react";
 // import Signin from './auth/signin'
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import navIcon from "../images/clients/web-icon.png"
 
 class Navbar extends React.Component {
   static contextTypes = {
@@ -64,29 +65,28 @@ class Navbar extends React.Component {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-
-            <a href="/" className="navbar-brand">
-              Foster The Future
-            </a>
+            <div className="icon_label">
+            <a href="/"><img className="web-icon" src={navIcon}/></a> 
+            </div>
           </div>
 
           <div className="navbar-collapse collapse">
             <ul className="nav navbar-nav navbar-right">
               {/* I CHANGED THIS */}
               <li key={1}>
-                <a href="/#ourservices">our services</a>
+                <a className="navA" href="/#ourservices">our services</a>
               </li>
               <li key={2}>
-                <a href="/#events">events</a>
+                <a className="navA" href="/#events">events</a>
               </li>
               <li key={3}>
-                <a href="/#team">team</a>
+                <a className="navA" href="/#team">team</a>
               </li>
               <li key={4}>
-                <a href="/#partners">partners</a>
+                <a className="navA" href="/#partners">partners</a>
               </li>
               <li key={5}>
-                <a href="/#contact">contact</a>
+                <a className="navA" href="/#contact">contact</a>
               </li>
 
               {this.renderLinks()}
