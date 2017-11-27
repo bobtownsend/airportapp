@@ -364,10 +364,7 @@ class Homepage extends Component {
                 <p style={{ color: "green", "font-size": "18px" }}>
                   {" "}
                   Message Submitted Successfully{" "}
-                </p>
-              ) : (
-                <p />
-              )}
+                </p>) : (<p />)}
             </div>
           </div>
         </div>
