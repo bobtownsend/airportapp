@@ -53,8 +53,11 @@ class Homepage extends Component {
         <div id="ourservices" className="ourservices">
           <div className="container">
             <h2>Our Services</h2>
-            <p />
+            <br />
             <div className="col-lg-6 col-md-6">
+              <br />
+              <br />
+              <br />
               <h2>about us</h2>
               <p>
                 Foster The Future is a care system in which a minor has been
@@ -67,7 +70,7 @@ class Homepage extends Component {
                 <iframe
                   className="embed-responsive-item"
                   className="video"
-                  src="https://www.youtube.com/embed/V4w5R7_80G0"
+                  src="https://www.youtube.com/embed/_eREJyLNf3o"
                   frameBorder="0"
                   allowFullScreen
                 />
@@ -88,13 +91,14 @@ class Homepage extends Component {
                 <div className="columns">
                   <h1>Dec. 5th</h1>
                   <hr />
-                  <p>
-                    Data Science Webinar 2:00-2:30pm
-                    <hr />
-                    Java Instructor Workshop 5:30-7:30pm
-                  </p>
+                  Data Science Webinar <br />
+                  2:00-2:30pm
+                  <hr />
+                  Java Instructor Workshop <br />
+                  5:30-7:30pm
                   <br />
-
+                  <br />
+                  <br />
                   <a
                     href="calendar"
                     className="btn btn-md btn-primary calendarButton"
@@ -107,11 +111,14 @@ class Homepage extends Component {
                 <div className="columns">
                   <h1>Dec. 7th</h1>
                   <hr />
-                  <p>Cyber Security Webinar TBD</p>
+                  Cyber Security Webinar TBD
                   <hr />
-                  <p>Choice Career 11am-2pm</p>
+                  Choice Career <br />
+                  11am-2pm
                   <br />
-
+                  <br />
+                  <br />
+                  <br />
                   <a
                     href="calendar"
                     className="btn btn-md btn-primary calendarButton"
@@ -124,10 +131,14 @@ class Homepage extends Component {
                 <div className="columns">
                   <h1>Dec. 13th</h1>
                   <hr />
-                  <p>BTW Cyber Security 5:30-7:30pm</p>
+                  BTW Cyber Security <br />
+                  5:30-7:30pm
                   <hr />
-                  <p>National Career 11am-2pm</p>
-
+                  National Career <br />
+                  11am-2pm
+                  <br />
+                  <br />
+                  <br />
                   <a
                     href="calendar"
                     className="btn btn-md btn-primary calendarButton"
@@ -140,10 +151,14 @@ class Homepage extends Component {
                 <div className="columns">
                   <h1>Dec. 14th</h1>
                   <hr />
-                  <p>Byte Club TBD</p>
+                  Byte Club <br />
+                  TBD
                   <hr />
-                  <p>Career Connectors 9am-12pm</p>
-
+                  Career Connectors <br />
+                  9am-12pm
+                  <br />
+                  <br />
+                  <br />
                   <a
                     href="calendar"
                     className="btn btn-md btn-primary calendarButton"
@@ -169,7 +184,9 @@ class Homepage extends Component {
                 <img src={team1} className="img-circle" alt="" />
                 <h4>Ray Roman</h4>
                 <b>Front End</b>
-                <p>Styling Specialist</p>
+                <br />
+                Styling Specialist
+                <br />
                 <a href="https://www.facebook.com/rayroman0809">
                   <i className="fa fa-facebook" aria-hidden="true" />
                 </a>
@@ -188,7 +205,9 @@ class Homepage extends Component {
                 <img src={team2} className="img-circle" alt="" />
                 <h4>Krysta Jones</h4>
                 <b>Front & Back End</b>
-                <p> Web Developer Supervisor </p>
+                <br />
+                Project Supervisor
+                <br />
                 <a href="https://www.facebook.com/krysta.moore.16">
                   <i className="fa fa-facebook" aria-hidden="true" />
                 </a>
@@ -207,7 +226,9 @@ class Homepage extends Component {
                 <img src={team3} className="img-circle" alt="" />
                 <h4>Lovie Bates</h4>
                 <b>Front & Back End</b>
-                <p>calendar Develorper</p>
+                <br />
+                Web Developer
+                <br />
                 <a href="https://www.facebook.com/lovie.bates">
                   <i className="fa fa-facebook" aria-hidden="true" />
                 </a>
@@ -226,7 +247,9 @@ class Homepage extends Component {
                 <img src={team4} className="img-circle" alt="" />
                 <h4>Tyler Miller</h4>
                 <b>Back End</b>
-                <p>Specialist in Backend Node.js Ninja</p>
+                <br />
+                Node.js Ninja
+                <br />
                 <a href="https://www.facebook.com/profile.php?id=100019632854480">
                   <i className="fa fa-facebook" aria-hidden="true" />
                 </a>
@@ -274,7 +297,10 @@ class Homepage extends Component {
                 <div className="col-lg-3 col-md-3">
                   <li>
                     <a target="_blank" href="https://arizonaatwork.com">
-                      <img src="https://i.imgur.com/01YlgMf.png" />
+                      <img
+                        className="client3"
+                        src="https://i.imgur.com/01YlgMf.png"
+                      />
                     </a>
                   </li>
                 </div>
@@ -364,7 +390,10 @@ class Homepage extends Component {
                 <p style={{ color: "green", "font-size": "18px" }}>
                   {" "}
                   Message Submitted Successfully{" "}
-                </p>) : (<p />)}
+                </p>
+              ) : (
+                <p />
+              )}
             </div>
           </div>
         </div>
