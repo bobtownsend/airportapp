@@ -36,15 +36,21 @@ export default class Test extends React.Component {
 
   render() {
     return (
+      <center>
       <div>
         {this.state.imageUrl && (
           <img style={{ width: "15vw" }} src={this.state.imageUrl} />
         )}
         <br />
+        <br></br>
+        <center>
         <button className="btn btn-primary" onClick={() => this.renderPicker()}>
           UpLoad Profile Pictures
         </button>
+        </center>
+        <br></br>
       </div>
+      </center>
     );
   }
 }

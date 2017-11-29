@@ -78,6 +78,12 @@ class Mycalendar extends Component {
               Popup.close();
 
               Popup.alert(
+                <div>
+                <h2>{event.type}</h2>
+                <h3>{event.title}</h3>
+                <br/>
+                <h2>{event.where}</h2>
+                <h3>{event.desc}</h3>
                 <button
                   onClick={() => {
                     this.addEventToCalendar(event);
@@ -85,8 +91,11 @@ class Mycalendar extends Component {
                   }}
                 >
                   Add Event
-                </button>,
-                event.title + "    " + event.desc + "   "
+
+
+                </button>
+                
+                </div>
               );
             } else {
               Popup.close();

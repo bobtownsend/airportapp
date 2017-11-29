@@ -173,7 +173,9 @@ class Signup extends Component {
             />
           </fieldset>
           {this.renderAlert()}
-          <Button onClick={() => this.handleAlertShow()}>I'm an Admin!</Button>
+
+         {/* <Button onClick={() => this.handleAlertShow()}>I'm an Admin!</Button>}*/}
+
           {this.state.alertVisible == true ? (
             <Alert bsStyle="danger" onDismiss={this.handleAlertDismiss}>
               <h4>Enter Your Admin Code.</h4>
@@ -194,6 +196,7 @@ class Signup extends Component {
           )}
           <br />
           {/* <button action='submit' className='btn btn-primary'>Upload Photo!</button> */}
+          <center>
           <button
             onClick={this.handleFormSubmit.bind(this)}
             action="submit"
@@ -201,6 +204,7 @@ class Signup extends Component {
           >
             Sign up!
           </button>
+          </center>
           <br />
           <br />
           <br />

@@ -66,7 +66,7 @@ class Signin extends Component {
       <div className="tg-login__wrapper">
         <form>
           <fieldset className="form-group">
-            <label>Email:</label>
+            <label className="email-fieldset">Email:</label>
             <input
               ref="email"
               className="form-control"
