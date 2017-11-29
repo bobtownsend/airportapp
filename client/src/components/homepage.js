@@ -99,6 +99,7 @@ class Homepage extends Component {
                   <br />
                   <br />
                   <br />
+                  <br />
                   <a
                     href="calendar"
                     className="btn btn-md btn-primary calendarButton"
@@ -111,7 +112,8 @@ class Homepage extends Component {
                 <div className="columns">
                   <h1>Dec. 7th</h1>
                   <hr />
-                  Cyber Security Webinar TBD
+                  Cyber Security Webinar <br />
+                  TBD
                   <hr />
                   Choice Career <br />
                   11am-2pm
@@ -139,6 +141,7 @@ class Homepage extends Component {
                   <br />
                   <br />
                   <br />
+                  <br />
                   <a
                     href="calendar"
                     className="btn btn-md btn-primary calendarButton"
@@ -156,6 +159,7 @@ class Homepage extends Component {
                   <hr />
                   Career Connectors <br />
                   9am-12pm
+                  <br />
                   <br />
                   <br />
                   <br />

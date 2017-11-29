@@ -123,7 +123,9 @@ class profile extends React.Component {
             <br/>
 
            <br/>
+           <center>
           <h3>Welcome, {userProfile.firstName}</h3>
+          </center>
           <form>
             <fieldset className="form-group">
               <label>First Name
@@ -159,12 +161,14 @@ class profile extends React.Component {
                 
               />
             </fieldset>
+            <center>
             <button
               onClick={this.handleFormSubmit.bind(this)}
               className="btn btn-primary"
             >
               Edit
             </button>
+            </center>
           </form>
           </div>
            : <p></p>}
