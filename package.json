@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "engines": {
-    "node": "8.9.0"
+    "node": "^8.9.0"
   },
   "repository": "https://github.com/bobtownsend/airportapp.git",
   "author": "Bob Townsend <bt.codes.it@gmail.com>",
