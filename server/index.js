@@ -7,6 +7,7 @@ const opn = require("opn");
 const path = require("path");
 
 const app = express();
+const staticFiles = express.static(path.join(__dirname, "../../client/build"));
 
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -23,6 +24,8 @@ mongoose.connect("mongodb://admin:admin@ds259325.mlab.com:59325/airportapp");
 app.use(morgan("combined"));
 app.use(cors());
 app.use(bodyParser.json({ type: "*/*" }));
+app.use(staticFiles);
+
 index(app);
 
 app.use(express.static(path.resolve(__dirname + "/public")));
@@ -32,7 +35,7 @@ app.get("*", function(req, res) {
 });
 
 // Server Setup
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3001;
 const server = http.createServer(app);
 server.listen(port);
 console.log("Server listening on:", port);

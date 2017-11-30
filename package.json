@@ -1,0 +1,23 @@
+{
+  "name": "airportapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "8.9.0"
+  },
+  "repository": "https://github.com/bobtownsend/airportapp.git",
+  "author": "Bob Townsend <bt.codes.it@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "scripts": {
+    "build":
+      "concurrently \"cd client && yarn build\" \"cd server && yarn build\"",
+    "install": "(cd client && yarn) && (cd server && yarn)",
+    "start":
+      "concurrently \"cd client && SET PORT=3000 && yarn start\" \"cd server && SET PORT=3001 && yarn start:dev\"",
+    "start:prod": "cd server && node build/index.js",
+    "heroku-postbuild": "yarn build"
+  }
+}
