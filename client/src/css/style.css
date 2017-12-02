@@ -346,6 +346,13 @@
     
         opacity: 2;
     }
+
+    /*PROFILE*/
+
+    #editbutton {
+        background-color: #428bca;
+        border-radius: 0;
+    }
     
     /*CONTACT*/
     

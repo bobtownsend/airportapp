@@ -33,7 +33,7 @@ exports.sendMessage = function (req, res, next) {
         //Enter as many emails as you'd 
         to: "fosterthefuture44@gmail.com",
         text: message,
-        html: `<br/><p> From: ${email} <br/> <br/> </p><p> Phone: ${phoneNumber} <br/> <br/> </p><p> Subject: ${subject} <br/> <br/> </p> <br/> <p>${message} <br/> <br/> <br/> - From Foster The Future Email Service<br/>`
+        html: `<br/><p> From: ${email} <br/> <br/> </p><p> Phone: ${phoneNumber} <br/> <br/> </p><p> Message: ${subject} <br/> <br/> </p> <br/> <p> <br/> <br/> <br/> <p> - From Foster The Future Email Service<br/>`
     };
 
     transporter.sendMail(mailOptions, function(error, info){

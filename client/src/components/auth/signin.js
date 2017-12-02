@@ -87,7 +87,7 @@ class Signin extends Component {
             <label>Admin Code:</label>
             <input
               ref="adminCode"
-              type="text"
+              type="password"
               className="form-control"
               placeholder="Enter password"
             />

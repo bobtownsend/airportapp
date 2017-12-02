@@ -53,14 +53,6 @@ export default [
     where: "Where",
     desc: "Coder Camps Campus, Scottsdale AZ"
   },
-  {
-    title: "Job Fair: Career Connectors 9am-12pm",
-    type: "Job Fair",
-    start: new Date(2017, 11, 6),
-    end: new Date(2017, 11, 6),
-    where: "Where",
-    desc: "North Phoenix Baptist Church- Building B 5757 N. Central Ave"
-  },
 
   {
     title: "Java Instructor Workshop 5:30-7:30pm",
@@ -69,6 +61,15 @@ export default [
     end: new Date(2017, 11, 5),
     where: "Where",
     desc: "Where: Coder Camps Campus, Scottsdale AZ"
+  },
+
+  {
+    title: "Job Fair: Career Connectors 9am-12pm",
+    type: "Job Fair",
+    start: new Date(2017, 11, 6),
+    end: new Date(2017, 11, 6),
+    where: "Where",
+    desc: "North Phoenix Baptist Church- Building B 5757 N. Central Ave"
   },
 
   {

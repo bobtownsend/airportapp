@@ -94,8 +94,9 @@ class Homepage extends Component {
                   Data Science Webinar <br />
                   2:00-2:30pm
                   <hr />
-                  Java Instructor Workshop <br />
-                  5:30-7:30pm
+              Java Instructor Workshop <br />
+              TBD
+                  <br />
                   <br />
                   <br />
                   <br />
@@ -112,11 +113,12 @@ class Homepage extends Component {
                 <div className="columns">
                   <h1>Dec. 7th</h1>
                   <hr />
-                  Cyber Security Webinar <br />
-                  TBD
+                  Cyber Security Webinar <br /> 
+                  TBD 
                   <hr />
                   Choice Career <br />
                   11am-2pm
+                  <br />
                   <br />
                   <br />
                   <br />
@@ -142,6 +144,7 @@ class Homepage extends Component {
                   <br />
                   <br />
                   <br />
+                  <br />
                   <a
                     href="calendar"
                     className="btn btn-md btn-primary calendarButton"
@@ -159,6 +162,7 @@ class Homepage extends Component {
                   <hr />
                   Career Connectors <br />
                   9am-12pm
+                  <br />
                   <br />
                   <br />
                   <br />
@@ -372,10 +376,11 @@ class Homepage extends Component {
                     <textarea
                       ref="message"
                       name=""
-                      id=""
-                      cols="80"
+                      id="sizing-addon1"
+                      cols="100"
                       rows="6"
                       className="form-control"
+                      placeholder="Message"
                     />
                   </div>
                   <button
