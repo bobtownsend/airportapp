@@ -162,12 +162,18 @@ class profile extends React.Component {
               />
             </fieldset>
             <center>
-            <button
+            <button id="editbutton"
               onClick={this.handleFormSubmit.bind(this)}
-              className="btn btn-primary"
+              className="btn btn-md btn-primary"
             >
               Edit
             </button>
+            <a
+            href="calendar"
+            className="btn btn-primary calendarButton"
+          >
+            View Calendar
+          </a>
             </center>
           </form>
           </div>

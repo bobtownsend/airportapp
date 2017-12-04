@@ -66,7 +66,7 @@ class Mycalendar extends Component {
       <div className="calendar  ">
         <BigCalendar
           {...this.props}
-          Popup
+          popup
           selectable
           events={userEvents}
           step={60}
@@ -110,7 +110,7 @@ class Mycalendar extends Component {
                 >
                   Remove Event
                 </button>,
-                event.title + "    " + event.desc + "   " + event.date
+                event.title + "    " + event.desc + "   " 
               );
             }
           }}
